@@ -1,0 +1,8 @@
+-
+  description: String#codepoints
+  benchmark: |-
+    "hello".codepoints
+-
+  description: String#codepoints {|code| ...}
+  benchmark: |-
+    "hello".codepoints {|code| }

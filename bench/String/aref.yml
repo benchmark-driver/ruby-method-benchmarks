@@ -1,0 +1,42 @@
+-
+  description: String#[nth]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[1]
+-
+  description: String#[nth, len]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[2, 3]
+-
+  description: String#[range]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[2..3]
+-
+  description: String#[substr]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str["lo"]
+-
+  description: String#[regexp]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[/[aeiou](.)\1/]
+-
+  description: String#[regexp, nth]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[/[aeiou](.)\1/, 1]
+-
+  description: String#[regexp, name]
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[/(?<vowel>[aeiou])(?<non_vowel>[^aeiou])/, "vowel"]

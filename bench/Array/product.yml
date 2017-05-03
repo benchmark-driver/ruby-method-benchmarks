@@ -1,0 +1,20 @@
+-
+  description: Array#product
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.product
+-
+  description: Array#product(other)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+    other = [1, 2]
+  benchmark: |-
+    ary.product(other)
+-
+  description: Array#product(other) {|x| block}
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+    other = [1, 2]
+  benchmark: |-
+    ary.product(other) {|x| x }

@@ -1,0 +1,6 @@
+-
+  description: Array#drop(n)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.drop(3)

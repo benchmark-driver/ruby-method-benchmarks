@@ -1,0 +1,16 @@
+-
+  description: String#chop
+  benchmark: |-
+    "abcdefg".chop
+-
+  description: String#chop strips \\r\\n
+  benchmark: |-
+    "abcdefg\r\n".chop
+-
+  description: String#chop!
+  benchmark: |-
+    "abcdefg".chop!
+-
+  description: String#chop! strips \\r\\n
+  benchmark: |-
+    "abcdefg\r\n".chop!

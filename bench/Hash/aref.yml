@@ -1,0 +1,18 @@
+-
+  description: Hash#[key]
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash["bar"]
+-
+  description: Hash#[key] with default value
+  before: |-
+    hash = Hash.new(42)
+  benchmark: |-
+    hash["bar"]
+-
+  description: Hash#[key] with default proc
+  before: |-
+    hash = Hash.new{ |h, k| h[k] = 42 }
+  benchmark: |-
+    hash["bar"]

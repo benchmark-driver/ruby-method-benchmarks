@@ -1,0 +1,6 @@
+-
+  description: Array#rassoc(obj)
+  before: |-
+    ary = [[1,15], [2,25], [3,35]]
+  benchmark: |-
+    ary.rassoc(2)

@@ -1,0 +1,6 @@
+-
+  description: Array#assoc(key)
+  before: |-
+    ary = [[1,15], [2,25], [3,35]]
+  benchmark: |-
+    ary.assoc(2)

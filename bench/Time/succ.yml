@@ -1,0 +1,7 @@
+-
+  description: Time#succ
+  before: |-
+    $VERBOSE = nil # get rid of warning message "warning: Time#succ is obsolete"
+    t = Time.now
+  benchmark: |-
+    t.succ

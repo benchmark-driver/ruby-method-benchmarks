@@ -1,0 +1,6 @@
+-
+  description: Time#month
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.month

@@ -1,0 +1,6 @@
+-
+  description: String#getbyte(index)
+  before: |-
+    string = "abcdef"
+  benchmark: |-
+    string.getbyte(2)

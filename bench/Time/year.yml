@@ -1,0 +1,6 @@
+-
+  description: Time#year
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.year

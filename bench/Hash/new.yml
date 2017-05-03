@@ -1,0 +1,12 @@
+-
+  description: Hash.new
+  benchmark: |-
+    Hash.new
+-
+  description: Hash.new(ifnone)
+  benchmark: |-
+    Hash.new(42)
+-
+  description: Hash.new {|hash, key| ... }
+  benchmark: |-
+    Hash.new {|h, k| h[k] = 42}

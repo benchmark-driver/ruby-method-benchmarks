@@ -1,0 +1,20 @@
+-
+  description: Hash#keep_if
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.keep_if
+-
+  description: Hash#keep_if {|key, value| true}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.keep_if {|key, value| true }
+-
+  description: Hash#keep_if {|key, value| false}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.keep_if {|key, value| false }

@@ -1,0 +1,13 @@
+-
+  description: Array#eql?(self)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.eql?(ary)
+-
+  description: Array#eql?(other)
+  before: |-
+    ary1 = [1, 2, 3, 4, 5]
+    ary2 = [6, "b", 8, 9, "a"]
+  benchmark: |-
+    ary1.eql?(ary2)

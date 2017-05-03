@@ -1,0 +1,40 @@
+-
+  description: String#upcase
+  benchmark: |-
+    "hello".upcase
+-
+  description: String#upcase(:ascii)
+  benchmark: |-
+    "hello".upcase(:ascii)
+-
+  description: String#upcase(:turkic)
+  benchmark: |-
+    "hello".upcase(:turkic)
+-
+  description: String#upcase(:lithuanian)
+  benchmark: |-
+    "hello".upcase(:lithuanian)
+-
+  description: String#upcase(:turkic, :lithuanian)
+  benchmark: |-
+    "hello".upcase(:turkic, :lithuanian)
+-
+  description: String#upcase!
+  benchmark: |-
+    "hello".upcase!
+-
+  description: String#upcase!(:ascii)
+  benchmark: |-
+    "hello".upcase!(:ascii)
+-
+  description: String#upcase!(:turkic)
+  benchmark: |-
+    "hello".upcase!(:turkic)
+-
+  description: String#upcase!(:lithuanian)
+  benchmark: |-
+    "hello".upcase!(:lithuanian)
+-
+  description: String#upcase!(:turkic, :lithuanian)
+  benchmark: |-
+    "hello".upcase!(:turkic, :lithuanian)

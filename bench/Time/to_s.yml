@@ -1,0 +1,12 @@
+-
+  description: Time#to_s
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.to_s
+-
+  description: Time#inspect
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.inspect

@@ -1,0 +1,14 @@
+-
+  description: Hash#delete(key)
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.delete("baz")
+-
+  description: Hash#delete(key) {|key| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.delete("hoge") {|key| }

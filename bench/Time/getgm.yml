@@ -1,0 +1,12 @@
+-
+  description: Time#getgm
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.getgm
+-
+  description: Time#getutc
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.getutc

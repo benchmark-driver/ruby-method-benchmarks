@@ -1,0 +1,4 @@
+-
+  description: String#hash
+  benchmark: |-
+    "abcdefg".hash

@@ -1,0 +1,6 @@
+-
+  description: Hash#rehash
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.rehash

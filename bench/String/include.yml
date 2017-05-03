@@ -1,0 +1,8 @@
+-
+  description: String#include?(substr) ASCII
+  benchmark: |-
+    "hello world".include?("llo")
+-
+  description: String#include?(substr) UTF8
+  benchmark: |-
+    "あいうえお".include?("うえ")

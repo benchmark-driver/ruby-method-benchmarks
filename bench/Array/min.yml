@@ -1,0 +1,24 @@
+-
+  description: Array#min
+  before: |-
+    ary = (1..20).to_a
+  benchmark: |-
+    ary.max
+-
+  description: Array#min(n)
+  before: |-
+    ary = (1..20).to_a
+  benchmark: |-
+    ary.min(5)
+-
+  description: Array#min {|a, b| ...}
+  before: |-
+    ary = (1..20).to_a
+  benchmark: |-
+    ary.min {|a, b| a <=> b }
+-
+  description: Array#min(n) {|a, b| ...}
+  before: |-
+    ary = (1..20).to_a
+  benchmark: |-
+    ary.min(5) {|a, b| a <=> b }

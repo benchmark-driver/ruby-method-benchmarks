@@ -1,0 +1,13 @@
+-
+  description: Array#join
+  before: |-
+    ary = ["a", "b", "c", "d"]
+  benchmark: |-
+    ary.join
+-
+  description: Array#join(sep)
+  before: |-
+    ary = ["a", "b", "c", "d"]
+    sep = '-'
+  benchmark: |-
+    ary.join(sep)

@@ -1,0 +1,6 @@
+-
+  description: Time#yday
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.yday

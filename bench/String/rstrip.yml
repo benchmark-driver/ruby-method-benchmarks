@@ -1,0 +1,8 @@
+-
+  description: String#rstrip
+  benchmark: |-
+    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".rstrip
+-
+  description: String#rstrip!
+  benchmark: |-
+    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".rstrip!

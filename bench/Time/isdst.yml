@@ -1,0 +1,12 @@
+-
+  description: Time#isdst
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.isdst
+-
+  description: Time#dst?
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.dst?

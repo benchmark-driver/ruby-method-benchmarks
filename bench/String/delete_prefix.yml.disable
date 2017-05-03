@@ -1,0 +1,8 @@
+-
+  description: String#delete_prefix
+  benchmark: |-
+    "hello".delete_prefix("hel")
+-
+  description: String#delete_prefix!
+  benchmark: |-
+    "hello".delete_prefix!("hel")

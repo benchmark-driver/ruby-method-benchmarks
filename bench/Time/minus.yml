@@ -1,0 +1,14 @@
+-
+  description: Time#-(other_time)
+  before: |-
+    t = Time.now
+    other = Time.at(0)
+  benchmark: |-
+    t - other
+-
+  description: Time#-(numeric)
+  before: |-
+    t = Time.now
+    other = 24 * 60 * 60
+  benchmark: |-
+    t - other

@@ -1,0 +1,12 @@
+-
+  description: Time#ctime
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.ctime
+-
+  description: Time#asctime
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.asctime

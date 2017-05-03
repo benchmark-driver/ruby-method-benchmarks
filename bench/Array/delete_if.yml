@@ -1,0 +1,14 @@
+-
+  description: Array#delete_if
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.delete_if
+-
+  description: Array#delete_if {|x| true }
+  benchmark: |-
+    [1, 2, 3, 4, 5].delete_if {|x| true }
+-
+  description: Array#delete_if {|x| false }
+  benchmark: |-
+    [1, 2, 3, 4, 5].delete_if {|x| false }

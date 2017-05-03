@@ -1,0 +1,7 @@
+-
+  description: Hash#clear
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.clear

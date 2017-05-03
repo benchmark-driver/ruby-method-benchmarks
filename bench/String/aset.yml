@@ -1,0 +1,30 @@
+-
+  description: String#[nth]=(other)
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[1] = ".."
+-
+  description: String#[nth, len]=(other)
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str[1, 4] = ".."
+-
+  description: String#[substr]=(other)
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str["llo "] = "llo "
+-
+  description: String#[regexp, nth]=(other)
+  before: |-
+    str = "def exec(cmd)"
+  benchmark: |-
+    str[/def\s+(\w+)/, 1] = "preprocess"
+-
+  description: String#[regexp, name]=(other)
+  before: |-
+    str = "FooBar"
+  benchmark: |-
+    str[/(?<foo>[A-Z]..)(?<bar>[A-Z]..)/, "foo"] = "Baz"

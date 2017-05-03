@@ -1,0 +1,16 @@
+-
+  description: String#reverse ASCII
+  benchmark: |-
+    "hello world".reverse
+-
+  description: String#reverse UTF8
+  benchmark: |-
+    "あいうえお".reverse
+-
+  description: String#reverse! ASCII
+  benchmark: |-
+    "hello world".reverse!
+-
+  description: String#reverse! UTF8
+  benchmark: |-
+    "あいうえお".reverse!

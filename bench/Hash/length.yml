@@ -1,0 +1,12 @@
+-
+  description: Hash#length
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.length
+-
+  description: Hash#size
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.size

@@ -1,0 +1,12 @@
+-
+  description: Array.new
+  benchmark: |-
+    Array.new
+-
+  description: Array.new(size)
+  benchmark: |-
+    Array.new(10)
+-
+  description: Array.new(size, val)
+  benchmark: |-
+    Array.new(10, 42)

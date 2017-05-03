@@ -1,0 +1,12 @@
+-
+  description: Time#usec
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.usec
+-
+  description: Time#tv_nsec
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.tv_nsec

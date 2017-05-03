@@ -1,0 +1,6 @@
+-
+  description: String#setbyte(index, b)
+  before: |-
+    string = "abcdef"
+  benchmark: |-
+    string.setbyte(2, 60)

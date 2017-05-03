@@ -1,0 +1,6 @@
+-
+  description: Hash#dig
+  before: |-
+    hash = { foo: {bar: {baz: 1}}}
+  benchmark: |-
+    hash.dig(:foo, :bar, :baz)

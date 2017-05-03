@@ -1,0 +1,54 @@
+-
+  description: Hash#merge(other)
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.merge(h2)
+-
+  description: Hash#merge(other) {|key, self_val, other_val| ... }
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.merge(h2) { |key, self_val, other_val| other_val }
+-
+  description: Hash#merge!(other)
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.merge!(h2)
+-
+  description: Hash#merge!(other) {|key, self_val, other_val| ... }
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.merge!(h2) { |key, self_val, other_val| other_val }
+-
+  description: Hash#update(other)
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.update(h2)
+-
+  description: Hash#update(other) {|key, self_val, other_val| ... }
+  before: |-
+    hash1 = { "a" => 100, "b" => 200 }
+    hash2 = { "b" => 254, "c" => 300 }
+  benchmark: |-
+    h1 = hash1.dup
+    h2 = hash2.dup
+    h1.update(h2) { |key, self_val, other_val| other_val }

@@ -1,0 +1,7 @@
+-
+  description: Array#|(other)
+  before: |-
+    ary1 = [1, 1, 4, 2, 3]
+    ary2 = [4, 5, 5]
+  benchmark: |-
+    ary1 | ary2

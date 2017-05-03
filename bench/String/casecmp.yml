@@ -1,0 +1,8 @@
+-
+  description: String#casecmp(other)
+  benchmark: |-
+    "aBcDeF".casecmp("abcdefg")
+-
+  description: String#casecmp?(other)
+  benchmark: |-
+    "aBcDeF".casecmp?("abcdefg")

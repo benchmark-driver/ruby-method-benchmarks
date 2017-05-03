@@ -1,0 +1,4 @@
+-
+  description: String#freeze
+  benchmark: |-
+    "hello".freeze

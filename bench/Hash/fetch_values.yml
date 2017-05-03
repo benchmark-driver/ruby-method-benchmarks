@@ -1,0 +1,12 @@
+-
+  description: Hash#fetch_values(key, ...)
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.fetch_values("foo", "bar")
+-
+  description: Hash#fetch_values(key, ...) { |key| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.fetch_values("foo", "hoge") { |key| }

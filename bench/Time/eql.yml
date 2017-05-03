@@ -1,0 +1,8 @@
+-
+  description: Time#eql?(other)
+  before: |-
+    t1 = Time.now
+    t2 = Time.now
+  benchmark: |-
+    t1.eql?(t2)
+

@@ -1,0 +1,6 @@
+-
+  description: Hash#invert
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.invert

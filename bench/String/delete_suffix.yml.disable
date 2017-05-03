@@ -1,0 +1,8 @@
+-
+  description: String#delete_suffix
+  benchmark: |-
+    "hello".delete_suffix("llo")
+-
+  description: String#delete_suffix!
+  benchmark: |-
+    "hello".delete_suffix!("llo")

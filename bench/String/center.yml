@@ -1,0 +1,8 @@
+-
+  description: String#center(width)
+  benchmark: |-
+    "foo".center(10)
+-
+  description: String#center(width, padding)
+  benchmark: |-
+    "foo".center(10, "*")

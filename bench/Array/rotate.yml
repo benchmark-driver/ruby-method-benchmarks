@@ -1,0 +1,10 @@
+-
+  description: Array#rotate
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.rotate
+-
+  description: Array#rotate!
+  benchmark: |-
+    [1, 2, 3, 4, 5].rotate!

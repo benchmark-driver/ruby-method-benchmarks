@@ -1,0 +1,40 @@
+-
+  description: String#swapcase
+  benchmark: |-
+    "hello".swapcase
+-
+  description: String#swapcase(:ascii)
+  benchmark: |-
+    "hello".swapcase(:ascii)
+-
+  description: String#swapcase(:turkic)
+  benchmark: |-
+    "hello".swapcase(:turkic)
+-
+  description: String#swapcase(:lithuanian)
+  benchmark: |-
+    "hello".swapcase(:lithuanian)
+-
+  description: String#swapcase(:turkic, :lithuanian)
+  benchmark: |-
+    "hello".swapcase(:turkic, :lithuanian)
+-
+  description: String#swapcase!
+  benchmark: |-
+    "hello".swapcase!
+-
+  description: String#swapcase!(:ascii)
+  benchmark: |-
+    "hello".swapcase!(:ascii)
+-
+  description: String#swapcase!(:turkic)
+  benchmark: |-
+    "hello".swapcase!(:turkic)
+-
+  description: String#swapcase!(:lithuanian)
+  benchmark: |-
+    "hello".swapcase!(:lithuanian)
+-
+  description: String#swapcase!(:turkic, :lithuanian)
+  benchmark: |-
+    "hello".swapcase!(:turkic, :lithuanian)

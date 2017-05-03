@@ -1,0 +1,6 @@
+-
+  description: String#insert(pos, other)
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str.insert(3, "bar")

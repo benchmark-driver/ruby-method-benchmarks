@@ -1,0 +1,28 @@
+-
+  description: Array#reject
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.reject
+-
+  description: Array#reject {|x| true }
+  benchmark: |-
+    [1, 2, 3, 4, 5].reject {|x| true }
+-
+  description: Array#reject {|x| false }
+  benchmark: |-
+    [1, 2, 3, 4, 5].reject {|x| false }
+-
+  description: Array#reject!
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.reject!
+-
+  description: Array#reject! {|x| true }
+  benchmark: |-
+    [1, 2, 3, 4, 5].reject! {|x| true }
+-
+  description: Array#reject! {|x| false }
+  benchmark: |-
+    [1, 2, 3, 4, 5].reject! {|x| false }

@@ -1,0 +1,8 @@
+-
+  description: String#upto(max)
+  benchmark: |-
+    "a8".upto("b6") { |s| }
+-
+  description: String#upto(max, exclusive)
+  benchmark: |-
+    "a8".upto("b6", true) { |s| }

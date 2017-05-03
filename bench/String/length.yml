@@ -1,0 +1,24 @@
+-
+  description: String#length with ASCII
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str.length
+-
+  description: String#length with UTF8
+  before: |-
+    str = "あいうえお"
+  benchmark: |-
+    str.length
+-
+  description: String#size with ASCII
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str.size
+-
+  description: String#size with UTF8
+  before: |-
+    str = "あいうえお"
+  benchmark: |-
+    str.size

@@ -1,0 +1,7 @@
+-
+  description: Time#hash
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.hash
+

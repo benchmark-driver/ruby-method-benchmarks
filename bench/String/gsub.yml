@@ -1,0 +1,44 @@
+-
+  description: String#gsub(pattern, replace)
+  benchmark: |-
+    "abcdefg".gsub(/def/, '!!')
+-
+  description: String#gsub(pattern, replace) with string pattern
+  benchmark: |-
+    "abcdefg".gsub('def', '!!')
+-
+  description: String#gsub(pattern, replace) replacing with global variable
+  benchmark: |-
+    "xxbbxbb".gsub(/x+(b+)/, 'X<<\1>>')
+-
+  description: String#gsub(pattern, hash)
+  before: |-
+    hash = {'b'=>'B', 'c'=>'C'}
+  benchmark: |-
+    "abcabc".gsub(/[bc]/, hash)
+-
+  description: String#gsub(pattern) {|matched| ...}
+  benchmark: |-
+    "abcdefg".gsub(/def/) {|m| }
+-
+  description: String#gsub!(pattern, replace)
+  benchmark: |-
+    "abcdefg".gsub!(/def/, '!!')
+-
+  description: String#gsub!(pattern, replace) with string pattern
+  benchmark: |-
+    "abcdefg".gsub!('def', '!!')
+-
+  description: String#gsub!(pattern, replace) replacing with global variable
+  benchmark: |-
+    "xxbbxbb".gsub!(/x+(b+)/, 'X<<\1>>')
+-
+  description: String#gsub!(pattern, hash)
+  before: |-
+    hash = {'b'=>'B', 'c'=>'C'}
+  benchmark: |-
+    "abcabc".gsub!(/[bc]/, hash)
+-
+  description: String#gsub!(pattern) {|matched| ...}
+  benchmark: |-
+    "abcdefg".gsub!(/def/) {|m| }

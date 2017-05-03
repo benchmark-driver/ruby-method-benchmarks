@@ -1,0 +1,6 @@
+-
+  description: Time#sunday?
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.sunday?

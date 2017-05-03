@@ -1,0 +1,42 @@
+-
+  description: Hash#reject
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.reject
+-
+  description: Hash#reject {|key, value| true}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.reject {|key, value| true }
+-
+  description: Hash#reject {|key, value| false}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.reject {|key, value| false }
+-
+  description: Hash#reject!
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.reject!
+-
+  description: Hash#reject! {|key, value| true}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.reject! {|key, value| true }
+-
+  description: Hash#reject! {|key, value| false}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.reject! {|key, value| false }
+

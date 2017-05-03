@@ -1,0 +1,18 @@
+-
+  description: Array#fetch(nth)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.fetch(4)
+-
+  description: Array#fetch(nth, ifnon)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.fetch(10, 42)
+-
+  description: Array#fetch(nth) {|nth| ...}
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.fetch(10) {|n| 42 }

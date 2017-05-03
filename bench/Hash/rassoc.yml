@@ -1,0 +1,6 @@
+-
+  description: Hash#rassoc(value)
+  before: |-
+    hash = { "a" => 100, "b" => 200 }
+  benchmark: |-
+    hash.rassoc(100)

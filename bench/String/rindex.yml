@@ -1,0 +1,12 @@
+-
+  description: String#rindex(str)
+  benchmark: |-
+    "hello".rindex('l')
+-
+  description: String#rindex(str, pos)
+  benchmark: |-
+    "hello".rindex('l', 2)
+-
+  description: String#rindex(pattern, pos)
+  benchmark: |-
+    "hello".rindex(/[aeiou]/, -3)

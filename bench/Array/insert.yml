@@ -1,0 +1,12 @@
+-
+  description: Array#insert(nth)
+  benchmark: |-
+    [1, 2, 3, 4, 5].insert(1)
+-
+  description: Array#insert(nth, *val)
+  benchmark: |-
+    [1, 2, 3, 4, 5].insert(3, "a", "b", "c")
+-
+  description: Array#insert(-1, *val)
+  benchmark: |-
+    [1, 2, 3, 4, 5].insert(-1, "a", "b", "c")

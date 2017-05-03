@@ -1,0 +1,4 @@
+-
+  description: String#hex
+  benchmark: |-
+    "-1234".hex

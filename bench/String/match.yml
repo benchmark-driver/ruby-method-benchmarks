@@ -1,0 +1,30 @@
+-
+  description: String#=~(other)
+  before: |-
+    str = "string"
+  benchmark: |-
+    str =~ /str/
+-
+  description: String#match(pattern)
+  before: |-
+    str = "hello"
+  benchmark: |-
+    str.match('(.)\1')
+-
+  description: String#match(pattern, pos)
+  before: |-
+    str = "hello"
+  benchmark: |-
+    str.match('(.)\1', 1)
+-
+  description: String#match?(pattern)
+  before: |-
+    str = "hello"
+  benchmark: |-
+    str.match?('(.)\1')
+-
+  description: String#match?(pattern, pos)
+  before: |-
+    str = "hello"
+  benchmark: |-
+    str.match?('(.)\1', 1)

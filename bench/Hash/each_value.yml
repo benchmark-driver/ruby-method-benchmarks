@@ -1,0 +1,12 @@
+-
+  description: Hash#each_value
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each_value
+-
+  description: Hash#each_value {|value| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each_value {|value| }

@@ -1,0 +1,12 @@
+-
+  description: Array#first
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.first
+-
+  description: Array#first(n)
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.first(3)

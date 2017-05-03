@@ -1,0 +1,8 @@
+-
+  description: String#to_sym
+  benchmark: |-
+    "hello world".to_sym
+-
+  description: String#intern
+  benchmark: |-
+    "hello world".intern

@@ -1,0 +1,4 @@
+-
+  description: String#to_f
+  benchmark: |-
+    "123.45e1".to_f

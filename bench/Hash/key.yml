@@ -1,0 +1,13 @@
+-
+  description: Hash#key(val)
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.key(300)
+-
+  description: Hash#index(val)
+  before: |-
+    $VERBOSE = nil # get rid of warning message "warning: Time#succ is obsolete"
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.index(300)

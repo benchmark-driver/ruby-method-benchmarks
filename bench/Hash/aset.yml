@@ -1,0 +1,12 @@
+-
+  description: Hash#[key]=(value)
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash["baz"] = 42
+-
+  description: Hash#store(key, value)
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.store("baz", 42)

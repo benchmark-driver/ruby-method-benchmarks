@@ -1,0 +1,7 @@
+-
+  description: Time#+(other)
+  before: |-
+    t = Time.now
+    other = 24 * 60 * 60
+  benchmark: |-
+    t + other

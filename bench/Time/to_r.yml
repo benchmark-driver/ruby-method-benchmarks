@@ -1,0 +1,7 @@
+-
+  description: Time#to_r
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.to_r
+

@@ -1,0 +1,20 @@
+-
+  description: Array#map {|x| ...}
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.map {|x| x }
+-
+  description: Array#collect {|x| ...}
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.collect {|x| x }
+-
+  description: Array#map! {|x| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].map! {|x| x }
+-
+  description: Array#collect! {|x| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].collect! {|x| x }

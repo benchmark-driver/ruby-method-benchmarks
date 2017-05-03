@@ -1,0 +1,30 @@
+-
+  description: Array#index(val), found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.index("d")
+-
+  description: Array#index(val) with Numerics, found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.index(4.6)
+-
+  description: Array#index(val), not found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.index("z")
+-
+  description: Array#index(val) with Numerics, not found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.index(9)
+-
+  description: Array#index {|item| ...}
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.index {|x| x == "d"}

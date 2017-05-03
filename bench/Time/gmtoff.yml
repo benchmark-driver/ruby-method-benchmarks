@@ -1,0 +1,18 @@
+-
+  description: Time#gmtoff
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.gmtoff
+-
+  description: Time#gmt_offset
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.gmt_offset
+-
+  description: Time#utc_offset
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.utc_offset

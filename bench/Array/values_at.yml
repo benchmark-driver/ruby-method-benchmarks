@@ -1,0 +1,6 @@
+-
+  description: Array#cycle(n) {|obj| block }
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.cycle(3) {|x| x }

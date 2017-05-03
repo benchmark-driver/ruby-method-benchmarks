@@ -1,0 +1,4 @@
+-
+  description: Array#delete_at(pos)
+  benchmark: |-
+    [1, 2, 3, 4, 5].delete_at(4)

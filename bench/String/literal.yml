@@ -1,0 +1,4 @@
+-
+  description: String literal
+  benchmark: |-
+    "hello world"

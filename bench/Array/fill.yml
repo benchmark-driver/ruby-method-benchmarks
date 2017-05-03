@@ -1,0 +1,32 @@
+-
+  description: Array#fill(val)
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(42)
+-
+  description: Array#fill(val, start)
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(42, 2)
+-
+  description: Array#fill(val, start, length)
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(42, 2, 3)
+-
+  description: Array#fill(val, range)
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(42, 2..3)
+-
+  description: Array#fill {|index| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill { |index| 42 }
+-
+  description: Array#fill(start) {|index| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(2) { |index| 42 }
+-
+  description: Array#fill(start, length) {|index| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(2, 3) { |index| 42 }
+-
+  description: Array#fill(range) {|index| ...}
+  benchmark: |-
+    [1, 2, 3, 4, 5].fill(2..3) { |index| 42 }

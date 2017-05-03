@@ -1,0 +1,12 @@
+-
+  description: Time#getlocal
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.getlocal
+-
+  description: Time#getlocal(utc_offset)
+  before: |-
+    t = Time.utc(2000,1,1,20,15,1)
+  benchmark: |-
+    t.getlocal("+09:00")

@@ -1,0 +1,16 @@
+-
+  description: String#end_with?(string) ASCII
+  benchmark: |-
+    "hello world".end_with?("ld")
+-
+  description: String#end_with?(string) ASCII
+  benchmark: |-
+    "hello world".end_with?("he", "ld")
+-
+  description: String#end_with?(string) UTF8
+  benchmark: |-
+    "あいうえお".end_with?("えお")
+-
+  description: String#end_with?(string) UTF8
+  benchmark: |-
+    "あいうえお".end_with?("けこ", "えお")

@@ -1,0 +1,8 @@
+-
+  description: Array#delete(val)
+  benchmark: |-
+    [1, 2, 3, 4, 5].delete(4)
+-
+  description: Array#delete(val) { ... }
+  benchmark: |-
+    [1, 2, 3, 4, 5].delete(42) { "not found" }

@@ -1,0 +1,12 @@
+-
+  description: Array#each
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.each
+-
+  description: Array#each {|item| ...}
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.each {|item| }

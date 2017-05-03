@@ -1,0 +1,4 @@
+-
+  description: Time.at(val)
+  benchmark: |-
+    Time.at(0)

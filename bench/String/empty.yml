@@ -1,0 +1,18 @@
+-
+  description: String#empty?
+  before: |-
+    str = ""
+  benchmark: |-
+    str.empty?
+-
+  description: String#empty? with ASCII
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str.empty?
+-
+  description: String#empty? with UTF8
+  before: |-
+    str = "あいうえお"
+  benchmark: |-
+    str.empty?

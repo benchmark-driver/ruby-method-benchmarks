@@ -1,0 +1,12 @@
+-
+  description: String#bytesize with ASCII
+  before: |-
+    str = "Hello there"
+  benchmark: |-
+    str.bytesize
+-
+  description: String#bytesize with UTF8
+  before: |-
+    str = "あいうえお"
+  benchmark: |-
+    str.bytesize

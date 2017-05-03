@@ -1,0 +1,4 @@
+-
+  description: String#oct
+  benchmark: |-
+    "-377".oct

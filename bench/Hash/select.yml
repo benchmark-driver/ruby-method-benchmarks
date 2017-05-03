@@ -1,0 +1,41 @@
+-
+  description: Hash#select
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.select
+-
+  description: Hash#select {|key, value| true}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.select {|key, value| true }
+-
+  description: Hash#select {|key, value| false}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.select {|key, value| false }
+-
+  description: Hash#select!
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.select!
+-
+  description: Hash#select! {|key, value| true}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.select! {|key, value| true }
+-
+  description: Hash#select! {|key, value| false}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    h = hash.dup
+    h.select! {|key, value| false }
+

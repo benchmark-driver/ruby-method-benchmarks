@@ -1,0 +1,22 @@
+-
+  description: String#==(other)
+  benchmark: |-
+    "abcdef" == "abcdefg"
+-
+  description: String#==(object)
+  before: |-
+    obj = Object.new
+    def obj.to_str; "abcdefg"; end
+  benchmark: |-
+    "abcdef" == obj
+-
+  description: String#===(other)
+  benchmark: |-
+    "abcdef" === "abcdefg"
+-
+  description: String#===(object)
+  before: |-
+    obj = Object.new
+    def obj.to_str; "abcdefg"; end
+  benchmark: |-
+    "abcdef" === obj

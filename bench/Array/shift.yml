@@ -1,0 +1,8 @@
+-
+  description: Array#shift
+  benchmark: |-
+    [1, 2, 3, 4, 5].shift
+-
+  description: Array#shift(n)
+  benchmark: |-
+    [1, 2, 3, 4, 5].shift(3)

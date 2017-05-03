@@ -1,0 +1,30 @@
+-
+  description: Array#rindex(val), found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.rindex("b")
+-
+  description: Array#rindex(val) with Numerics, found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.rindex(1.5)
+-
+  description: Array#rindex(val), not found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.rindex("z")
+-
+  description: Array#rindex(val) with Numerics, not found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.rindex(9)
+-
+  description: Array#index {|x| ...}
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.rindex {|x| x == "b"}

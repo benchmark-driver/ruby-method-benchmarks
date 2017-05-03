@@ -1,0 +1,36 @@
+-
+  description: Hash#each
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each
+-
+  description: Hash#each {|array| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each {|array| }
+-
+  description: Hash#each {|key, value| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each {|key, value| }
+-
+  description: Hash#each_pair
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each_pair
+-
+  description: Hash#each_pair {|array| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each_pair {|array| }
+-
+  description: Hash#each_pair {|key, value| ...}
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.each_pair {|key, value| }

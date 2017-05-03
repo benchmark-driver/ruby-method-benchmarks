@@ -1,0 +1,6 @@
+-
+  description: Array#any? {|x| block }
+  before: |-
+    ary = [1, 2, 3, 4, 5]
+  benchmark: |-
+    ary.any? {|x| x > 5 }

@@ -1,0 +1,20 @@
+-
+  description: String#to_i
+  benchmark: |-
+    "012345".to_i
+-
+  description: String#to_i(2)
+  benchmark: |-
+    "012345".to_i(2)
+-
+  description: String#to_i(8)
+  benchmark: |-
+    "012345".to_i(8)
+-
+  description: String#to_i(10)
+  benchmark: |-
+    "012345".to_i(10)
+-
+  description: String#to_i(16)
+  benchmark: |-
+    "012345".to_i(16)

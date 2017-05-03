@@ -1,0 +1,8 @@
+-
+  description: String#to_s
+  benchmark: |-
+    "hello".to_s
+-
+  description: String#to_str
+  benchmark: |-
+    "hello".to_str

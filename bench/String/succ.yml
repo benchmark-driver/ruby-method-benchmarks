@@ -1,0 +1,16 @@
+-
+  description: String#succ
+  benchmark: |-
+    "THX1138".succ
+-
+  description: String#succ!
+  benchmark: |-
+    "THX1138".succ!
+-
+  description: String#next
+  benchmark: |-
+    "THX1138".next
+-
+  description: String#next!
+  benchmark: |-
+    "THX1138".next!

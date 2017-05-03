@@ -1,0 +1,12 @@
+-
+  description: Time#round
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.round
+-
+  description: Time#round(n)
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.round(10)

@@ -1,0 +1,8 @@
+-
+  description: Array#pop
+  benchmark: |-
+    [1, 2, 3, 4, 5].pop
+-
+  description: Array#pop(n)
+  benchmark: |-
+    [1, 2, 3, 4, 5].pop(3)

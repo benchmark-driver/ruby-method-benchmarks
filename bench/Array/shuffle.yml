@@ -1,0 +1,22 @@
+-
+  description: Array#shuffle
+  benchmark: |-
+    [1, 2, 3, 4].shuffle
+-
+  description: |-
+    Array#shuffle(random: rng)
+  before: |-
+    rng = Random.new(1)
+  benchmark: |-
+    [1, 2, 3, 4].shuffle(random: rng)
+-
+  description: Array#shuffle!
+  benchmark: |-
+    [1, 2, 3, 4].shuffle!
+-
+  description: |-
+    Array#shuffle!(random: rng)
+  before: |-
+    rng = Random.new(1)
+  benchmark: |-
+    [1, 2, 3, 4].shuffle!(random: rng)

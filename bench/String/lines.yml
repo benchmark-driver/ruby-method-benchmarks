@@ -1,0 +1,26 @@
+-
+  description: String#lines
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines
+-
+  description: String#lines('')
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines('')
+-
+  description: |-
+    String#lines(chomp: true)
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true)
+-
+  description: String#lines {|line| ... }
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines {|line| }
+-
+  description: String#lines('') {|line| ... }
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines('') {|line| }
+-
+  description: |-
+    String#lines(chomp: true) {|line| ... }
+  benchmark: |-
+    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) {|line| }

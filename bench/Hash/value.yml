@@ -1,0 +1,24 @@
+-
+  description: Hash#value?
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.value?(500)
+-
+  description: Hash#value? no value
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.value?(999)
+-
+  description: Hash#has_value?
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.has_value?(500)
+-
+  description: Hash#has_value? no value
+  before: |-
+    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  benchmark: |-
+    hash.has_value?(999)

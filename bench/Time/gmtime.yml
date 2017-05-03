@@ -1,0 +1,12 @@
+-
+  description: Time#gmtime
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.gmtime
+-
+  description: Time#utc
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.utc

@@ -1,0 +1,8 @@
+-
+  description: String#prepend(other)
+  benchmark: |-
+    "!".prepend("hello")
+-
+  description: String#prepend(obj1, obj2,...)
+  benchmark: |-
+    "!".prepend("hello", " ", "world")

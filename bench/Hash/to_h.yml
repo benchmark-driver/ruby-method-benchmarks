@@ -1,0 +1,6 @@
+-
+  description: Hash#to_h
+  before: |-
+    hash = { "foo" => 100, "bar" => 300 }
+  benchmark: |-
+    hash.to_h

@@ -1,0 +1,6 @@
+-
+  description: Array#*(n)
+  before: |-
+    ary = [1, 2, 3]
+  benchmark: |-
+    ary * 5

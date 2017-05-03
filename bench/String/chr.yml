@@ -1,0 +1,12 @@
+-
+  description: String#chr ASCII
+  before: |-
+    string = "hello"
+  benchmark: |-
+    string.chr
+-
+  description: String#chr UTF8
+  before: |-
+    string = "あいうえお"
+  benchmark: |-
+    string.chr

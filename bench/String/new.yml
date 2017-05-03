@@ -1,0 +1,8 @@
+-
+  description: String#new
+  benchmark: |-
+    String.new
+-
+  description: String#new(string)
+  benchmark: |-
+    String.new("hello")

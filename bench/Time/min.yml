@@ -1,0 +1,6 @@
+-
+  description: Time#min
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.min

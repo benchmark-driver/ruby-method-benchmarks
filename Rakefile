@@ -1,4 +1,5 @@
 # coding: utf-8
+TEMPLATE_FILE = ENV['template'] || "benchmark-ips.erb"
 RETRY_SAVE_PATH = 'result/retry.json'
 RETRY_MAX = 5
 RETRY_ERROR_THRESHOLD = 8.0 # Threshold to retry benchmark If the result has orver ±8.0 % error.
@@ -15,7 +16,7 @@ task :generate do
   require 'yaml'
   require 'erb'
 
-  template = ERB.new(File.read("template/bench.erb"))
+  template = ERB.new(File.read("template/#{TEMPLATE_FILE}"))
 
   Dir.glob("bench/**/*.yml") do |path|
     result_dir = File.join("result", File.dirname(path).sub("bench", ""))

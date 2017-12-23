@@ -88,7 +88,7 @@ def generate_csv
   require 'json'
   require 'csv'
   CSV.open("#{RESULT_DIR}/summary.csv", "wb") do |csv|
-    csv << ["File path", "Description", "Iterations"]
+    csv << ["File path", "Description", "Ruby #{RUBY_VERSION} r#{RUBY_REVISION}"]
     Dir.glob("#{RESULT_DIR}/**/*.json").sort.each do |path|
       next if path == RETRY_SAVE_PATH
       json = JSON.parse(File.read(path))

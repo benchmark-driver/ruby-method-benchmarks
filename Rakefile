@@ -1,6 +1,7 @@
 # coding: utf-8
 TEMPLATE_FILE = ENV['template'] || "benchmark-ips.erb"
-RETRY_SAVE_PATH = 'result/retry.json'
+RESULT_DIR = "result_ruby#{RUBY_VERSION}_r#{RUBY_REVISION}"
+RETRY_SAVE_PATH = "#{RESULT_DIR}/retry.json"
 RETRY_MAX = 5
 RETRY_ERROR_THRESHOLD = 8.0 # Threshold to retry benchmark If the result has orver ±8.0 % error.
 
@@ -19,7 +20,7 @@ task :generate do
   template = ERB.new(File.read("template/#{TEMPLATE_FILE}"))
 
   Dir.glob("bench/**/*.yml") do |path|
-    result_dir = File.join("result", File.dirname(path).sub("bench", ""))
+    result_dir = File.join(RESULT_DIR, File.dirname(path).sub("bench", ""))
     @json_path = File.join(result_dir, "#{File.basename(path, ".*")}.json")
 
     benchmark_items = YAML.load(File.read(path))
@@ -53,7 +54,7 @@ task :benchmarks do
   rm_rf RETRY_SAVE_PATH
 
   Dir.glob("script/**/*.rb") do |path|
-    result_dir = File.join("result", File.dirname(path).sub("script", ""))
+    result_dir = File.join(RESULT_DIR, File.dirname(path).sub("script", ""))
     mkdir_p result_dir unless File.exist?(result_dir)
 
     cmd "ruby #{path}"
@@ -80,15 +81,15 @@ end
 desc "Clean"
 task :clean do
   rm_rf "script"
-  rm_rf "result"
+  rm_rf RESULT_DIR
 end
 
 def generate_csv
   require 'json'
   require 'csv'
-  CSV.open("result/summary.csv", "wb") do |csv|
+  CSV.open("#{RESULT_DIR}/summary.csv", "wb") do |csv|
     csv << ["File path", "Description", "Iterations"]
-    Dir.glob("result/**/*.json").sort.each do |path|
+    Dir.glob("#{RESULT_DIR}/**/*.json").sort.each do |path|
       next if path == RETRY_SAVE_PATH
       json = JSON.parse(File.read(path))
       json.each do |item|
@@ -102,4 +103,3 @@ end
 task :csv do
   generate_csv()
 end
-

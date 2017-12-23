@@ -53,7 +53,7 @@ task :benchmarks do
   require 'json'
   rm_rf RETRY_SAVE_PATH
 
-  Dir.glob("script/**/*.rb") do |path|
+  Dir.glob("script/**/*.rb").sort.each do |path|
     result_dir = File.join(RESULT_DIR, File.dirname(path).sub("script", ""))
     mkdir_p result_dir unless File.exist?(result_dir)
 

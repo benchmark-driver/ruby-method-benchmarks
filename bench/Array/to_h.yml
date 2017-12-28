@@ -1,0 +1,4 @@
+-
+  description: Array#to_h
+  benchmark: |-
+    [[:foo, :bar], [1, 2]].to_h

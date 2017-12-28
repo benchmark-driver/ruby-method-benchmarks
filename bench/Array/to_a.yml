@@ -1,0 +1,8 @@
+-
+  description: Array#to_a
+  benchmark: |-
+    [1, 2, 3, 4, 5].to_a
+-
+  description: Array#to_ary
+  benchmark: |-
+    [1, 2, 3, 4, 5].to_ary

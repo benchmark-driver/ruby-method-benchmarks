@@ -1,0 +1,30 @@
+-
+  description: Array#find_index(val), found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.find_index("d")
+-
+  description: Array#find_index(val) with Numerics, found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.find_index(4.6)
+-
+  description: Array#find_index(val), not found
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.find_index("z")
+-
+  description: Array#find_index(val) with Numerics, not found
+  before: |-
+    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
+  benchmark: |-
+    ary.find_index(9)
+-
+  description: Array#find_index {|item| ...}
+  before: |-
+    ary = ["a", "b", "c", "d", "e"]
+  benchmark: |-
+    ary.find_index {|x| x == "d"}

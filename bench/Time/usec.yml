@@ -5,8 +5,8 @@
   benchmark: |-
     t.usec
 -
-  description: Time#tv_nsec
+  description: Time#tv_usec
   before: |-
     t = Time.now
   benchmark: |-
-    t.tv_nsec
+    t.tv_usec

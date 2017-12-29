@@ -4,3 +4,9 @@
     t = Time.now
   benchmark: |-
     t.nsec
+-
+  description: Time#tv_nsec
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t.tv_nsec

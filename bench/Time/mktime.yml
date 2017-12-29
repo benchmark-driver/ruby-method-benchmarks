@@ -1,0 +1,16 @@
+-
+  description: Time.mktime(year, month, day, hour, min, sec, usec_with_frac)
+  benchmark: |-
+    Time.mktime(2000, 1, 1, 23, 59, 59, 5000)
+-
+  description: Time.mktime(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
+  benchmark: |-
+    Time.mktime(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")
+-
+  description: Time.local(year, month, day, hour, min, sec, usec_with_frac)
+  benchmark: |-
+    Time.local(2000, 1, 1, 23, 59, 59, 5000)
+-
+  description: Time.local(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
+  benchmark: |-
+    Time.local(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")

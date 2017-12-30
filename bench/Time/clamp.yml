@@ -1,0 +1,8 @@
+-
+  description: Time#clamp(min, max)
+  before: |-
+    min = Time.now
+    t = Time.now
+    max = Time.now
+  benchmark: |-
+    t.clamp(min, max)

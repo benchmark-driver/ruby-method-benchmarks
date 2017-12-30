@@ -1,0 +1,8 @@
+-
+  description: Time#between?(min, max)
+  before: |-
+    min = Time.now
+    t = Time.now
+    max = Time.now
+  benchmark: |-
+    t.between?(min, max)

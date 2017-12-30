@@ -1,0 +1,13 @@
+-
+  description: Time#<=(self)
+  before: |-
+    t = Time.now
+  benchmark: |-
+    t <= t
+-
+  description: Time#<=(other)
+  before: |-
+    t1 = Time.now
+    t2 = Time.now
+  benchmark: |-
+    t1 <= t2

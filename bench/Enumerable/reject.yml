@@ -1,0 +1,18 @@
+-
+  description: Enumerable#reject
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reject
+-
+  description: Enumerable#reject { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reject { |x| true }
+-
+  description: Enumerable#reject { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reject { |x| false }

@@ -1,0 +1,24 @@
+-
+  description: Enumerable#max_by
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.max_by
+-
+  description: Enumerable#max_by { |a, b| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.max_by { |a, b| a <=> b }
+-
+  description: Enumerable#max_by(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.max_by(5)
+-
+  description: Enumerable#max_by(n) { |a, b| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.max_by(5) { |a, b| a <=> b }

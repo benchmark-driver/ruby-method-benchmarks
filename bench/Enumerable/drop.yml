@@ -1,0 +1,6 @@
+-
+  description: Enumerable#drop(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.drop(5)

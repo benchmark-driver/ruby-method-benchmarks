@@ -1,0 +1,12 @@
+-
+  description: Enumerable#to_a
+  before: |-
+    enum = [1, 2, 3].to_enum
+  benchmark: |-
+    enum.to_a
+-
+  description: Enumerable#entries
+  before: |-
+    enum = [1, 2, 3].to_enum
+  benchmark: |-
+    enum.entries

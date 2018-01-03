@@ -1,0 +1,24 @@
+-
+  description: Enumerable#grep(pattern)
+  before: |-
+    enum = ("a".."z").to_enum
+  benchmark: |-
+    enum.grep(/(f|g|h|i)/)
+-
+  description: Enumerable#grep(range)
+  before: |-
+    enum = ("a".."z").to_enum
+  benchmark: |-
+    enum.grep("f".."i")
+-
+  description: Enumerable#grep(pattern) { |obj| ...}
+  before: |-
+    enum = ("a".."z").to_enum
+  benchmark: |-
+    enum.grep(/(f|g|h|i)/) { |obj| obj }
+-
+  description: Enumerable#grep(range) { |obj| ...}
+  before: |-
+    enum = ("a".."z").to_enum
+  benchmark: |-
+    enum.grep("f".."i") { |obj| obj }

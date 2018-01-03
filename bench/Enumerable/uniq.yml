@@ -1,0 +1,12 @@
+-
+  description: Enumerable#uniq
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.uniq
+-
+  description: Enumerable#uniq { |item| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.uniq { |n| n }

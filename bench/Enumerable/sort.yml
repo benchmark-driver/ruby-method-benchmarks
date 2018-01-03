@@ -1,0 +1,12 @@
+-
+  description: Enumerable#sort
+  before: |-
+    enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum
+  benchmark: |-
+    enum.sort
+-
+  description: Enumerable#sort {|a, b| ...}
+  before: |-
+    enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum
+  benchmark: |-
+    enum.sort {|a, b| a <=> b }

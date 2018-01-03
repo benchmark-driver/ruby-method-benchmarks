@@ -1,0 +1,12 @@
+-
+  description: Enumerable#each_slice(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_slice(5)
+-
+  description: Enumerable#each_slice(n) { |obj| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_slice(5) { |obj| obj }

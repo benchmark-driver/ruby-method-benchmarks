@@ -1,0 +1,12 @@
+-
+  description: Enumerable#each_with_object(obj)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_with_object([])
+-
+  description: Enumerable#each_with_object(obj) { |(*args), memo_obj| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_with_object([]) { |i, memo| memo << i }

@@ -1,0 +1,36 @@
+-
+  description: Enumerable#find
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.find
+-
+  description: Enumerable#find { |obj| true }
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.find { |x| true }
+-
+  description: Enumerable#find { |obj| false }
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.find { |x| false }
+-
+  description: Enumerable#detect
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.detect
+-
+  description: Enumerable#detect { |obj| true }
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.detect { |x| true }
+-
+  description: Enumerable#detect { |obj| false }
+  before: |-
+    enum = [1, 2, 3, 4, 5].to_enum
+  benchmark: |-
+    enum.detect { |x| false }

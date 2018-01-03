@@ -1,0 +1,24 @@
+-
+  description: Enumerable#min
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.min
+-
+  description: Enumerable#min { |a, b| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.min { |a, b| a <=> b }
+-
+  description: Enumerable#min(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.min(5)
+-
+  description: Enumerable#min(n) { |a, b| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.min(5) { |a, b| a <=> b }

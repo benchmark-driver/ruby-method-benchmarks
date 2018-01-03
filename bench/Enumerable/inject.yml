@@ -1,0 +1,48 @@
+-
+  description: Enumerable#inject(sym)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.inject(:+)
+-
+  description: Enumerable#inject(init, sym)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.inject(0, :+)
+-
+  description: Enumerable#inject { |result, item| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.inject { |sum, x| sum + x }
+-
+  description: Enumerable#inject(init) { |result, item| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.inject(0) { |sum, x| sum + x }
+-
+  description: Enumerable#reduce(sym)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reduce(:+)
+-
+  description: Enumerable#reduce(init, sym)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reduce(0, :+)
+-
+  description: Enumerable#reduce { |result, item| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reduce { |sum, x| sum + x }
+-
+  description: Enumerable#reduce(init) { |result, item| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.reduce(0) { |sum, x| sum + x }

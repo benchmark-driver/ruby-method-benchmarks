@@ -1,0 +1,12 @@
+-
+  description: Enumerable#cycle(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.cycle(2)
+-
+  description: Enumerable#cycle(n) { |obj| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.cycle(2) { |obj| }

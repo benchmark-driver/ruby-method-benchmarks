@@ -1,0 +1,31 @@
+-
+  description: Enumerable#any?(constant)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.any?(Integer)
+-
+  description: Enumerable#any?(pattern)
+  before: |-
+    enum = (['cat'] * 100).to_enum
+  benchmark: |-
+    enum.any?(/t/)
+-
+  description: Enumerable#any?(range)
+  before: |-
+    enum = (1..100).to_enum
+    range = 1..200
+  benchmark: |-
+    enum.any?(range)
+-
+  description: Enumerable#any? { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.any? { |obj| true }
+-
+  description: Enumerable#any? { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.any? { |obj| false }

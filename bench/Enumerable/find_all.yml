@@ -1,0 +1,36 @@
+-
+  description: Enumerable#find_all
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.find_all
+-
+  description: Enumerable#find_all { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.find_all { |x| true }
+-
+  description: Enumerable#find_all { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.find_all { |x| false }
+-
+  description: Enumerable#select
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.select
+-
+  description: Enumerable#select { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.select { |x| true }
+-
+  description: Enumerable#select { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.select { |x| false }

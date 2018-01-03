@@ -1,0 +1,12 @@
+-
+  description: Enumerable#first
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.first
+-
+  description: Enumerable#first(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.first(5)

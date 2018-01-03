@@ -1,0 +1,18 @@
+-
+  description: Enumerable#take_while
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.take_while
+-
+  description: Enumerable#take_while { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.take_while { |obj| true }
+-
+  description: Enumerable#take_while { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.take_while { |obj| false }

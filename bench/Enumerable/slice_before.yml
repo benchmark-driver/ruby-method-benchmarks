@@ -1,0 +1,30 @@
+-
+  description: Enumerable#slice_before(pattern)
+  before: |-
+    enum = enum = (['cat'] * 100).to_enum
+  benchmark: |-
+    enum.slice_before(/t/)
+-
+  description: Enumerable#slice_before(range)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.slice_before(1..10)
+-
+  description: Enumerable#slice_before(method)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.slice_before(&:even?)
+-
+  description: Enumerable#slice_before { |obj| true }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.slice_before { |obj| true }
+-
+  description: Enumerable#slice_before { |obj| false }
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.slice_before { |obj| false }

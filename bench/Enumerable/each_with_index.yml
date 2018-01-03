@@ -1,0 +1,12 @@
+-
+  description: Enumerable#each_with_index
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_with_index
+-
+  description: Enumerable#each_with_index { |obj, index| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.each_with_index { |obj, index| }

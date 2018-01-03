@@ -1,0 +1,6 @@
+-
+  description: Enumerable#take(n)
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.take(5)

@@ -1,0 +1,12 @@
+-
+  description: Enumerable#minmax_by
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.minmax_by
+-
+  description: Enumerable#minmax_by { |a, b| ...}
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.minmax_by { |a, b| a <=> b }

@@ -1,0 +1,12 @@
+-
+  description: Enumerable#group_by
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.group_by
+-
+  description: Enumerable#group_by
+  before: |-
+    enum = (1..100).to_enum
+  benchmark: |-
+    enum.group_by { |x| x % 3 }

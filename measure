@@ -1,0 +1,6 @@
+#!/bin/bash
+
+rake clean
+rake template=measure.erb 
+rake benchmarks
+rake csv

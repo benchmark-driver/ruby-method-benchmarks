@@ -1,5 +1,5 @@
 # coding: utf-8
-TEMPLATE_FILE = ENV['template'] || "benchmark-ips.erb"
+TEMPLATE_FILE = ENV['template'] || "dry-run.erb"
 RESULT_DIR = "result_ruby#{RUBY_VERSION}_r#{RUBY_REVISION}"
 RETRY_SAVE_PATH = "#{RESULT_DIR}/retry.json"
 RETRY_MAX = 5
@@ -59,22 +59,25 @@ task :benchmarks do
 
     cmd "ruby #{path}"
 
-    json_path = File.expand_path(File.join(result_dir, "#{File.basename(path, ".*")}.json"))
-    json = JSON.parse(File.read(json_path))
+    begin
+      json_path = File.expand_path(File.join(result_dir, "#{File.basename(path, ".*")}.json"))
+      json = JSON.parse(File.read(json_path))
 
-    do_retry = false
-    count = 0
-    json.each do |item|
-      value = item["central_tendency"]
-      error = item["error"]
-      if error/value * 100 >= RETRY_ERROR_THRESHOLD
-        do_retry = true
-        count = retry_count(path)
-        break
+      do_retry = false
+      count = 0
+      json.each do |item|
+        value = item["central_tendency"]
+        error = item["error"]
+        if error/value * 100 >= RETRY_ERROR_THRESHOLD
+          do_retry = true
+          count = retry_count(path)
+          break
+        end
       end
-    end
 
-    redo if do_retry && count < RETRY_MAX
+      redo if do_retry && count < RETRY_MAX
+    rescue
+    end
   end
 end
 

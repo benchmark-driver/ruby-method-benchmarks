@@ -1,0 +1,17 @@
+require 'benchmark/ips'
+
+Benchmark.ips do |_x|
+  _x.warmup = 0.2
+  _x.time   = 0.5
+<% benchmark_items.each do |item| %>
+  _x.report "<%= item['description'] %>" do |_loop|
+    <%= item['before'] %>
+    _count = 0
+    while _count < _loop
+      <%= item['benchmark'] %>
+
+      _count += 1
+    end
+  end
+<% end %>
+end

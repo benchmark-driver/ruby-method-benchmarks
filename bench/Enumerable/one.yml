@@ -1,23 +1,4 @@
 -
-  description: Enumerable#one?(constant)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.one?(Integer)
--
-  description: Enumerable#one?(pattern)
-  before: |-
-    enum = (['cat'] * 100).to_enum
-  benchmark: |-
-    enum.one?(/t/)
--
-  description: Enumerable#one?(range)
-  before: |-
-    enum = (1..100).to_enum
-    range = 1..200
-  benchmark: |-
-    enum.one?(range)
--
   description: Enumerable#one? { |obj| true }
   before: |-
     enum = (1..100).to_enum

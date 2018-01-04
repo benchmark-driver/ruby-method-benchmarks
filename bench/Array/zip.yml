@@ -7,10 +7,10 @@
   benchmark: |-
     ary.zip(a, b)
 -
-  description: Array#zip(*args) {|ary| ...}
+  description: Array#zip(*args) { |ary| ...}
   before: |-
     ary = [1, 2, 3]
     a = [4, 5, 6]
     b = [7, 8, 9]
   benchmark: |-
-    ary.zip(a, b) {|ary| ary}
+    ary.zip(a, b) { |ary| ary}

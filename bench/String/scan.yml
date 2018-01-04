@@ -3,6 +3,6 @@
   benchmark: |-
     "foobarbazfoobarbaz".scan(/ba./)
 -
-  description: String#scan(pattern)) {|s| ... }
+  description: String#scan(pattern)) { |s| ... }
   benchmark: |-
-    "foobarbazfoobarbaz".scan(/ba./) {|s| }
+    "foobarbazfoobarbaz".scan(/ba./) { |s| }

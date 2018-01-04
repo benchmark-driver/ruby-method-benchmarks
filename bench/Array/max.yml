@@ -11,14 +11,14 @@
   benchmark: |-
     ary.max(5)
 -
-  description: Array#max {|a, b| ...}
+  description: Array#max { |a, b| ...}
   before: |-
     ary = (1..20).to_a
   benchmark: |-
-    ary.max {|a, b| a <=> b }
+    ary.max { |a, b| a <=> b }
 -
-  description: Array#max(n) {|a, b| ...}
+  description: Array#max(n) { |a, b| ...}
   before: |-
     ary = (1..20).to_a
   benchmark: |-
-    ary.max(5) {|a, b| a <=> b }
+    ary.max(5) { |a, b| a <=> b }

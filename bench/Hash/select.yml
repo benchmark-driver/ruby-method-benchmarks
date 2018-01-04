@@ -5,19 +5,19 @@
   benchmark: |-
     hash.select
 -
-  description: Hash#select {|key, value| true}
+  description: Hash#select { |key, value| true}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.select {|key, value| true }
+    h.select { |key, value| true }
 -
-  description: Hash#select {|key, value| false}
+  description: Hash#select { |key, value| false}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.select {|key, value| false }
+    h.select { |key, value| false }
 -
   description: Hash#select!
   before: |-
@@ -25,17 +25,17 @@
   benchmark: |-
     hash.select!
 -
-  description: Hash#select! {|key, value| true}
+  description: Hash#select! { |key, value| true}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.select! {|key, value| true }
+    h.select! { |key, value| true }
 -
-  description: Hash#select! {|key, value| false}
+  description: Hash#select! { |key, value| false}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.select! {|key, value| false }
+    h.select! { |key, value| false }
 

@@ -5,10 +5,10 @@
   benchmark: |-
     ary.delete_if
 -
-  description: Array#delete_if {|x| true }
+  description: Array#delete_if { |x| true }
   benchmark: |-
-    [1, 2, 3, 4, 5].delete_if {|x| true }
+    [1, 2, 3, 4, 5].delete_if { |x| true }
 -
-  description: Array#delete_if {|x| false }
+  description: Array#delete_if { |x| false }
   benchmark: |-
-    [1, 2, 3, 4, 5].delete_if {|x| false }
+    [1, 2, 3, 4, 5].delete_if { |x| false }

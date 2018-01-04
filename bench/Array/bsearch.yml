@@ -1,6 +1,6 @@
 -
-  description: Array#bsearch {|x| block }
+  description: Array#bsearch { |obj| ...}
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-
-    ary.bsearch {|x| x > 3 }
+    ary.bsearch { |x| x > 3 }

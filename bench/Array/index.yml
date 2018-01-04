@@ -23,8 +23,8 @@
   benchmark: |-
     ary.index(9)
 -
-  description: Array#index {|item| ...}
+  description: Array#index { |item| ...}
   before: |-
     ary = ["a", "b", "c", "d", "e"]
   benchmark: |-
-    ary.index {|x| x == "d"}
+    ary.index { |x| x == "d"}

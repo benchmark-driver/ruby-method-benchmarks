@@ -23,8 +23,8 @@
   benchmark: |-
     ary.find_index(9)
 -
-  description: Array#find_index {|item| ...}
+  description: Array#find_index { |item| ...}
   before: |-
     ary = ["a", "b", "c", "d", "e"]
   benchmark: |-
-    ary.find_index {|x| x == "d"}
+    ary.find_index { |x| x == "d"}

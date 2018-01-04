@@ -11,9 +11,9 @@
   benchmark: |-
     "xxbbxbb".sub(/x+(b+)/, 'X<<\1>>')
 -
-  description: String#sub(pattern) {|matched| ...}
+  description: String#sub(pattern) { |matched| ...}
   benchmark: |-
-    "abcdefg".sub(/def/) {|m| }
+    "abcdefg".sub(/def/) { |m| }
 -
   description: String#sub!(pattern, replace)
   benchmark: |-
@@ -27,6 +27,6 @@
   benchmark: |-
     "xxbbxbb".sub!(/x+(b+)/, 'X<<\1>>')
 -
-  description: String#sub!(pattern) {|matched| ...}
+  description: String#sub!(pattern) { |matched| ...}
   benchmark: |-
-    "abcdefg".sub!(/def/) {|m| }
+    "abcdefg".sub!(/def/) { |m| }

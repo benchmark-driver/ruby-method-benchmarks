@@ -13,6 +13,6 @@
 -
   description: Hash#[key] with default proc
   before: |-
-    hash = Hash.new{ |h, k| h[k] = 42 }
+    hash = Hash.new { |h, k| h[k] = 42 }
   benchmark: |-
     hash["bar"]

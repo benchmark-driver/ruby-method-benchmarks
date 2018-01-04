@@ -3,6 +3,6 @@
   benchmark: |-
     "hello".codepoints
 -
-  description: String#codepoints {|code| ...}
+  description: String#codepoints { |code| ...}
   benchmark: |-
-    "hello".codepoints {|code| }
+    "hello".codepoints { |code| }

@@ -1,5 +1,5 @@
 -
-  description: Array#repeated_permutation(n) {|x| block }
+  description: Array#repeated_permutation(n) { |obj| ...}
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-

@@ -5,17 +5,17 @@
   benchmark: |-
     ary.sort
 -
-  description: Array#sort {|a, b| ...}
+  description: Array#sort { |a, b| ...}
   before: |-
     ary = [1, 2, 3, 4, 2.5, 3.2, 4.6]
   benchmark: |-
-    ary.sort {|a, b| a <=> b }
+    ary.sort { |a, b| a <=> b }
 -
   description: Array#sort!
   benchmark: |-
     [1, 2, 3, 4, 2.5, 3.2, 4.6].sort!
 -
-  description: Array#sort! {|a, b| ...}
+  description: Array#sort! { |a, b| ...}
   benchmark: |-
-    [1, 2, 3, 4, 2.5, 3.2, 4.6].sort! {|a, b| a <=> b }
+    [1, 2, 3, 4, 2.5, 3.2, 4.6].sort! { |a, b| a <=> b }
 

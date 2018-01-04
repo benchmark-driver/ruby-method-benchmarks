@@ -5,17 +5,17 @@
   benchmark: |-
     ary.select
 -
-  description: Array#select {|x| true }
+  description: Array#select { |x| true }
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-
-    ary.select {|x| true }
+    ary.select { |x| true }
 -
-  description: Array#select {|x| false }
+  description: Array#select { |x| false }
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-
-    ary.select {|x| false }
+    ary.select { |x| false }
 -
   description: Array#select!
   before: |-
@@ -23,10 +23,10 @@
   benchmark: |-
     ary.select!
 -
-  description: Array#select! {|x| true }
+  description: Array#select! { |x| true }
   benchmark: |-
-    [1, 2, 3, 4, 5].select! {|x| true }
+    [1, 2, 3, 4, 5].select! { |x| true }
 -
-  description: Array#select! {|x| false }
+  description: Array#select! { |x| false }
   benchmark: |-
-    [1, 2, 3, 4, 5].select! {|x| false }
+    [1, 2, 3, 4, 5].select! { |x| false }

@@ -1,13 +1,13 @@
 -
   description: Hash#default
   before: |-
-    hash = Hash.new {|h,k| h[k] = k.to_i*10}
+    hash = Hash.new { |h,k| h[k] = k.to_i*10}
   benchmark: |-
     hash.default
 -
   description: Hash#default(key)
   before: |-
-    hash = Hash.new {|h,k| h[k] = k.to_i*10}
+    hash = Hash.new { |h,k| h[k] = k.to_i*10}
   benchmark: |-
     hash.default(42)
 -

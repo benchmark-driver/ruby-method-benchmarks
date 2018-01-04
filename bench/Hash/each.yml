@@ -5,17 +5,17 @@
   benchmark: |-
     hash.each
 -
-  description: Hash#each {|array| ...}
+  description: Hash#each { |array| ...}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
-    hash.each {|array| }
+    hash.each { |array| }
 -
-  description: Hash#each {|key, value| ...}
+  description: Hash#each { |key, value| ...}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
-    hash.each {|key, value| }
+    hash.each { |key, value| }
 -
   description: Hash#each_pair
   before: |-
@@ -23,14 +23,14 @@
   benchmark: |-
     hash.each_pair
 -
-  description: Hash#each_pair {|array| ...}
+  description: Hash#each_pair { |array| ...}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
-    hash.each_pair {|array| }
+    hash.each_pair { |array| }
 -
-  description: Hash#each_pair {|key, value| ...}
+  description: Hash#each_pair { |key, value| ...}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
-    hash.each_pair {|key, value| }
+    hash.each_pair { |key, value| }

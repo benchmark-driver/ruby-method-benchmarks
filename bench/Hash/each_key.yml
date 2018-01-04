@@ -5,8 +5,8 @@
   benchmark: |-
     hash.each_key
 -
-  description: Hash#each_key {|key| ...}
+  description: Hash#each_key { |key| ...}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
-    hash.each_key {|value| }
+    hash.each_key { |value| }

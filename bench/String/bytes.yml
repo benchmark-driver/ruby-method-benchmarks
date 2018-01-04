@@ -3,6 +3,6 @@
   benchmark: |-
     "hello".bytes
 -
-  description: String#bytes {|byte| ...}
+  description: String#bytes { |byte| ...}
   benchmark: |-
-    "hello".bytes {|byte| }
+    "hello".bytes { |byte| }

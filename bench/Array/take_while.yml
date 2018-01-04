@@ -1,6 +1,6 @@
 -
-  description: Array#take_while {|x| block }
+  description: Array#take_while { |obj| ...}
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-
-    ary.take_while {|x| x < 3 }
+    ary.take_while { |x| x < 3 }

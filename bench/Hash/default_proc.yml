@@ -1,13 +1,13 @@
 -
   description: Hash#default_proc
   before: |-
-    hash = Hash.new {|h,k| h[k] = k.to_i*10}
+    hash = Hash.new { |h,k| h[k] = k.to_i*10}
   benchmark: |-
     hash.default_proc
 -
   description: Hash#default_proc=(proc)
   before: |-
-    hash = Hash.new {|h,k| h[k] = k.to_i*10}
-    prc = proc {|h,k| h[k] = k.to_i*20}
+    hash = Hash.new { |h,k| h[k] = k.to_i*10}
+    prc = proc { |h,k| h[k] = k.to_i*20}
   benchmark: |-
     hash.default_proc = prc

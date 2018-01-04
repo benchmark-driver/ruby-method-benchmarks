@@ -17,9 +17,9 @@
   benchmark: |-
     "abcabc".gsub(/[bc]/, hash)
 -
-  description: String#gsub(pattern) {|matched| ...}
+  description: String#gsub(pattern) { |matched| ...}
   benchmark: |-
-    "abcdefg".gsub(/def/) {|m| }
+    "abcdefg".gsub(/def/) { |m| }
 -
   description: String#gsub!(pattern, replace)
   benchmark: |-
@@ -39,6 +39,6 @@
   benchmark: |-
     "abcabc".gsub!(/[bc]/, hash)
 -
-  description: String#gsub!(pattern) {|matched| ...}
+  description: String#gsub!(pattern) { |matched| ...}
   benchmark: |-
-    "abcdefg".gsub!(/def/) {|m| }
+    "abcdefg".gsub!(/def/) { |m| }

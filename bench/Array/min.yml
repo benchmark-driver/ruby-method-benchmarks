@@ -11,14 +11,14 @@
   benchmark: |-
     ary.min(5)
 -
-  description: Array#min {|a, b| ...}
+  description: Array#min { |a, b| ...}
   before: |-
     ary = (1..20).to_a
   benchmark: |-
-    ary.min {|a, b| a <=> b }
+    ary.min { |a, b| a <=> b }
 -
-  description: Array#min(n) {|a, b| ...}
+  description: Array#min(n) { |a, b| ...}
   before: |-
     ary = (1..20).to_a
   benchmark: |-
-    ary.min(5) {|a, b| a <=> b }
+    ary.min(5) { |a, b| a <=> b }

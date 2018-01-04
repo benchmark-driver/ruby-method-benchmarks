@@ -5,8 +5,8 @@
   benchmark: |-
     ary.each_index
 -
-  description: Array#each_index {|index| ...}
+  description: Array#each_index { |index| ...}
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-
-    ary.each_index {|index| }
+    ary.each_index { |index| }

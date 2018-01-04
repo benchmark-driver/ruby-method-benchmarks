@@ -3,7 +3,7 @@
   benchmark: |-
     [1, 2, 3, 4, 2.5, 3.2, 4.6].sort_by!
 -
-  description: Array#sort_by! {|a, b| ...}
+  description: Array#sort_by! { |a, b| ...}
   benchmark: |-
-    [1, 2, 3, 4, 2.5, 3.2, 4.6].sort_by! {|a, b| a <=> b }
+    [1, 2, 3, 4, 2.5, 3.2, 4.6].sort_by! { |a, b| a <=> b }
 

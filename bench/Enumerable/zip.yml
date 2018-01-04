@@ -7,10 +7,10 @@
   benchmark: |-
     enum.zip(a, b)
 -
-  description: Enumerable#zip(*args) {|ary| ...}
+  description: Enumerable#zip(*args) { |ary| ...}
   before: |-
     enum = [1, 2, 3].to_enum
     a = [4, 5, 6]
     b = [7, 8, 9]
   benchmark: |-
-    enum.zip(a, b) {|ary| ary}
+    enum.zip(a, b) { |ary| ary}

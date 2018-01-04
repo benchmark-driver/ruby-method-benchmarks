@@ -7,6 +7,6 @@
   benchmark: |-
     Hash.new(42)
 -
-  description: Hash.new {|hash, key| ... }
+  description: Hash.new { |hash, key| ... }
   benchmark: |-
-    Hash.new {|h, k| h[k] = 42}
+    Hash.new { |h, k| h[k] = 42}

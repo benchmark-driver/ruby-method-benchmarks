@@ -12,15 +12,15 @@
   benchmark: |-
     "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true)
 -
-  description: String#lines {|line| ... }
+  description: String#lines { |line| ...}
   benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines {|line| }
+    "aa\nbb\n\n\ncc\ndd\nee".lines { |line| }
 -
-  description: String#lines('') {|line| ... }
+  description: String#lines('') { |line| ...}
   benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines('') {|line| }
+    "aa\nbb\n\n\ncc\ndd\nee".lines('') { |line| }
 -
   description: |-
-    String#lines(chomp: true) {|line| ... }
+    String#lines(chomp: true) { |line| ...}
   benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) {|line| }
+    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) { |line| }

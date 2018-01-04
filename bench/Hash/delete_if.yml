@@ -5,16 +5,16 @@
   benchmark: |-
     hash.delete_if
 -
-  description: Hash#delete_if {|key, value| true}
+  description: Hash#delete_if { |key, value| true}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.delete_if {|key, value| true }
+    h.delete_if { |key, value| true }
 -
-  description: Hash#delete_if {|key, value| false}
+  description: Hash#delete_if { |key, value| false}
   before: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
   benchmark: |-
     h = hash.dup
-    h.delete_if {|key, value| false }
+    h.delete_if { |key, value| false }

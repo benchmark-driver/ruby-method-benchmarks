@@ -1,5 +1,5 @@
 -
-  description: Array#permutation {|x| block }
+  description: Array#permutation { |obj| ...}
   before: |-
     ary = [1, 2, 3, 4, 5]
   benchmark: |-

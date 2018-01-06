@@ -1,4 +1,4 @@
 -
   description: String#replace(other)
   benchmark: |-
-    "hello".rindex('world')
+    "hello".replace('world')

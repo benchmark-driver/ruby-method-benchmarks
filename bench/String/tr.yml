@@ -1,12 +1,8 @@
 -
-  description: String#chr ASCII
-  before: |-
-    string = "hello"
+  description: String#tr(pattern, replace)
   benchmark: |-
-    string.chr
+    "hello^world".tr("\\^aeiou", "*")
 -
-  description: String#chr UTF8
-  before: |-
-    string = "あいうえお"
+  description: String#tr!(pattern, replace)
   benchmark: |-
-    string.chr
+    "hello^world".tr!("\\^aeiou", "*")

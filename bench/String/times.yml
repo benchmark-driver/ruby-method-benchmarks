@@ -1,4 +1,4 @@
 -
-  description: String#+(times)
+  description: String#*(times)
   benchmark: |-
     "abc" * 5

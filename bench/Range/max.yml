@@ -1,0 +1,24 @@
+-
+  description: Range#max
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.max
+-
+  description: Range#max(n)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.max(10)
+-
+  description: Range#max { |a, b| ...}
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.max { |a, b| a <=> b }
+-
+  description: Range#max(n) { |a, b| ...}
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.max(10) { |a, b| a <=> b }

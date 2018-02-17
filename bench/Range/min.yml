@@ -1,0 +1,24 @@
+-
+  description: Range#min
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.min
+-
+  description: Range#min(n)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.min(10)
+-
+  description: Range#min { |a, b| ...}
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.min { |a, b| a <=> b }
+-
+  description: Range#min(n) { |a, b| ...}
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.min(10) { |a, b| a <=> b }

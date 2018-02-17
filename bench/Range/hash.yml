@@ -1,0 +1,6 @@
+-
+  description: Range#hash
+  before: |-
+    range = 0..10
+  benchmark: |-
+    range.hash

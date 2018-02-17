@@ -1,0 +1,24 @@
+-
+  description: Range#include?(obj)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.include?(10)
+-
+  description: Range#include?(obj) (not included)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.include?(200)
+-
+  description: Range#member?(obj)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.member?(10)
+-
+  description: Range#member?(obj) (not included)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.member?(200)

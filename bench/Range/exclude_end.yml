@@ -1,0 +1,12 @@
+-
+  description: Range#exclude_end
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.exclude_end?
+-
+  description: Range#exclude_end (Exclude)
+  before: |-
+    range = 0...100
+  benchmark: |-
+    range.exclude_end?

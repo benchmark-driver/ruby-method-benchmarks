@@ -1,0 +1,6 @@
+-
+  description: Range#to_s
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.to_s

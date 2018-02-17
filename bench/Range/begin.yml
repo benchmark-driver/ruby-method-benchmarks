@@ -1,0 +1,6 @@
+-
+  description: Range#begin
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.begin

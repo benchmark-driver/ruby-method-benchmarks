@@ -1,0 +1,14 @@
+-
+  description: Range#eql?(other) true
+  before: |-
+    range1 = 0..10
+    range2 = 0..10
+  benchmark: |-
+    range1.eql?(range2)
+-
+  description: Range#eql?(other) false
+  before: |-
+    range1 = 0..10
+    range2 = 0...10
+  benchmark: |-
+    range1.eql?(range2)

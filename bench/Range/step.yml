@@ -1,0 +1,37 @@
+-
+  description: Range#step
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.step
+-
+  description: Range#step { |x| ...} (Fixnum range)
+  before: |-
+    range = 0..676
+  benchmark: |-
+    range.step { |x| }
+-
+  description: Range#step { |x| ...} (Float range)
+  before: |-
+    range = 0.0..676.0
+  benchmark: |-
+    range.step { |x| }
+-
+  description: Range#step { |x| ...} (Numeric range)
+  before: |-
+    bignum = 2**100
+    range = bignum..(bignum+676)
+  benchmark: |-
+    range.step { |x| }
+-
+  description: Range#step { |x| ...} (Symbol range)
+  before: |-
+    range = :aa..:zz
+  benchmark: |-
+    range.step { |x| }
+-
+  description: Range#step { |x| ...} (String range)
+  before: |-
+    range = "aa".."zz"
+  benchmark: |-
+    range.step { |x| }

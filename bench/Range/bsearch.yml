@@ -1,0 +1,30 @@
+-
+  description: Range#bsearch
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.bsearch
+-
+  description: Range#bsearch { |x| true }
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.bsearch { |x| true }
+-
+  description: Range#bsearch { |x| false }
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.bsearch { |x| false }
+-
+  description: Range#bsearch { |x| 0 }
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.bsearch { |x| 0 }
+-
+  description: Range#bsearch { |x| nil }
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.bsearch { |x| nil }

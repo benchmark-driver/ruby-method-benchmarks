@@ -1,0 +1,12 @@
+-
+  description: Range#first
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.first
+-
+  description: Range#first(n)
+  before: |-
+    range = 0..100
+  benchmark: |-
+    range.first(10)

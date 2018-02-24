@@ -6,3 +6,9 @@ The benchmarks for Ruby methods.
 $ rake
 $ rake benchmarks
 ```
+
+or
+
+```console
+$ ./measure
+```

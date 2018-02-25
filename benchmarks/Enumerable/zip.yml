@@ -1,16 +1,14 @@
--
-  description: Enumerable#zip(*args)
-  before: |-
+---
+benchmark:
+- name: Enumerable#zip(*args)
+  script: enum.zip(a, b)
+  prelude: |-
     enum = [1, 2, 3].to_enum
     a = [4, 5, 6]
     b = [7, 8, 9]
-  benchmark: |-
-    enum.zip(a, b)
--
-  description: Enumerable#zip(*args) { |ary| ...}
-  before: |-
+- name: Enumerable#zip(*args) { |ary| ...}
+  script: enum.zip(a, b) { |ary| ary}
+  prelude: |-
     enum = [1, 2, 3].to_enum
     a = [4, 5, 6]
     b = [7, 8, 9]
-  benchmark: |-
-    enum.zip(a, b) { |ary| ary}

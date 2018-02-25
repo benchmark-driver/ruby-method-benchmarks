@@ -1,12 +1,8 @@
--
-  description: Hash#each_key
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each_key
--
-  description: Hash#each_key { |key| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each_key { |value| }
+---
+benchmark:
+- name: Hash#each_key
+  script: hash.each_key
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each_key { |key| ...}
+  script: hash.each_key { |value| }
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

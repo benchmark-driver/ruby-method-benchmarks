@@ -1,6 +1,5 @@
--
-  description: Enumerable#chunk { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.chunk { |obj| true }
+---
+benchmark:
+- name: Enumerable#chunk { |obj| ...}
+  script: enum.chunk { |obj| true }
+  prelude: enum = (1..100).to_enum

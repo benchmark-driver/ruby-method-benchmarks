@@ -1,4 +1,4 @@
--
-  description: Array#to_s
-  benchmark: |-
-    [1, 2, 3, 4, 5].to_s
+---
+benchmark:
+- name: Array#to_s
+  script: "[1, 2, 3, 4, 5].to_s"

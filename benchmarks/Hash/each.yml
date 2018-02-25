@@ -1,36 +1,20 @@
--
-  description: Hash#each
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each
--
-  description: Hash#each { |array| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each { |array| }
--
-  description: Hash#each { |key, value| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each { |key, value| }
--
-  description: Hash#each_pair
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each_pair
--
-  description: Hash#each_pair { |array| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each_pair { |array| }
--
-  description: Hash#each_pair { |key, value| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.each_pair { |key, value| }
+---
+benchmark:
+- name: Hash#each
+  script: hash.each
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each { |array| ...}
+  script: hash.each { |array| }
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each { |key, value| ...}
+  script: hash.each { |key, value| }
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each_pair
+  script: hash.each_pair
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each_pair { |array| ...}
+  script: hash.each_pair { |array| }
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#each_pair { |key, value| ...}
+  script: hash.each_pair { |key, value| }
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

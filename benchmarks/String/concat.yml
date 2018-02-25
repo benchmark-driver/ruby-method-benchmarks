@@ -1,24 +1,14 @@
--
-  description: String#concat(other)
-  benchmark: |-
-    "hello ".concat("world")
--
-  description: String#concat(obj1, obj2,...)
-  benchmark: |-
-    "hello ".concat(" ", "world", "!!!")
--
-  description: String#concat(integer)
-  benchmark: |-
-    "hello world".concat(33)
--
-  description: String#concat(integer1, integer2,...)
-  benchmark: |-
-    "hello world".concat(33, 33, 33)
--
-  description: String#<<(other)
-  benchmark: |-
-    "hello " << "world"
--
-  description: String#<<(integer)
-  benchmark: |-
-    "hello " << 33
+---
+benchmark:
+- name: String#concat(other)
+  script: '"hello ".concat("world")'
+- name: String#concat(obj1, obj2,...)
+  script: '"hello ".concat(" ", "world", "!!!")'
+- name: String#concat(integer)
+  script: '"hello world".concat(33)'
+- name: String#concat(integer1, integer2,...)
+  script: '"hello world".concat(33, 33, 33)'
+- name: String#<<(other)
+  script: '"hello " << "world"'
+- name: String#<<(integer)
+  script: '"hello " << 33'

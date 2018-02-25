@@ -1,8 +1,6 @@
--
-  description: String#include?(substr) ASCII
-  benchmark: |-
-    "hello world".include?("llo")
--
-  description: String#include?(substr) UTF8
-  benchmark: |-
-    "あいうえお".include?("うえ")
+---
+benchmark:
+- name: String#include?(substr) ASCII
+  script: '"hello world".include?("llo")'
+- name: String#include?(substr) UTF8
+  script: '"あいうえお".include?("うえ")'

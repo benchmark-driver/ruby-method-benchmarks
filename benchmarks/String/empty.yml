@@ -1,18 +1,11 @@
--
-  description: String#empty?
-  before: |-
-    str = ""
-  benchmark: |-
-    str.empty?
--
-  description: String#empty? with ASCII
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str.empty?
--
-  description: String#empty? with UTF8
-  before: |-
-    str = "あいうえお"
-  benchmark: |-
-    str.empty?
+---
+benchmark:
+- name: String#empty?
+  script: str.empty?
+  prelude: str = ""
+- name: String#empty? with ASCII
+  script: str.empty?
+  prelude: str = "Hello there"
+- name: String#empty? with UTF8
+  script: str.empty?
+  prelude: str = "あいうえお"

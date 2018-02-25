@@ -1,8 +1,6 @@
--
-  description: String#strip
-  benchmark: |-
-    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".strip
--
-  description: String#strip!
-  benchmark: |-
-    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".strip!
+---
+benchmark:
+- name: String#strip
+  script: '"  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".strip'
+- name: String#strip!
+  script: '"  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".strip!'

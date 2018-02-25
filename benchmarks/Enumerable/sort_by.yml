@@ -1,12 +1,8 @@
--
-  description: Enumerable#sort_by
-  before: |-
-    enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum
-  benchmark: |-
-    enum.sort_by
--
-  description: Enumerable#sort_by { |a, b| ...}
-  before: |-
-    enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum
-  benchmark: |-
-    enum.sort_by { |a, b| a <=> b }
+---
+benchmark:
+- name: Enumerable#sort_by
+  script: enum.sort_by
+  prelude: enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum
+- name: Enumerable#sort_by { |a, b| ...}
+  script: enum.sort_by { |a, b| a <=> b }
+  prelude: enum = [1, 2, 3, 4, 2.5, 3.2, 4.6].to_enum

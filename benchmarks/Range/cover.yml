@@ -1,12 +1,8 @@
--
-  description: Range#cover?(obj)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.cover?(10)
--
-  description: Range#cover?(obj) (not covered)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.cover?(101)
+---
+benchmark:
+- name: Range#cover?(obj)
+  script: range.cover?(10)
+  prelude: range = 0..100
+- name: Range#cover?(obj) (not covered)
+  script: range.cover?(101)
+  prelude: range = 0..100

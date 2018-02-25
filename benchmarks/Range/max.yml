@@ -1,24 +1,14 @@
--
-  description: Range#max
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.max
--
-  description: Range#max(n)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.max(10)
--
-  description: Range#max { |a, b| ...}
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.max { |a, b| a <=> b }
--
-  description: Range#max(n) { |a, b| ...}
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.max(10) { |a, b| a <=> b }
+---
+benchmark:
+- name: Range#max
+  script: range.max
+  prelude: range = 0..100
+- name: Range#max(n)
+  script: range.max(10)
+  prelude: range = 0..100
+- name: Range#max { |a, b| ...}
+  script: range.max { |a, b| a <=> b }
+  prelude: range = 0..100
+- name: Range#max(n) { |a, b| ...}
+  script: range.max(10) { |a, b| a <=> b }
+  prelude: range = 0..100

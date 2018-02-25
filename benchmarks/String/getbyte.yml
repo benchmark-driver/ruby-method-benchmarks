@@ -1,6 +1,5 @@
--
-  description: String#getbyte(index)
-  before: |-
-    string = "abcdef"
-  benchmark: |-
-    string.getbyte(2)
+---
+benchmark:
+- name: String#getbyte(index)
+  script: string.getbyte(2)
+  prelude: string = "abcdef"

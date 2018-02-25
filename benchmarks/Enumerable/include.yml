@@ -1,12 +1,8 @@
--
-  description: Enumerable#include?(obj)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.include?(200)
--
-  description: Enumerable#member?(obj)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.member?(200)
+---
+benchmark:
+- name: Enumerable#include?(obj)
+  script: enum.include?(200)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#member?(obj)
+  script: enum.member?(200)
+  prelude: enum = (1..100).to_enum

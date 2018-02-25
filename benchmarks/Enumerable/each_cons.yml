@@ -1,12 +1,8 @@
--
-  description: Enumerable#each_cons(n)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_cons(5)
--
-  description: Enumerable#each_cons(n) { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_cons(5) { |obj| obj }
+---
+benchmark:
+- name: Enumerable#each_cons(n)
+  script: enum.each_cons(5)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#each_cons(n) { |obj| ...}
+  script: enum.each_cons(5) { |obj| obj }
+  prelude: enum = (1..100).to_enum

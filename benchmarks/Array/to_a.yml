@@ -1,8 +1,6 @@
--
-  description: Array#to_a
-  benchmark: |-
-    [1, 2, 3, 4, 5].to_a
--
-  description: Array#to_ary
-  benchmark: |-
-    [1, 2, 3, 4, 5].to_ary
+---
+benchmark:
+- name: Array#to_a
+  script: "[1, 2, 3, 4, 5].to_a"
+- name: Array#to_ary
+  script: "[1, 2, 3, 4, 5].to_ary"

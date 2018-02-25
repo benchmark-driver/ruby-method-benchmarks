@@ -1,12 +1,8 @@
--
-  description: Enumerable#chunk_while { |obj| true }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.chunk_while { |obj| true }
--
-  description: Enumerable#chunk_while { |obj| false }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.chunk_while { |obj| false }
+---
+benchmark:
+- name: Enumerable#chunk_while { |obj| true }
+  script: enum.chunk_while { |obj| true }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#chunk_while { |obj| false }
+  script: enum.chunk_while { |obj| false }
+  prelude: enum = (1..100).to_enum

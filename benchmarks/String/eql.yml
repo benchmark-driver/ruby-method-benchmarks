@@ -1,4 +1,4 @@
--
-  description: String#eql?(other)
-  benchmark: |-
-    "abcdef".eql?("abcdefg")
+---
+benchmark:
+- name: String#eql?(other)
+  script: '"abcdef".eql?("abcdefg")'

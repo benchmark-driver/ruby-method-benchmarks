@@ -1,42 +1,30 @@
--
-  description: Hash#reject
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.reject
--
-  description: Hash#reject { |key, value| true}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#reject
+  script: hash.reject
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#reject { |key, value| true}
+  script: |-
     h = hash.dup
     h.reject { |key, value| true }
--
-  description: Hash#reject { |key, value| false}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#reject { |key, value| false}
+  script: |-
     h = hash.dup
     h.reject { |key, value| false }
--
-  description: Hash#reject!
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#reject!
+  script: |-
     h = hash.dup
     h.reject!
--
-  description: Hash#reject! { |key, value| true}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#reject! { |key, value| true}
+  script: |-
     h = hash.dup
     h.reject! { |key, value| true }
--
-  description: Hash#reject! { |key, value| false}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#reject! { |key, value| false}
+  script: |-
     h = hash.dup
     h.reject! { |key, value| false }
-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

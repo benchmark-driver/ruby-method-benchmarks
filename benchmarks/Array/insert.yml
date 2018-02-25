@@ -1,12 +1,8 @@
--
-  description: Array#insert(nth)
-  benchmark: |-
-    [1, 2, 3, 4, 5].insert(1)
--
-  description: Array#insert(nth, *val)
-  benchmark: |-
-    [1, 2, 3, 4, 5].insert(3, "a", "b", "c")
--
-  description: Array#insert(-1, *val)
-  benchmark: |-
-    [1, 2, 3, 4, 5].insert(-1, "a", "b", "c")
+---
+benchmark:
+- name: Array#insert(nth)
+  script: "[1, 2, 3, 4, 5].insert(1)"
+- name: Array#insert(nth, *val)
+  script: '[1, 2, 3, 4, 5].insert(3, "a", "b", "c")'
+- name: Array#insert(-1, *val)
+  script: '[1, 2, 3, 4, 5].insert(-1, "a", "b", "c")'

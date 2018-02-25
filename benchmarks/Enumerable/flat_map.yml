@@ -1,32 +1,26 @@
--
-  description: Enumerable#flat_map
-  before: |-
+---
+benchmark:
+- name: Enumerable#flat_map
+  script: enum.flat_map
+  prelude: |-
     ary = []
     50.times { |i| ary << [i] }
     enum = ary.to_enum
-  benchmark: |-
-    enum.flat_map
--
-  description: Enumerable#flat_map { |obj| ...}
-  before: |-
+- name: Enumerable#flat_map { |obj| ...}
+  script: enum.flat_map { |obj| obj }
+  prelude: |-
     ary = []
     50.times { |i| ary << [i] }
     enum = ary.to_enum
-  benchmark: |-
-    enum.flat_map { |obj| obj }
--
-  description: Enumerable#collect_concat
-  before: |-
+- name: Enumerable#collect_concat
+  script: enum.collect_concat
+  prelude: |-
     ary = []
     50.times { |i| ary << [i] }
     enum = ary.to_enum
-  benchmark: |-
-    enum.collect_concat
--
-  description: Enumerable#collect_concat { |obj| ...}
-  before: |-
+- name: Enumerable#collect_concat { |obj| ...}
+  script: enum.collect_concat { |obj| obj }
+  prelude: |-
     ary = []
     50.times { |i| ary << [i] }
     enum = ary.to_enum
-  benchmark: |-
-    enum.collect_concat { |obj| obj }

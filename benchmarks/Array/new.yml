@@ -1,12 +1,8 @@
--
-  description: Array.new
-  benchmark: |-
-    Array.new
--
-  description: Array.new(size)
-  benchmark: |-
-    Array.new(10)
--
-  description: Array.new(size, val)
-  benchmark: |-
-    Array.new(10, 42)
+---
+benchmark:
+- name: Array.new
+  script: Array.new
+- name: Array.new(size)
+  script: Array.new(10)
+- name: Array.new(size, val)
+  script: Array.new(10, 42)

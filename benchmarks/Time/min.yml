@@ -1,6 +1,5 @@
--
-  description: Time#min
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.min
+---
+benchmark:
+- name: Time#min
+  script: t.min
+  prelude: t = Time.now

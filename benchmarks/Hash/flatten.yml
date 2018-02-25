@@ -1,18 +1,11 @@
--
-  description: flatten
-  before: |-
-    hash = {1=> "one", 2 => [2,"two"], 3 => "three"}
-  benchmark: |-
-    hash.flatten
--
-  description: flatten(0)
-  before: |-
-    hash = {1=> "one", 2 => [2,"two"], 3 => "three"}
-  benchmark: |-
-    hash.flatten(0)
--
-  description: flatten(2)
-  before: |-
-    hash = {1=> "one", 2 => [2,"two"], 3 => "three"}
-  benchmark: |-
-    hash.flatten(2)
+---
+benchmark:
+- name: flatten
+  script: hash.flatten
+  prelude: hash = {1=> "one", 2 => [2,"two"], 3 => "three"}
+- name: flatten(0)
+  script: hash.flatten(0)
+  prelude: hash = {1=> "one", 2 => [2,"two"], 3 => "three"}
+- name: flatten(2)
+  script: hash.flatten(2)
+  prelude: hash = {1=> "one", 2 => [2,"two"], 3 => "three"}

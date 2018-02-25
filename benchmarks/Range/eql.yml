@@ -1,14 +1,12 @@
--
-  description: Range#eql?(other) true
-  before: |-
+---
+benchmark:
+- name: Range#eql?(other) true
+  script: range1.eql?(range2)
+  prelude: |-
     range1 = 0..10
     range2 = 0..10
-  benchmark: |-
-    range1.eql?(range2)
--
-  description: Range#eql?(other) false
-  before: |-
+- name: Range#eql?(other) false
+  script: range1.eql?(range2)
+  prelude: |-
     range1 = 0..10
     range2 = 0...10
-  benchmark: |-
-    range1.eql?(range2)

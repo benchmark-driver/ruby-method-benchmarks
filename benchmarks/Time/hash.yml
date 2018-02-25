@@ -1,7 +1,5 @@
--
-  description: Time#hash
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.hash
-
+---
+benchmark:
+- name: Time#hash
+  script: t.hash
+  prelude: t = Time.now

@@ -1,12 +1,8 @@
--
-  description: Enumerable#uniq
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.uniq
--
-  description: Enumerable#uniq { |item| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.uniq { |n| n }
+---
+benchmark:
+- name: Enumerable#uniq
+  script: enum.uniq
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#uniq { |item| ...}
+  script: enum.uniq { |n| n }
+  prelude: enum = (1..100).to_enum

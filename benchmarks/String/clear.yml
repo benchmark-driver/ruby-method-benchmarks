@@ -1,4 +1,4 @@
--
-  description: String#clear
-  benchmark: |-
-    "hello".clear
+---
+benchmark:
+- name: String#clear
+  script: '"hello".clear'

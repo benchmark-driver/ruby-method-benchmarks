@@ -1,22 +1,16 @@
--
-  description: String#==(other)
-  benchmark: |-
-    "abcdef" == "abcdefg"
--
-  description: String#==(object)
-  before: |-
+---
+benchmark:
+- name: String#==(other)
+  script: '"abcdef" == "abcdefg"'
+- name: String#==(object)
+  script: '"abcdef" == obj'
+  prelude: |-
     obj = Object.new
     def obj.to_str; "abcdefg"; end
-  benchmark: |-
-    "abcdef" == obj
--
-  description: String#===(other)
-  benchmark: |-
-    "abcdef" === "abcdefg"
--
-  description: String#===(object)
-  before: |-
+- name: String#===(other)
+  script: '"abcdef" === "abcdefg"'
+- name: String#===(object)
+  script: '"abcdef" === obj'
+  prelude: |-
     obj = Object.new
     def obj.to_str; "abcdefg"; end
-  benchmark: |-
-    "abcdef" === obj

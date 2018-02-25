@@ -1,14 +1,12 @@
--
-  description: Hash#compact
-  before: |-
-    hash = { a: 1, b: false, c: nil }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#compact
+  script: |-
     h = hash.dup
     h.compact
--
-  description: Hash#compact!
-  before: |-
-    hash = { a: 1, b: false, c: nil }
-  benchmark: |-
+  prelude: 'hash = { a: 1, b: false, c: nil }'
+- name: Hash#compact!
+  script: |-
     h = hash.dup
     h.compact!
+  prelude: 'hash = { a: 1, b: false, c: nil }'

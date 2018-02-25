@@ -1,22 +1,12 @@
--
-  description: Array#shuffle
-  benchmark: |-
-    [1, 2, 3, 4].shuffle
--
-  description: |-
-    Array#shuffle(random: rng)
-  before: |-
-    rng = Random.new(1)
-  benchmark: |-
-    [1, 2, 3, 4].shuffle(random: rng)
--
-  description: Array#shuffle!
-  benchmark: |-
-    [1, 2, 3, 4].shuffle!
--
-  description: |-
-    Array#shuffle!(random: rng)
-  before: |-
-    rng = Random.new(1)
-  benchmark: |-
-    [1, 2, 3, 4].shuffle!(random: rng)
+---
+benchmark:
+- name: Array#shuffle
+  script: "[1, 2, 3, 4].shuffle"
+- name: 'Array#shuffle(random: rng)'
+  script: "[1, 2, 3, 4].shuffle(random: rng)"
+  prelude: rng = Random.new(1)
+- name: Array#shuffle!
+  script: "[1, 2, 3, 4].shuffle!"
+- name: 'Array#shuffle!(random: rng)'
+  script: "[1, 2, 3, 4].shuffle!(random: rng)"
+  prelude: rng = Random.new(1)

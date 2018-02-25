@@ -1,6 +1,5 @@
--
-  description: Hash#empty?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.empty?
+---
+benchmark:
+- name: Hash#empty?
+  script: hash.empty?
+  prelude: hash = { "foo" => 100, "bar" => 300 }

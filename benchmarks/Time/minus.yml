@@ -1,14 +1,12 @@
--
-  description: Time#-(other_time)
-  before: |-
+---
+benchmark:
+- name: Time#-(other_time)
+  script: t - other
+  prelude: |-
     t = Time.now
     other = Time.at(0)
-  benchmark: |-
-    t - other
--
-  description: Time#-(numeric)
-  before: |-
+- name: Time#-(numeric)
+  script: t - other
+  prelude: |-
     t = Time.now
     other = 24 * 60 * 60
-  benchmark: |-
-    t - other

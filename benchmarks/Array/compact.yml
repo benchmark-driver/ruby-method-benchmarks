@@ -1,8 +1,6 @@
--
-  description: Array#compact
-  benchmark: |-
-    [1, nil, 2, nil, 3, nil].compact
--
-  description: Array#compact!
-  benchmark: |-
-    [1, nil, 2, nil, 3, nil].compact!
+---
+benchmark:
+- name: Array#compact
+  script: "[1, nil, 2, nil, 3, nil].compact"
+- name: Array#compact!
+  script: "[1, nil, 2, nil, 3, nil].compact!"

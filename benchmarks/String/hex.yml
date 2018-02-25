@@ -1,4 +1,4 @@
--
-  description: String#hex
-  benchmark: |-
-    "-1234".hex
+---
+benchmark:
+- name: String#hex
+  script: '"-1234".hex'

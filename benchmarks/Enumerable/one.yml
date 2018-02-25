@@ -1,12 +1,8 @@
--
-  description: Enumerable#one? { |obj| true }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.one? { |obj| true }
--
-  description: Enumerable#one? { |obj| false }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.one? { |obj| false }
+---
+benchmark:
+- name: Enumerable#one? { |obj| true }
+  script: enum.one? { |obj| true }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#one? { |obj| false }
+  script: enum.one? { |obj| false }
+  prelude: enum = (1..100).to_enum

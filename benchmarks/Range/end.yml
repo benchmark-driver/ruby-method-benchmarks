@@ -1,6 +1,5 @@
--
-  description: Range#end
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.end
+---
+benchmark:
+- name: Range#end
+  script: range.end
+  prelude: range = 0..100

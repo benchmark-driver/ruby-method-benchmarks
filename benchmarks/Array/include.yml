@@ -1,6 +1,5 @@
--
-  description: Array#include?(val)
-  before: |-
-    ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
-  benchmark: |-
-    ary.include?(5)
+---
+benchmark:
+- name: Array#include?(val)
+  script: ary.include?(5)
+  prelude: ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]

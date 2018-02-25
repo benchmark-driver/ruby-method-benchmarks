@@ -1,18 +1,11 @@
--
-  description: String#byteslice(nth)
-  before: |-
-    string = "hello"
-  benchmark: |-
-    string.byteslice(1)
--
-  description: String#byteslice(nth, len)
-  before: |-
-    string = "hello"
-  benchmark: |-
-    string.byteslice(1, 2)
--
-  description: String#byteslice(range)
-  before: |-
-    string = "hello"
-  benchmark: |-
-    string.byteslice(1..2)
+---
+benchmark:
+- name: String#byteslice(nth)
+  script: string.byteslice(1)
+  prelude: string = "hello"
+- name: String#byteslice(nth, len)
+  script: string.byteslice(1, 2)
+  prelude: string = "hello"
+- name: String#byteslice(range)
+  script: string.byteslice(1..2)
+  prelude: string = "hello"

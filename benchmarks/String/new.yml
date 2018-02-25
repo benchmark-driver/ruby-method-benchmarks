@@ -1,8 +1,6 @@
--
-  description: String#new
-  benchmark: |-
-    String.new
--
-  description: String#new(string)
-  benchmark: |-
-    String.new("hello")
+---
+benchmark:
+- name: String#new
+  script: String.new
+- name: String#new(string)
+  script: String.new("hello")

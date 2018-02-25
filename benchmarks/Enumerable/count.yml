@@ -1,24 +1,14 @@
--
-  description: Enumerable#count
-  before: |-
-    enum = [1, 2, 4, 2].to_enum
-  benchmark: |-
-    enum.count
--
-  description: Enumerable#count(item)
-  before: |-
-    enum = [1, 2, 4, 2].to_enum
-  benchmark: |-
-    enum.count(2)
--
-  description: Enumerable#count { |obj| true }
-  before: |-
-    enum = [1, 2, 4, 2].to_enum
-  benchmark: |-
-    enum.count { |obj| true }
--
-  description: Enumerable#count { |obj| false }
-  before: |-
-    enum = [1, 2, 4, 2].to_enum
-  benchmark: |-
-    enum.count { |obj| false }
+---
+benchmark:
+- name: Enumerable#count
+  script: enum.count
+  prelude: enum = [1, 2, 4, 2].to_enum
+- name: Enumerable#count(item)
+  script: enum.count(2)
+  prelude: enum = [1, 2, 4, 2].to_enum
+- name: Enumerable#count { |obj| true }
+  script: enum.count { |obj| true }
+  prelude: enum = [1, 2, 4, 2].to_enum
+- name: Enumerable#count { |obj| false }
+  script: enum.count { |obj| false }
+  prelude: enum = [1, 2, 4, 2].to_enum

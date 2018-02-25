@@ -1,6 +1,5 @@
--
-  description: Time#strftime
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.strftime("%Y%m%dT%H%M%S%z")
+---
+benchmark:
+- name: Time#strftime
+  script: t.strftime("%Y%m%dT%H%M%S%z")
+  prelude: t = Time.now

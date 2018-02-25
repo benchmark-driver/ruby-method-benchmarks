@@ -1,8 +1,6 @@
--
-  description: String#bytes
-  benchmark: |-
-    "hello".bytes
--
-  description: String#bytes { |byte| ...}
-  benchmark: |-
-    "hello".bytes { |byte| }
+---
+benchmark:
+- name: String#bytes
+  script: '"hello".bytes'
+- name: String#bytes { |byte| ...}
+  script: '"hello".bytes { |byte| }'

@@ -1,29 +1,16 @@
--
-  description: String#split
-  benchmark: |-
-    "   a \t  b \n  c".split
--
-  description: String#split(nil)
-  benchmark: |-
-    "   a \t  b \n  c".split(nil)
--
-  description: String#split(nil, limit)
-  benchmark: |-
-    "   a \t  b \n  c".split(nil, 2)
--
-  description: String#split(nil, -limit)
-  benchmark: |-
-    "   a \t  b \n  c".split(nil, -2)
--
-  description: String#split(regexp)
-  benchmark: |-
-    "   a \t  b \n  c".split(/\s+/)
--
-  description: String#split(regexp, limit)
-  benchmark: |-
-    "   a \t  b \n  c".split(/\s+/, 2)
--
-  description: String#split(regexp, -limit)
-  benchmark: |-
-    "   a \t  b \n  c".split(/\s+/, -2)
-
+---
+benchmark:
+- name: String#split
+  script: '"   a \t  b \n  c".split'
+- name: String#split(nil)
+  script: '"   a \t  b \n  c".split(nil)'
+- name: String#split(nil, limit)
+  script: '"   a \t  b \n  c".split(nil, 2)'
+- name: String#split(nil, -limit)
+  script: '"   a \t  b \n  c".split(nil, -2)'
+- name: String#split(regexp)
+  script: '"   a \t  b \n  c".split(/\s+/)'
+- name: String#split(regexp, limit)
+  script: '"   a \t  b \n  c".split(/\s+/, 2)'
+- name: String#split(regexp, -limit)
+  script: '"   a \t  b \n  c".split(/\s+/, -2)'

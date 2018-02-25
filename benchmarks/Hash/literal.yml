@@ -1,4 +1,4 @@
--
-  description: Hash literal
-  benchmark: |-
-    hash = {foo: 12, bar: 34, baz: 56}
+---
+benchmark:
+- name: Hash literal
+  script: 'hash = {foo: 12, bar: 34, baz: 56}'

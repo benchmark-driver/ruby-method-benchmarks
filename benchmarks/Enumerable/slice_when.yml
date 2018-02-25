@@ -1,12 +1,8 @@
--
-  description: Enumerable#slice_when { |obj| true }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.slice_when { |obj| true }
--
-  description: Enumerable#slice_when { |obj| false }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.slice_after { |obj| false }
+---
+benchmark:
+- name: Enumerable#slice_when { |obj| true }
+  script: enum.slice_when { |obj| true }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#slice_when { |obj| false }
+  script: enum.slice_after { |obj| false }
+  prelude: enum = (1..100).to_enum

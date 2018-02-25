@@ -1,4 +1,4 @@
--
-  description: String#oct
-  benchmark: |-
-    "-377".oct
+---
+benchmark:
+- name: String#oct
+  script: '"-377".oct'

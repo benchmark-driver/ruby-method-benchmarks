@@ -1,18 +1,11 @@
--
-  description: Hash#fetch(key)
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.fetch("foo")
--
-  description: Hash#fetch(key, default)
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.fetch("baz", 42)
--
-  description: Hash#fetch(key) { |key| ...}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.fetch("baz") { |key| 42 }
+---
+benchmark:
+- name: Hash#fetch(key)
+  script: hash.fetch("foo")
+  prelude: hash = { "foo" => 100, "bar" => 300 }
+- name: Hash#fetch(key, default)
+  script: hash.fetch("baz", 42)
+  prelude: hash = { "foo" => 100, "bar" => 300 }
+- name: Hash#fetch(key) { |key| ...}
+  script: hash.fetch("baz") { |key| 42 }
+  prelude: hash = { "foo" => 100, "bar" => 300 }

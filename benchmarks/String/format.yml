@@ -1,12 +1,8 @@
--
-  description: String#%(arg)
-  benchmark: |-
-    "%05d" % 123
--
-  description: String#%(arg) with Array
-  benchmark: |-
-    "%-5s: %08x" % [ "ID", self.object_id ]
--
-  description: String#%(arg) with Hash
-  benchmark: |-
-    "foo = %{foo}" % { :foo => 'bar' }
+---
+benchmark:
+- name: String#%(arg)
+  script: '"%05d" % 123'
+- name: String#%(arg) with Array
+  script: '"%-5s: %08x" % [ "ID", self.object_id ]'
+- name: String#%(arg) with Hash
+  script: '"foo = %{foo}" % { :foo => ''bar'' }'

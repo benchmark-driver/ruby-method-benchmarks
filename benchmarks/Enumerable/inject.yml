@@ -1,48 +1,26 @@
--
-  description: Enumerable#inject(sym)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.inject(:+)
--
-  description: Enumerable#inject(init, sym)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.inject(0, :+)
--
-  description: Enumerable#inject { |result, item| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.inject { |sum, x| sum + x }
--
-  description: Enumerable#inject(init) { |result, item| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.inject(0) { |sum, x| sum + x }
--
-  description: Enumerable#reduce(sym)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reduce(:+)
--
-  description: Enumerable#reduce(init, sym)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reduce(0, :+)
--
-  description: Enumerable#reduce { |result, item| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reduce { |sum, x| sum + x }
--
-  description: Enumerable#reduce(init) { |result, item| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reduce(0) { |sum, x| sum + x }
+---
+benchmark:
+- name: Enumerable#inject(sym)
+  script: enum.inject(:+)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#inject(init, sym)
+  script: enum.inject(0, :+)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#inject { |result, item| ...}
+  script: enum.inject { |sum, x| sum + x }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#inject(init) { |result, item| ...}
+  script: enum.inject(0) { |sum, x| sum + x }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#reduce(sym)
+  script: enum.reduce(:+)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#reduce(init, sym)
+  script: enum.reduce(0, :+)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#reduce { |result, item| ...}
+  script: enum.reduce { |sum, x| sum + x }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#reduce(init) { |result, item| ...}
+  script: enum.reduce(0) { |sum, x| sum + x }
+  prelude: enum = (1..100).to_enum

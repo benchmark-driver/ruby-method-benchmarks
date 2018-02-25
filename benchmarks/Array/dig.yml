@@ -1,6 +1,5 @@
--
-  description: Array#dig(idx, ...)
-  before: |-
-    ary = [[1, [2, 3]]]
-  benchmark: |-
-    ary.dig(0, 1, 1)
+---
+benchmark:
+- name: Array#dig(idx, ...)
+  script: ary.dig(0, 1, 1)
+  prelude: ary = [[1, [2, 3]]]

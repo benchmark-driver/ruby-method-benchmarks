@@ -1,8 +1,6 @@
--
-  description: String#chars
-  benchmark: |-
-    "hello".chars
--
-  description: String#chars { |char| ...}
-  benchmark: |-
-    "hello".chars { |char| }
+---
+benchmark:
+- name: String#chars
+  script: '"hello".chars'
+- name: String#chars { |char| ...}
+  script: '"hello".chars { |char| }'

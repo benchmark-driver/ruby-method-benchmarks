@@ -1,26 +1,14 @@
--
-  description: String#lines
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines
--
-  description: String#lines('')
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines('')
--
-  description: |-
-    String#lines(chomp: true)
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true)
--
-  description: String#lines { |line| ...}
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines { |line| }
--
-  description: String#lines('') { |line| ...}
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines('') { |line| }
--
-  description: |-
-    String#lines(chomp: true) { |line| ...}
-  benchmark: |-
-    "aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) { |line| }
+---
+benchmark:
+- name: String#lines
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines'
+- name: String#lines('')
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines('''')'
+- name: 'String#lines(chomp: true)'
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true)'
+- name: String#lines { |line| ...}
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines { |line| }'
+- name: String#lines('') { |line| ...}
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines('''') { |line| }'
+- name: 'String#lines(chomp: true) { |line| ...}'
+  script: '"aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) { |line| }'

@@ -1,16 +1,10 @@
--
-  description: Array#uniq
-  benchmark: |-
-    [1, 3, 2, "2", "3"].uniq
--
-  description: Array#uniq { |item| ...}
-  benchmark: |-
-    [1, 3, 2, "2", "3"].uniq { |n| n }
--
-  description: Array#uniq!
-  benchmark: |-
-    [1, 3, 2, "2", "3"].uniq!
--
-  description: Array#uniq! { |item| ...}
-  benchmark: |-
-    [1, 3, 2, "2", "3"].uniq! { |n| n }
+---
+benchmark:
+- name: Array#uniq
+  script: '[1, 3, 2, "2", "3"].uniq'
+- name: Array#uniq { |item| ...}
+  script: '[1, 3, 2, "2", "3"].uniq { |n| n }'
+- name: Array#uniq!
+  script: '[1, 3, 2, "2", "3"].uniq!'
+- name: Array#uniq! { |item| ...}
+  script: '[1, 3, 2, "2", "3"].uniq! { |n| n }'

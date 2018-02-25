@@ -1,24 +1,14 @@
--
-  description: Enumerable#grep_v(pattern)
-  before: |-
-    enum = ("a".."z").to_enum
-  benchmark: |-
-    enum.grep_v(/(f|g|h|i)/)
--
-  description: Enumerable#grep_v(range)
-  before: |-
-    enum = ("a".."z").to_enum
-  benchmark: |-
-    enum.grep_v("f".."i")
--
-  description: Enumerable#grep_v(pattern) { |obj| ...}
-  before: |-
-    enum = ("a".."z").to_enum
-  benchmark: |-
-    enum.grep_v(/(f|g|h|i)/) { |obj| obj }
--
-  description: Enumerable#grep_v(range) { |obj| ...}
-  before: |-
-    enum = ("a".."z").to_enum
-  benchmark: |-
-    enum.grep_v("f".."i") { |obj| obj }
+---
+benchmark:
+- name: Enumerable#grep_v(pattern)
+  script: enum.grep_v(/(f|g|h|i)/)
+  prelude: enum = ("a".."z").to_enum
+- name: Enumerable#grep_v(range)
+  script: enum.grep_v("f".."i")
+  prelude: enum = ("a".."z").to_enum
+- name: Enumerable#grep_v(pattern) { |obj| ...}
+  script: enum.grep_v(/(f|g|h|i)/) { |obj| obj }
+  prelude: enum = ("a".."z").to_enum
+- name: Enumerable#grep_v(range) { |obj| ...}
+  script: enum.grep_v("f".."i") { |obj| obj }
+  prelude: enum = ("a".."z").to_enum

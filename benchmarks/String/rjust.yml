@@ -1,8 +1,6 @@
--
-  description: String#rjust(width)
-  benchmark: |-
-    "foo".rjust(10)
--
-  description: String#rjust(width, padding)
-  benchmark: |-
-    "foo".rjust(10, "*")
+---
+benchmark:
+- name: String#rjust(width)
+  script: '"foo".rjust(10)'
+- name: String#rjust(width, padding)
+  script: '"foo".rjust(10, "*")'

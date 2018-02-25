@@ -1,6 +1,5 @@
--
-  description: String#setbyte(index, b)
-  before: |-
-    string = "abcdef"
-  benchmark: |-
-    string.setbyte(2, 60)
+---
+benchmark:
+- name: String#setbyte(index, b)
+  script: string.setbyte(2, 60)
+  prelude: string = "abcdef"

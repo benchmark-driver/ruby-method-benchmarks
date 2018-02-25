@@ -1,40 +1,22 @@
--
-  description: String#capitalize
-  benchmark: |-
-    "hello".capitalize
--
-  description: String#capitalize(:ascii)
-  benchmark: |-
-    "hello".capitalize(:ascii)
--
-  description: String#capitalize(:turkic)
-  benchmark: |-
-    "hello".capitalize(:turkic)
--
-  description: String#capitalize(:lithuanian)
-  benchmark: |-
-    "hello".capitalize(:lithuanian)
--
-  description: String#capitalize(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".capitalize(:turkic, :lithuanian)
--
-  description: String#capitalize!
-  benchmark: |-
-    "hello".capitalize!
--
-  description: String#capitalize!(:ascii)
-  benchmark: |-
-    "hello".capitalize!(:ascii)
--
-  description: String#capitalize!(:turkic)
-  benchmark: |-
-    "hello".capitalize!(:turkic)
--
-  description: String#capitalize!(:lithuanian)
-  benchmark: |-
-    "hello".capitalize!(:lithuanian)
--
-  description: String#capitalize!(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".capitalize!(:turkic, :lithuanian)
+---
+benchmark:
+- name: String#capitalize
+  script: '"hello".capitalize'
+- name: String#capitalize(:ascii)
+  script: '"hello".capitalize(:ascii)'
+- name: String#capitalize(:turkic)
+  script: '"hello".capitalize(:turkic)'
+- name: String#capitalize(:lithuanian)
+  script: '"hello".capitalize(:lithuanian)'
+- name: String#capitalize(:turkic, :lithuanian)
+  script: '"hello".capitalize(:turkic, :lithuanian)'
+- name: String#capitalize!
+  script: '"hello".capitalize!'
+- name: String#capitalize!(:ascii)
+  script: '"hello".capitalize!(:ascii)'
+- name: String#capitalize!(:turkic)
+  script: '"hello".capitalize!(:turkic)'
+- name: String#capitalize!(:lithuanian)
+  script: '"hello".capitalize!(:lithuanian)'
+- name: String#capitalize!(:turkic, :lithuanian)
+  script: '"hello".capitalize!(:turkic, :lithuanian)'

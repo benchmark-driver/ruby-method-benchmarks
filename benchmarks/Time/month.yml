@@ -1,6 +1,5 @@
--
-  description: Time#month
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.month
+---
+benchmark:
+- name: Time#month
+  script: t.month
+  prelude: t = Time.now

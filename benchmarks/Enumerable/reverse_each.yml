@@ -1,12 +1,8 @@
--
-  description: Enumerable#reverse_each
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reverse_each
--
-  description: Enumerable#reverse_each { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.reverse_each { |obj| }
+---
+benchmark:
+- name: Enumerable#reverse_each
+  script: enum.reverse_each
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#reverse_each { |obj| ...}
+  script: enum.reverse_each { |obj| }
+  prelude: enum = (1..100).to_enum

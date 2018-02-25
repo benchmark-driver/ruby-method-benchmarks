@@ -1,36 +1,20 @@
--
-  description: Enumerable#sum
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.sum
--
-  description: Enumerable#sum(init)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.sum(100)
--
-  description: Enumerable#sum with float
-  before: |-
-    enum = (1..100).to_a.map(&:to_f).to_enum
-  benchmark: |-
-    enum.sum
--
-  description: Enumerable#sum { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.sum { |x| x * 2 }
--
-  description: Enumerable#sum(init) { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.sum(100) { |x| x * 2 }
--
-  description: Enumerable#sum { |obj| ...} with float
-  before: |-
-    enum = (1..100).to_a.map(&:to_f).to_enum
-  benchmark: |-
-    enum.sum { |x| x * 2 }
+---
+benchmark:
+- name: Enumerable#sum
+  script: enum.sum
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#sum(init)
+  script: enum.sum(100)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#sum with float
+  script: enum.sum
+  prelude: enum = (1..100).to_a.map(&:to_f).to_enum
+- name: Enumerable#sum { |obj| ...}
+  script: enum.sum { |x| x * 2 }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#sum(init) { |obj| ...}
+  script: enum.sum(100) { |x| x * 2 }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#sum { |obj| ...} with float
+  script: enum.sum { |x| x * 2 }
+  prelude: enum = (1..100).to_a.map(&:to_f).to_enum

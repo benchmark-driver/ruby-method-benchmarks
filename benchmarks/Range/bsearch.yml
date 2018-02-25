@@ -1,30 +1,17 @@
--
-  description: Range#bsearch
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.bsearch
--
-  description: Range#bsearch { |x| true }
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.bsearch { |x| true }
--
-  description: Range#bsearch { |x| false }
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.bsearch { |x| false }
--
-  description: Range#bsearch { |x| 0 }
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.bsearch { |x| 0 }
--
-  description: Range#bsearch { |x| nil }
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.bsearch { |x| nil }
+---
+benchmark:
+- name: Range#bsearch
+  script: range.bsearch
+  prelude: range = 0..100
+- name: Range#bsearch { |x| true }
+  script: range.bsearch { |x| true }
+  prelude: range = 0..100
+- name: Range#bsearch { |x| false }
+  script: range.bsearch { |x| false }
+  prelude: range = 0..100
+- name: Range#bsearch { |x| 0 }
+  script: range.bsearch { |x| 0 }
+  prelude: range = 0..100
+- name: Range#bsearch { |x| nil }
+  script: range.bsearch { |x| nil }
+  prelude: range = 0..100

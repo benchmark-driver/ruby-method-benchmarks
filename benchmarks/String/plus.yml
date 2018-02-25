@@ -1,4 +1,4 @@
--
-  description: String#+(other)
-  benchmark: |-
-    "Hello " + "world!!"
+---
+benchmark:
+- name: String#+(other)
+  script: '"Hello " + "world!!"'

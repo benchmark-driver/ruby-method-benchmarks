@@ -1,13 +1,10 @@
--
-  description: Array#== self
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary == ary
--
-  description: Array#== other
-  before: |-
+---
+benchmark:
+- name: Array#== self
+  script: ary == ary
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#== other
+  script: ary1 == ary2
+  prelude: |-
     ary1 = [1, 2, 3, 4, 5]
     ary2 = [6, "b", 8, 9, "a"]
-  benchmark: |-
-    ary1 == ary2

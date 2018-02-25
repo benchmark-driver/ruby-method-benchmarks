@@ -1,18 +1,11 @@
--
-  description: Hash#default
-  before: |-
-    hash = Hash.new { |h,k| h[k] = k.to_i*10}
-  benchmark: |-
-    hash.default
--
-  description: Hash#default(key)
-  before: |-
-    hash = Hash.new { |h,k| h[k] = k.to_i*10}
-  benchmark: |-
-    hash.default(42)
--
-  description: Hash#default=(value)
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.default = 42
+---
+benchmark:
+- name: Hash#default
+  script: hash.default
+  prelude: hash = Hash.new { |h,k| h[k] = k.to_i*10}
+- name: Hash#default(key)
+  script: hash.default(42)
+  prelude: hash = Hash.new { |h,k| h[k] = k.to_i*10}
+- name: Hash#default=(value)
+  script: hash.default = 42
+  prelude: hash = { "foo" => 100, "bar" => 300 }

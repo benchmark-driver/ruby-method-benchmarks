@@ -1,13 +1,10 @@
--
-  description: Hash#values_at(keys)
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.values_at("foo", "bar")
--
-  description: Hash#values_at(Keys) with default
-  before: |-
+---
+benchmark:
+- name: Hash#values_at(keys)
+  script: hash.values_at("foo", "bar")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#values_at(Keys) with default
+  script: hash.values_at("hoge", "fuga")
+  prelude: |-
     hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
     hash.default = 999
-  benchmark: |-
-    hash.values_at("hoge", "fuga")

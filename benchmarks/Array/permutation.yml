@@ -1,6 +1,5 @@
--
-  description: Array#permutation { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.permutation { |x| x }
+---
+benchmark:
+- name: Array#permutation { |obj| ...}
+  script: ary.permutation { |x| x }
+  prelude: ary = [1, 2, 3, 4, 5]

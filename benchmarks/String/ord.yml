@@ -1,4 +1,4 @@
--
-  description: String#ord
-  benchmark: |-
-    "hello world".ord
+---
+benchmark:
+- name: String#ord
+  script: '"hello world".ord'

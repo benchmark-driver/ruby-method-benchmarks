@@ -1,12 +1,8 @@
--
-  description: Enumerable#minmax
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.minmax
--
-  description: Enumerable#minmax { |a, b| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.minmax { |a, b| a <=> b }
+---
+benchmark:
+- name: Enumerable#minmax
+  script: enum.minmax
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#minmax { |a, b| ...}
+  script: enum.minmax { |a, b| a <=> b }
+  prelude: enum = (1..100).to_enum

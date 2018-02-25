@@ -1,4 +1,4 @@
--
-  description: String#to_f
-  benchmark: |-
-    "123.45e1".to_f
+---
+benchmark:
+- name: String#to_f
+  script: '"123.45e1".to_f'

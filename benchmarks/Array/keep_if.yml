@@ -1,14 +1,9 @@
--
-  description: Array#keep_if
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.keep_if
--
-  description: Array#keep_if { |x| true }
-  benchmark: |-
-    [1, 2, 3, 4, 5].keep_if { |x| true }
--
-  description: Array#keep_if { |x| false }
-  benchmark: |-
-    [1, 2, 3, 4, 5].keep_if { |x| false }
+---
+benchmark:
+- name: Array#keep_if
+  script: ary.keep_if
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#keep_if { |x| true }
+  script: "[1, 2, 3, 4, 5].keep_if { |x| true }"
+- name: Array#keep_if { |x| false }
+  script: "[1, 2, 3, 4, 5].keep_if { |x| false }"

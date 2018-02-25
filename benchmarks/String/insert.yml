@@ -1,6 +1,5 @@
--
-  description: String#insert(pos, other)
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str.insert(3, "bar")
+---
+benchmark:
+- name: String#insert(pos, other)
+  script: str.insert(3, "bar")
+  prelude: str = "Hello there"

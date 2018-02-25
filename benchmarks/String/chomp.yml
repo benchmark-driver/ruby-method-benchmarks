@@ -1,24 +1,14 @@
--
-  description: String#chomp
-  benchmark: |-
-    "abcdefg\n".chomp
--
-  description: String#chomp strips \\r\\n
-  benchmark: |-
-    "abcdefg\r\n".chomp
--
-  description: String#chomp with paragraph mode
-  benchmark: |-
-    "abcdefg\n\n".chomp('')
--
-  description: String#chomp!
-  benchmark: |-
-    "abcdefg\n".chomp!
--
-  description: String#chomp! strips \\r\\n
-  benchmark: |-
-    "abcdefg\r\n".chomp!
--
-  description: String#chomp! with paragraph mode
-  benchmark: |-
-    "abcdefg\n\n".chomp!('')
+---
+benchmark:
+- name: String#chomp
+  script: '"abcdefg\n".chomp'
+- name: String#chomp strips \\r\\n
+  script: '"abcdefg\r\n".chomp'
+- name: String#chomp with paragraph mode
+  script: '"abcdefg\n\n".chomp('''')'
+- name: String#chomp!
+  script: '"abcdefg\n".chomp!'
+- name: String#chomp! strips \\r\\n
+  script: '"abcdefg\r\n".chomp!'
+- name: String#chomp! with paragraph mode
+  script: '"abcdefg\n\n".chomp!('''')'

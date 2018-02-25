@@ -1,28 +1,22 @@
--
-  description: Range#==(other) true
-  before: |-
+---
+benchmark:
+- name: Range#==(other) true
+  script: range1 == range2
+  prelude: |-
     range1 = 0..10
     range2 = 0..10
-  benchmark: |-
-    range1 == range2
--
-  description: Range#==(other) false
-  before: |-
+- name: Range#==(other) false
+  script: range1 == range2
+  prelude: |-
     range1 = 0..10
     range2 = 0...10
-  benchmark: |-
-    range1 == range2
--
-  description: Range#===(other) true
-  before: |-
+- name: Range#===(other) true
+  script: range1 === range2
+  prelude: |-
     range1 = 0..10
     range2 = 0..10
-  benchmark: |-
-    range1 === range2
--
-  description: Range#===(other) false
-  before: |-
+- name: Range#===(other) false
+  script: range1 === range2
+  prelude: |-
     range1 = 0..10
     range2 = 0...10
-  benchmark: |-
-    range1 === range2

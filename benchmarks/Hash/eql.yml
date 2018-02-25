@@ -1,7 +1,7 @@
--
-  description: Hash#eql?(other)
-  before: |-
+---
+benchmark:
+- name: Hash#eql?(other)
+  script: hash1.eql?(hash2)
+  prelude: |-
     hash1 = { "foo" => 100, "bar" => 300 }
     hash2 = { "foo" => 100, "baz" => 400 }
-  benchmark: |-
-    hash1.eql?(hash2)

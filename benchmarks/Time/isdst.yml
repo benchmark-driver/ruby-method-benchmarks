@@ -1,12 +1,8 @@
--
-  description: Time#isdst
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.isdst
--
-  description: Time#dst?
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.dst?
+---
+benchmark:
+- name: Time#isdst
+  script: t.isdst
+  prelude: t = Time.now
+- name: Time#dst?
+  script: t.dst?
+  prelude: t = Time.now

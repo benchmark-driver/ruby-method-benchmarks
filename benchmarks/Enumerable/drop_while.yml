@@ -1,18 +1,11 @@
--
-  description: Enumerable#drop_while
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.drop_while
--
-  description: Enumerable#drop_while { |obj| true }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.drop_while { |obj| true }
--
-  description: Enumerable#drop_while { |obj| false }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.drop_while { |obj| false }
+---
+benchmark:
+- name: Enumerable#drop_while
+  script: enum.drop_while
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#drop_while { |obj| true }
+  script: enum.drop_while { |obj| true }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#drop_while { |obj| false }
+  script: enum.drop_while { |obj| false }
+  prelude: enum = (1..100).to_enum

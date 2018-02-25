@@ -1,48 +1,26 @@
--
-  description: String#downcase
-  benchmark: |-
-    "hello".downcase
--
-  description: String#downcase(:ascii)
-  benchmark: |-
-    "hello".downcase(:ascii)
--
-  description: String#downcase(:turkic)
-  benchmark: |-
-    "hello".downcase(:turkic)
--
-  description: String#downcase(:lithuanian)
-  benchmark: |-
-    "hello".downcase(:lithuanian)
--
-  description: String#downcase(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".downcase(:turkic, :lithuanian)
--
-  description: String#downcase(:fold)
-  benchmark: |-
-    "hello".downcase(:fold)
--
-  description: String#downcase!
-  benchmark: |-
-    "hello".downcase!
--
-  description: String#downcase!(:ascii)
-  benchmark: |-
-    "hello".downcase!(:ascii)
--
-  description: String#downcase!(:turkic)
-  benchmark: |-
-    "hello".downcase!(:turkic)
--
-  description: String#downcase!(:lithuanian)
-  benchmark: |-
-    "hello".downcase!(:lithuanian)
--
-  description: String#downcase!(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".downcase!(:turkic, :lithuanian)
--
-  description: String#downcase!(:fold)
-  benchmark: |-
-    "hello".downcase!(:fold)
+---
+benchmark:
+- name: String#downcase
+  script: '"hello".downcase'
+- name: String#downcase(:ascii)
+  script: '"hello".downcase(:ascii)'
+- name: String#downcase(:turkic)
+  script: '"hello".downcase(:turkic)'
+- name: String#downcase(:lithuanian)
+  script: '"hello".downcase(:lithuanian)'
+- name: String#downcase(:turkic, :lithuanian)
+  script: '"hello".downcase(:turkic, :lithuanian)'
+- name: String#downcase(:fold)
+  script: '"hello".downcase(:fold)'
+- name: String#downcase!
+  script: '"hello".downcase!'
+- name: String#downcase!(:ascii)
+  script: '"hello".downcase!(:ascii)'
+- name: String#downcase!(:turkic)
+  script: '"hello".downcase!(:turkic)'
+- name: String#downcase!(:lithuanian)
+  script: '"hello".downcase!(:lithuanian)'
+- name: String#downcase!(:turkic, :lithuanian)
+  script: '"hello".downcase!(:turkic, :lithuanian)'
+- name: String#downcase!(:fold)
+  script: '"hello".downcase!(:fold)'

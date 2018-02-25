@@ -1,18 +1,11 @@
--
-  description: Array#count
-  before: |-
-    ary = [1, 2, 4, 2]
-  benchmark: |-
-    ary.count
--
-  description: Array#count(n)
-  before: |-
-    ary = [1, 2, 4, 2]
-  benchmark: |-
-    ary.count(2)
--
-  description: Array#count { |n| ...}
-  before: |-
-    ary = [1, 2, 4, 2]
-  benchmark: |-
-    ary.count { |n| n % 2 == 0 }
+---
+benchmark:
+- name: Array#count
+  script: ary.count
+  prelude: ary = [1, 2, 4, 2]
+- name: Array#count(n)
+  script: ary.count(2)
+  prelude: ary = [1, 2, 4, 2]
+- name: Array#count { |n| ...}
+  script: ary.count { |n| n % 2 == 0 }
+  prelude: ary = [1, 2, 4, 2]

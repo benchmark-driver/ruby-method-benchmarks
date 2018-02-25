@@ -1,6 +1,5 @@
--
-  description: Hash#assoc(key)
-  before: |-
-    hash = { "a" => 100, "b" => 200 }
-  benchmark: |-
-    hash.assoc("a")
+---
+benchmark:
+- name: Hash#assoc(key)
+  script: hash.assoc("a")
+  prelude: hash = { "a" => 100, "b" => 200 }

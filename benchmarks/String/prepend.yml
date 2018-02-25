@@ -1,8 +1,6 @@
--
-  description: String#prepend(other)
-  benchmark: |-
-    "!".prepend("hello")
--
-  description: String#prepend(obj1, obj2,...)
-  benchmark: |-
-    "!".prepend("hello", " ", "world")
+---
+benchmark:
+- name: String#prepend(other)
+  script: '"!".prepend("hello")'
+- name: String#prepend(obj1, obj2,...)
+  script: '"!".prepend("hello", " ", "world")'

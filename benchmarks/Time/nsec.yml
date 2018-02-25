@@ -1,12 +1,8 @@
--
-  description: Time#nsec
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.nsec
--
-  description: Time#tv_nsec
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.tv_nsec
+---
+benchmark:
+- name: Time#nsec
+  script: t.nsec
+  prelude: t = Time.now
+- name: Time#tv_nsec
+  script: t.tv_nsec
+  prelude: t = Time.now

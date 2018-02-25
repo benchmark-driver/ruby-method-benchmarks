@@ -1,40 +1,22 @@
--
-  description: String#swapcase
-  benchmark: |-
-    "hello".swapcase
--
-  description: String#swapcase(:ascii)
-  benchmark: |-
-    "hello".swapcase(:ascii)
--
-  description: String#swapcase(:turkic)
-  benchmark: |-
-    "hello".swapcase(:turkic)
--
-  description: String#swapcase(:lithuanian)
-  benchmark: |-
-    "hello".swapcase(:lithuanian)
--
-  description: String#swapcase(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".swapcase(:turkic, :lithuanian)
--
-  description: String#swapcase!
-  benchmark: |-
-    "hello".swapcase!
--
-  description: String#swapcase!(:ascii)
-  benchmark: |-
-    "hello".swapcase!(:ascii)
--
-  description: String#swapcase!(:turkic)
-  benchmark: |-
-    "hello".swapcase!(:turkic)
--
-  description: String#swapcase!(:lithuanian)
-  benchmark: |-
-    "hello".swapcase!(:lithuanian)
--
-  description: String#swapcase!(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".swapcase!(:turkic, :lithuanian)
+---
+benchmark:
+- name: String#swapcase
+  script: '"hello".swapcase'
+- name: String#swapcase(:ascii)
+  script: '"hello".swapcase(:ascii)'
+- name: String#swapcase(:turkic)
+  script: '"hello".swapcase(:turkic)'
+- name: String#swapcase(:lithuanian)
+  script: '"hello".swapcase(:lithuanian)'
+- name: String#swapcase(:turkic, :lithuanian)
+  script: '"hello".swapcase(:turkic, :lithuanian)'
+- name: String#swapcase!
+  script: '"hello".swapcase!'
+- name: String#swapcase!(:ascii)
+  script: '"hello".swapcase!(:ascii)'
+- name: String#swapcase!(:turkic)
+  script: '"hello".swapcase!(:turkic)'
+- name: String#swapcase!(:lithuanian)
+  script: '"hello".swapcase!(:lithuanian)'
+- name: String#swapcase!(:turkic, :lithuanian)
+  script: '"hello".swapcase!(:turkic, :lithuanian)'

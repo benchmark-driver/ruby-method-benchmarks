@@ -1,12 +1,8 @@
--
-  description: Enumerable#partition
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.partition
--
-  description: Enumerable#partition { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.partition { |x| x.even? }
+---
+benchmark:
+- name: Enumerable#partition
+  script: enum.partition
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#partition { |obj| ...}
+  script: enum.partition { |x| x.even? }
+  prelude: enum = (1..100).to_enum

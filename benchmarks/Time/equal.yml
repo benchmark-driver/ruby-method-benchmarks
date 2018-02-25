@@ -1,13 +1,10 @@
--
-  description: Time#==(self)
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t == t
--
-  description: Time#==(other)
-  before: |-
+---
+benchmark:
+- name: Time#==(self)
+  script: t == t
+  prelude: t = Time.now
+- name: Time#==(other)
+  script: t1 == t2
+  prelude: |-
     t1 = Time.now
     t2 = Time.now
-  benchmark: |-
-    t1 == t2

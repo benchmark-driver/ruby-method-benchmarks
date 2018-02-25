@@ -1,6 +1,5 @@
--
-  description: Array#hash
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.hash
+---
+benchmark:
+- name: Array#hash
+  script: ary.hash
+  prelude: ary = [1, 2, 3, 4, 5]

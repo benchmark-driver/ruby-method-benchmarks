@@ -1,16 +1,10 @@
--
-  description: Time.gm(year, month, day, hour, min, sec, usec_with_frac)
-  benchmark: |-
-    Time.gm(2000, 1, 1, 23, 59, 59, 5000)
--
-  description: Time.gm(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
-  benchmark: |-
-    Time.gm(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")
--
-  description: Time.utc(year, month, day, hour, min, sec, usec_with_frac)
-  benchmark: |-
-    Time.utc(2000, 1, 1, 23, 59, 59, 5000)
--
-  description: Time.utc(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
-  benchmark: |-
-    Time.utc(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")
+---
+benchmark:
+- name: Time.gm(year, month, day, hour, min, sec, usec_with_frac)
+  script: Time.gm(2000, 1, 1, 23, 59, 59, 5000)
+- name: Time.gm(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
+  script: Time.gm(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")
+- name: Time.utc(year, month, day, hour, min, sec, usec_with_frac)
+  script: Time.utc(2000, 1, 1, 23, 59, 59, 5000)
+- name: Time.utc(sec, min, hour, mday, mon, year, wday, yday, isdst, zone)
+  script: Time.utc(59, 59, 23, 1, 1, 2000, 6, 1, false, "JST")

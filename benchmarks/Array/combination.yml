@@ -1,12 +1,8 @@
--
-  description: Array#combination(n)
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.combination(1)
--
-  description: Array#combination(n) { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.combination(1) { |x| x }
+---
+benchmark:
+- name: Array#combination(n)
+  script: ary.combination(1)
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#combination(n) { |obj| ...}
+  script: ary.combination(1) { |x| x }
+  prelude: ary = [1, 2, 3, 4, 5]

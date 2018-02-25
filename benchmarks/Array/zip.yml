@@ -1,16 +1,14 @@
--
-  description: Array#zip(*args)
-  before: |-
+---
+benchmark:
+- name: Array#zip(*args)
+  script: ary.zip(a, b)
+  prelude: |-
     ary = [1, 2, 3]
     a = [4, 5, 6]
     b = [7, 8, 9]
-  benchmark: |-
-    ary.zip(a, b)
--
-  description: Array#zip(*args) { |ary| ...}
-  before: |-
+- name: Array#zip(*args) { |ary| ...}
+  script: ary.zip(a, b) { |ary| ary}
+  prelude: |-
     ary = [1, 2, 3]
     a = [4, 5, 6]
     b = [7, 8, 9]
-  benchmark: |-
-    ary.zip(a, b) { |ary| ary}

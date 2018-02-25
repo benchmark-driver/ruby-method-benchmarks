@@ -1,6 +1,5 @@
--
-  description: Time#friday?
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.friday?
+---
+benchmark:
+- name: Time#friday?
+  script: t.friday?
+  prelude: t = Time.now

@@ -1,8 +1,6 @@
--
-  description: String#casecmp(other)
-  benchmark: |-
-    "aBcDeF".casecmp("abcdefg")
--
-  description: String#casecmp?(other)
-  benchmark: |-
-    "aBcDeF".casecmp?("abcdefg")
+---
+benchmark:
+- name: String#casecmp(other)
+  script: '"aBcDeF".casecmp("abcdefg")'
+- name: String#casecmp?(other)
+  script: '"aBcDeF".casecmp?("abcdefg")'

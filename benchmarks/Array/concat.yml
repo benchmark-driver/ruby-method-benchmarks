@@ -1,6 +1,5 @@
--
-  description: Array#concat(other)
-  before: |-
-    other = ["a", "b"]
-  benchmark: |-
-    [1, 2, 3, 4, 5].concat(other)
+---
+benchmark:
+- name: Array#concat(other)
+  script: "[1, 2, 3, 4, 5].concat(other)"
+  prelude: other = ["a", "b"]

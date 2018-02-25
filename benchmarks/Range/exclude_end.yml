@@ -1,12 +1,8 @@
--
-  description: Range#exclude_end
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.exclude_end?
--
-  description: Range#exclude_end (Exclude)
-  before: |-
-    range = 0...100
-  benchmark: |-
-    range.exclude_end?
+---
+benchmark:
+- name: Range#exclude_end
+  script: range.exclude_end?
+  prelude: range = 0..100
+- name: Range#exclude_end (Exclude)
+  script: range.exclude_end?
+  prelude: range = 0...100

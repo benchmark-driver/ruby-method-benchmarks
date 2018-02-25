@@ -1,36 +1,20 @@
--
-  description: Enumerable#find
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find
--
-  description: Enumerable#find { |obj| true }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find { |x| true }
--
-  description: Enumerable#find { |obj| false }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find { |x| false }
--
-  description: Enumerable#detect
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.detect
--
-  description: Enumerable#detect { |obj| true }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.detect { |x| true }
--
-  description: Enumerable#detect { |obj| false }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.detect { |x| false }
+---
+benchmark:
+- name: Enumerable#find
+  script: enum.find
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#find { |obj| true }
+  script: enum.find { |x| true }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#find { |obj| false }
+  script: enum.find { |x| false }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#detect
+  script: enum.detect
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#detect { |obj| true }
+  script: enum.detect { |x| true }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#detect { |obj| false }
+  script: enum.detect { |x| false }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum

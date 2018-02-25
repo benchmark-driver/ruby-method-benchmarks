@@ -1,32 +1,18 @@
--
-  description: String#sub(pattern, replace)
-  benchmark: |-
-    "abcdefg".sub(/def/, '!!')
--
-  description: String#sub(pattern, replace) with string pattern
-  benchmark: |-
-    "abcdefg".sub('def', '!!')
--
-  description: String#sub(pattern, replace) replacing with global variable
-  benchmark: |-
-    "xxbbxbb".sub(/x+(b+)/, 'X<<\1>>')
--
-  description: String#sub(pattern) { |matched| ...}
-  benchmark: |-
-    "abcdefg".sub(/def/) { |m| }
--
-  description: String#sub!(pattern, replace)
-  benchmark: |-
-    "abcdefg".sub!(/def/, '!!')
--
-  description: String#sub!(pattern, replace) with string pattern
-  benchmark: |-
-    "abcdefg".sub!('def', '!!')
--
-  description: String#sub!(pattern, replace) replacing with global variable
-  benchmark: |-
-    "xxbbxbb".sub!(/x+(b+)/, 'X<<\1>>')
--
-  description: String#sub!(pattern) { |matched| ...}
-  benchmark: |-
-    "abcdefg".sub!(/def/) { |m| }
+---
+benchmark:
+- name: String#sub(pattern, replace)
+  script: '"abcdefg".sub(/def/, ''!!'')'
+- name: String#sub(pattern, replace) with string pattern
+  script: '"abcdefg".sub(''def'', ''!!'')'
+- name: String#sub(pattern, replace) replacing with global variable
+  script: '"xxbbxbb".sub(/x+(b+)/, ''X<<\1>>'')'
+- name: String#sub(pattern) { |matched| ...}
+  script: '"abcdefg".sub(/def/) { |m| }'
+- name: String#sub!(pattern, replace)
+  script: '"abcdefg".sub!(/def/, ''!!'')'
+- name: String#sub!(pattern, replace) with string pattern
+  script: '"abcdefg".sub!(''def'', ''!!'')'
+- name: String#sub!(pattern, replace) replacing with global variable
+  script: '"xxbbxbb".sub!(/x+(b+)/, ''X<<\1>>'')'
+- name: String#sub!(pattern) { |matched| ...}
+  script: '"abcdefg".sub!(/def/) { |m| }'

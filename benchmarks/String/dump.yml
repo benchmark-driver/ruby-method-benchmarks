@@ -1,4 +1,4 @@
--
-  description: String#dump
-  benchmark: |-
-    "abc\r\n\f\x00\b10\\\"".dump
+---
+benchmark:
+- name: String#dump
+  script: '"abc\r\n\f\x00\b10\\\"".dump'

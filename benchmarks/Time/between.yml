@@ -1,8 +1,8 @@
--
-  description: Time#between?(min, max)
-  before: |-
+---
+benchmark:
+- name: Time#between?(min, max)
+  script: t.between?(min, max)
+  prelude: |-
     min = Time.now
     t = Time.now
     max = Time.now
-  benchmark: |-
-    t.between?(min, max)

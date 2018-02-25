@@ -1,24 +1,14 @@
--
-  description: Array#sum with Fixnum
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.sum
--
-  description: Array#sum with Float
-  before: |-
-    ary = [1.0, 2.0, 3.0, 4.0, 5.0]
-  benchmark: |-
-    ary.sum
--
-  description: Array#sum with Rational
-  before: |-
-    ary = [1r, 2r, 3r, 4r, 5r]
-  benchmark: |-
-    ary.sum
--
-  description: Array#sum { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.sum { |x| x }
+---
+benchmark:
+- name: Array#sum with Fixnum
+  script: ary.sum
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#sum with Float
+  script: ary.sum
+  prelude: ary = [1.0, 2.0, 3.0, 4.0, 5.0]
+- name: Array#sum with Rational
+  script: ary.sum
+  prelude: ary = [1r, 2r, 3r, 4r, 5r]
+- name: Array#sum { |obj| ...}
+  script: ary.sum { |x| x }
+  prelude: ary = [1, 2, 3, 4, 5]

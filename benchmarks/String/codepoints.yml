@@ -1,8 +1,6 @@
--
-  description: String#codepoints
-  benchmark: |-
-    "hello".codepoints
--
-  description: String#codepoints { |code| ...}
-  benchmark: |-
-    "hello".codepoints { |code| }
+---
+benchmark:
+- name: String#codepoints
+  script: '"hello".codepoints'
+- name: String#codepoints { |code| ...}
+  script: '"hello".codepoints { |code| }'

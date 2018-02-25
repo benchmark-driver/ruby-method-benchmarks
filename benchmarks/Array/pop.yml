@@ -1,8 +1,6 @@
--
-  description: Array#pop
-  benchmark: |-
-    [1, 2, 3, 4, 5].pop
--
-  description: Array#pop(n)
-  benchmark: |-
-    [1, 2, 3, 4, 5].pop(3)
+---
+benchmark:
+- name: Array#pop
+  script: "[1, 2, 3, 4, 5].pop"
+- name: Array#pop(n)
+  script: "[1, 2, 3, 4, 5].pop(3)"

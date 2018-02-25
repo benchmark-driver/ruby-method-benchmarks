@@ -1,16 +1,10 @@
--
-  description: String#start_with?(string) ASCII
-  benchmark: |-
-    "hello world".start_with?("he")
--
-  description: String#start_with?(*string) ASCII
-  benchmark: |-
-    "hello world".start_with?("wo", "he")
--
-  description: String#start_with?(string) UTF8
-  benchmark: |-
-    "あいうえお".start_with?("あい")
--
-  description: String#start_with?(*string) UTF8
-  benchmark: |-
-    "あいうえお".start_with?("かき", "あい")
+---
+benchmark:
+- name: String#start_with?(string) ASCII
+  script: '"hello world".start_with?("he")'
+- name: String#start_with?(*string) ASCII
+  script: '"hello world".start_with?("wo", "he")'
+- name: String#start_with?(string) UTF8
+  script: '"あいうえお".start_with?("あい")'
+- name: String#start_with?(*string) UTF8
+  script: '"あいうえお".start_with?("かき", "あい")'

@@ -1,18 +1,11 @@
--
-  description: Time#gmtoff
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.gmtoff
--
-  description: Time#gmt_offset
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.gmt_offset
--
-  description: Time#utc_offset
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.utc_offset
+---
+benchmark:
+- name: Time#gmtoff
+  script: t.gmtoff
+  prelude: t = Time.now
+- name: Time#gmt_offset
+  script: t.gmt_offset
+  prelude: t = Time.now
+- name: Time#utc_offset
+  script: t.utc_offset
+  prelude: t = Time.now

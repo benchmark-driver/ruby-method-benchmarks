@@ -1,12 +1,8 @@
--
-  description: Enumerable#all? { |obj| true }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.all? { |obj| true }
--
-  description: Enumerable#all? { |obj| false }
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.all? { |obj| false }
+---
+benchmark:
+- name: Enumerable#all? { |obj| true }
+  script: enum.all? { |obj| true }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#all? { |obj| false }
+  script: enum.all? { |obj| false }
+  prelude: enum = (1..100).to_enum

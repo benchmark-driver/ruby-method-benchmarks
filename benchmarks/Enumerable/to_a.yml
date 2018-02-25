@@ -1,12 +1,8 @@
--
-  description: Enumerable#to_a
-  before: |-
-    enum = [1, 2, 3].to_enum
-  benchmark: |-
-    enum.to_a
--
-  description: Enumerable#entries
-  before: |-
-    enum = [1, 2, 3].to_enum
-  benchmark: |-
-    enum.entries
+---
+benchmark:
+- name: Enumerable#to_a
+  script: enum.to_a
+  prelude: enum = [1, 2, 3].to_enum
+- name: Enumerable#entries
+  script: enum.entries
+  prelude: enum = [1, 2, 3].to_enum

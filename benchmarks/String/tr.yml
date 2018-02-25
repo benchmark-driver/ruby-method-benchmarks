@@ -1,8 +1,6 @@
--
-  description: String#tr(pattern, replace)
-  benchmark: |-
-    "hello^world".tr("\\^aeiou", "*")
--
-  description: String#tr!(pattern, replace)
-  benchmark: |-
-    "hello^world".tr!("\\^aeiou", "*")
+---
+benchmark:
+- name: String#tr(pattern, replace)
+  script: '"hello^world".tr("\\^aeiou", "*")'
+- name: String#tr!(pattern, replace)
+  script: '"hello^world".tr!("\\^aeiou", "*")'

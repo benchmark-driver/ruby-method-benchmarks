@@ -1,12 +1,8 @@
--
-  description: Enumerable#each_with_index
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_with_index
--
-  description: Enumerable#each_with_index { |obj, index| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_with_index { |obj, index| }
+---
+benchmark:
+- name: Enumerable#each_with_index
+  script: enum.each_with_index
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#each_with_index { |obj, index| ...}
+  script: enum.each_with_index { |obj, index| }
+  prelude: enum = (1..100).to_enum

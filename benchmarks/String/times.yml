@@ -1,4 +1,4 @@
--
-  description: String#*(times)
-  benchmark: |-
-    "abc" * 5
+---
+benchmark:
+- name: String#*(times)
+  script: '"abc" * 5'

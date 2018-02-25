@@ -1,12 +1,8 @@
--
-  description: Enumerable#first
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.first
--
-  description: Enumerable#first(n)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.first(5)
+---
+benchmark:
+- name: Enumerable#first
+  script: enum.first
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#first(n)
+  script: enum.first(5)
+  prelude: enum = (1..100).to_enum

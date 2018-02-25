@@ -1,6 +1,5 @@
--
-  description: Time#hour
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.hour
+---
+benchmark:
+- name: Time#hour
+  script: t.hour
+  prelude: t = Time.now

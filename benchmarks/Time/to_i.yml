@@ -1,12 +1,8 @@
--
-  description: Time#to_i
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.to_i
--
-  description: Time#tv_sec
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.tv_sec
+---
+benchmark:
+- name: Time#to_i
+  script: t.to_i
+  prelude: t = Time.now
+- name: Time#tv_sec
+  script: t.tv_sec
+  prelude: t = Time.now

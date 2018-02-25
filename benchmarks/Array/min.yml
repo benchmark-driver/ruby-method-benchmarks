@@ -1,24 +1,14 @@
--
-  description: Array#min
-  before: |-
-    ary = (1..20).to_a
-  benchmark: |-
-    ary.max
--
-  description: Array#min(n)
-  before: |-
-    ary = (1..20).to_a
-  benchmark: |-
-    ary.min(5)
--
-  description: Array#min { |a, b| ...}
-  before: |-
-    ary = (1..20).to_a
-  benchmark: |-
-    ary.min { |a, b| a <=> b }
--
-  description: Array#min(n) { |a, b| ...}
-  before: |-
-    ary = (1..20).to_a
-  benchmark: |-
-    ary.min(5) { |a, b| a <=> b }
+---
+benchmark:
+- name: Array#min
+  script: ary.max
+  prelude: ary = (1..20).to_a
+- name: Array#min(n)
+  script: ary.min(5)
+  prelude: ary = (1..20).to_a
+- name: Array#min { |a, b| ...}
+  script: ary.min { |a, b| a <=> b }
+  prelude: ary = (1..20).to_a
+- name: Array#min(n) { |a, b| ...}
+  script: ary.min(5) { |a, b| a <=> b }
+  prelude: ary = (1..20).to_a

@@ -1,7 +1,7 @@
--
-  description: Time#+(other)
-  before: |-
+---
+benchmark:
+- name: Time#+(other)
+  script: t + other
+  prelude: |-
     t = Time.now
     other = 24 * 60 * 60
-  benchmark: |-
-    t + other

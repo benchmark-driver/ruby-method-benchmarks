@@ -1,30 +1,17 @@
--
-  description: String#=~(other)
-  before: |-
-    str = "string"
-  benchmark: |-
-    str =~ /str/
--
-  description: String#match(pattern)
-  before: |-
-    str = "hello"
-  benchmark: |-
-    str.match('(.)\1')
--
-  description: String#match(pattern, pos)
-  before: |-
-    str = "hello"
-  benchmark: |-
-    str.match('(.)\1', 1)
--
-  description: String#match?(pattern)
-  before: |-
-    str = "hello"
-  benchmark: |-
-    str.match?('(.)\1')
--
-  description: String#match?(pattern, pos)
-  before: |-
-    str = "hello"
-  benchmark: |-
-    str.match?('(.)\1', 1)
+---
+benchmark:
+- name: String#=~(other)
+  script: str =~ /str/
+  prelude: str = "string"
+- name: String#match(pattern)
+  script: str.match('(.)\1')
+  prelude: str = "hello"
+- name: String#match(pattern, pos)
+  script: str.match('(.)\1', 1)
+  prelude: str = "hello"
+- name: String#match?(pattern)
+  script: str.match?('(.)\1')
+  prelude: str = "hello"
+- name: String#match?(pattern, pos)
+  script: str.match?('(.)\1', 1)
+  prelude: str = "hello"

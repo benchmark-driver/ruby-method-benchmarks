@@ -1,6 +1,5 @@
--
-  description: Time#zone
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.zone
+---
+benchmark:
+- name: Time#zone
+  script: t.zone
+  prelude: t = Time.now

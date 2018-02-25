@@ -1,7 +1,7 @@
--
-  description: Hash#clear
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#clear
+  script: |-
     h = hash.dup
     h.clear
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

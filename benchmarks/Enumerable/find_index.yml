@@ -1,24 +1,14 @@
--
-  description: Enumerable#find_index
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find_index
--
-  description: Enumerable#find_index(value)
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find_index(5)
--
-  description: Enumerable#find_index { |obj| true }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find_index { |obj| true }
--
-  description: Enumerable#find_index { |obj| false }
-  before: |-
-    enum = [1, 2, 3, 4, 5].to_enum
-  benchmark: |-
-    enum.find_index { |obj| false }
+---
+benchmark:
+- name: Enumerable#find_index
+  script: enum.find_index
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#find_index(value)
+  script: enum.find_index(5)
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#find_index { |obj| true }
+  script: enum.find_index { |obj| true }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum
+- name: Enumerable#find_index { |obj| false }
+  script: enum.find_index { |obj| false }
+  prelude: enum = [1, 2, 3, 4, 5].to_enum

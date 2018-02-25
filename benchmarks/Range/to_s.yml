@@ -1,6 +1,5 @@
--
-  description: Range#to_s
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.to_s
+---
+benchmark:
+- name: Range#to_s
+  script: range.to_s
+  prelude: range = 0..100

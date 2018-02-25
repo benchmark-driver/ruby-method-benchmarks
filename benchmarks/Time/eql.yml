@@ -1,8 +1,7 @@
--
-  description: Time#eql?(other)
-  before: |-
+---
+benchmark:
+- name: Time#eql?(other)
+  script: t1.eql?(t2)
+  prelude: |-
     t1 = Time.now
     t2 = Time.now
-  benchmark: |-
-    t1.eql?(t2)
-

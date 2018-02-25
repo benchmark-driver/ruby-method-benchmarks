@@ -1,4 +1,4 @@
--
-  description: Array#to_h
-  benchmark: |-
-    [[:foo, :bar], [1, 2]].to_h
+---
+benchmark:
+- name: Array#to_h
+  script: "[[:foo, :bar], [1, 2]].to_h"

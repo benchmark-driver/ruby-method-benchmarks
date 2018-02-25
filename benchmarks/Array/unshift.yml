@@ -1,8 +1,6 @@
--
-  description: Array#unshift
-  benchmark: |-
-    [1, 2, 3, 4, 5].unshift
--
-  description: Array#unshift(obj)
-  benchmark: |-
-    [1, 2, 3, 4, 5].unshift(0)
+---
+benchmark:
+- name: Array#unshift
+  script: "[1, 2, 3, 4, 5].unshift"
+- name: Array#unshift(obj)
+  script: "[1, 2, 3, 4, 5].unshift(0)"

@@ -1,4 +1,4 @@
--
-  description: String#replace(other)
-  benchmark: |-
-    "hello".replace('world')
+---
+benchmark:
+- name: String#replace(other)
+  script: '"hello".replace(''world'')'

@@ -1,6 +1,5 @@
--
-  description: Enumerable#take(n)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.take(5)
+---
+benchmark:
+- name: Enumerable#take(n)
+  script: enum.take(5)
+  prelude: enum = (1..100).to_enum

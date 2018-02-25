@@ -1,32 +1,18 @@
--
-  description: Array#select
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.select
--
-  description: Array#select { |x| true }
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.select { |x| true }
--
-  description: Array#select { |x| false }
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.select { |x| false }
--
-  description: Array#select!
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.select!
--
-  description: Array#select! { |x| true }
-  benchmark: |-
-    [1, 2, 3, 4, 5].select! { |x| true }
--
-  description: Array#select! { |x| false }
-  benchmark: |-
-    [1, 2, 3, 4, 5].select! { |x| false }
+---
+benchmark:
+- name: Array#select
+  script: ary.select
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#select { |x| true }
+  script: ary.select { |x| true }
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#select { |x| false }
+  script: ary.select { |x| false }
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#select!
+  script: ary.select!
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#select! { |x| true }
+  script: "[1, 2, 3, 4, 5].select! { |x| true }"
+- name: Array#select! { |x| false }
+  script: "[1, 2, 3, 4, 5].select! { |x| false }"

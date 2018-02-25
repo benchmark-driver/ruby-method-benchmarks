@@ -1,6 +1,5 @@
--
-  description: Hash#to_hash
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.to_hash
+---
+benchmark:
+- name: Hash#to_hash
+  script: hash.to_hash
+  prelude: hash = { "foo" => 100, "bar" => 300 }

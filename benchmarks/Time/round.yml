@@ -1,12 +1,8 @@
--
-  description: Time#round
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.round
--
-  description: Time#round(n)
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.round(10)
+---
+benchmark:
+- name: Time#round
+  script: t.round
+  prelude: t = Time.now
+- name: Time#round(n)
+  script: t.round(10)
+  prelude: t = Time.now

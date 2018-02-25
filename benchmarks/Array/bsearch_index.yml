@@ -1,6 +1,5 @@
--
-  description: Array#bsearch_index { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5].sort
-  benchmark: |-
-    ary.bsearch_index { |x| x > 3 }
+---
+benchmark:
+- name: Array#bsearch_index { |obj| ...}
+  script: ary.bsearch_index { |x| x > 3 }
+  prelude: ary = [1, 2, 3, 4, 5].sort

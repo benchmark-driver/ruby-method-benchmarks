@@ -1,6 +1,5 @@
--
-  description: Time#to_a
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.to_a
+---
+benchmark:
+- name: Time#to_a
+  script: t.to_a
+  prelude: t = Time.now

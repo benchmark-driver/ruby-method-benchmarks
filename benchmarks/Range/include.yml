@@ -1,24 +1,14 @@
--
-  description: Range#include?(obj)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.include?(10)
--
-  description: Range#include?(obj) (not included)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.include?(200)
--
-  description: Range#member?(obj)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.member?(10)
--
-  description: Range#member?(obj) (not included)
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.member?(200)
+---
+benchmark:
+- name: Range#include?(obj)
+  script: range.include?(10)
+  prelude: range = 0..100
+- name: Range#include?(obj) (not included)
+  script: range.include?(200)
+  prelude: range = 0..100
+- name: Range#member?(obj)
+  script: range.member?(10)
+  prelude: range = 0..100
+- name: Range#member?(obj) (not included)
+  script: range.member?(200)
+  prelude: range = 0..100

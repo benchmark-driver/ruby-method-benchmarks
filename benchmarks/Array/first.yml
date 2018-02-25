@@ -1,12 +1,8 @@
--
-  description: Array#first
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.first
--
-  description: Array#first(n)
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.first(3)
+---
+benchmark:
+- name: Array#first
+  script: ary.first
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#first(n)
+  script: ary.first(3)
+  prelude: ary = [1, 2, 3, 4, 5]

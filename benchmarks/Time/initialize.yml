@@ -1,4 +1,4 @@
--
-  description: Time#initialize
-  benchmark: |-
-    Time.new(2007,11,6,17,10,0, "+09:00")
+---
+benchmark:
+- name: Time#initialize
+  script: Time.new(2007,11,6,17,10,0, "+09:00")

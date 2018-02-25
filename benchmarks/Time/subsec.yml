@@ -1,6 +1,5 @@
--
-  description: Time#subsec
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.subsec
+---
+benchmark:
+- name: Time#subsec
+  script: t.subsec
+  prelude: t = Time.now

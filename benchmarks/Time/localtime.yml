@@ -1,12 +1,8 @@
--
-  description: Time#localtime
-  before: |-
-    t = Time.utc(2000, "jan", 1, 20, 15, 1)
-  benchmark: |-
-    t.localtime
--
-  description: Time#localtime(utc_offset)
-  before: |-
-    t = Time.utc(2000, "jan", 1, 20, 15, 1)
-  benchmark: |-
-    t.localtime("+09:00")
+---
+benchmark:
+- name: Time#localtime
+  script: t.localtime
+  prelude: t = Time.utc(2000, "jan", 1, 20, 15, 1)
+- name: Time#localtime(utc_offset)
+  script: t.localtime("+09:00")
+  prelude: t = Time.utc(2000, "jan", 1, 20, 15, 1)

@@ -1,6 +1,5 @@
--
-  description: Array#repeated_permutation(n) { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.repeated_permutation(3) { |x| x }
+---
+benchmark:
+- name: Array#repeated_permutation(n) { |obj| ...}
+  script: ary.repeated_permutation(3) { |x| x }
+  prelude: ary = [1, 2, 3, 4, 5]

@@ -1,8 +1,6 @@
--
-  description: String#lstrip
-  benchmark: |-
-    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".lstrip
--
-  description: String#lstrip!
-  benchmark: |-
-    "  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".lstrip!
+---
+benchmark:
+- name: String#lstrip
+  script: '"  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".lstrip'
+- name: String#lstrip!
+  script: '"  \t\r\n\f\v\0 abcdefg  \t\r\n\f\v\0".lstrip!'

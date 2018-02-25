@@ -1,8 +1,7 @@
--
-  description: Time#<=>
-  before: |-
+---
+benchmark:
+- name: Time#<=>
+  script: t1 <=> t2
+  prelude: |-
     t1 = Time.now
     t2 = Time.now
-  benchmark: |-
-    t1 <=> t2
-

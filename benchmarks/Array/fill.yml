@@ -1,32 +1,18 @@
--
-  description: Array#fill(val)
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(42)
--
-  description: Array#fill(val, start)
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(42, 2)
--
-  description: Array#fill(val, start, length)
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(42, 2, 3)
--
-  description: Array#fill(val, range)
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(42, 2..3)
--
-  description: Array#fill { |index| ...}
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill { |index| 42 }
--
-  description: Array#fill(start) { |index| ...}
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(2) { |index| 42 }
--
-  description: Array#fill(start, length) { |index| ...}
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(2, 3) { |index| 42 }
--
-  description: Array#fill(range) { |index| ...}
-  benchmark: |-
-    [1, 2, 3, 4, 5].fill(2..3) { |index| 42 }
+---
+benchmark:
+- name: Array#fill(val)
+  script: "[1, 2, 3, 4, 5].fill(42)"
+- name: Array#fill(val, start)
+  script: "[1, 2, 3, 4, 5].fill(42, 2)"
+- name: Array#fill(val, start, length)
+  script: "[1, 2, 3, 4, 5].fill(42, 2, 3)"
+- name: Array#fill(val, range)
+  script: "[1, 2, 3, 4, 5].fill(42, 2..3)"
+- name: Array#fill { |index| ...}
+  script: "[1, 2, 3, 4, 5].fill { |index| 42 }"
+- name: Array#fill(start) { |index| ...}
+  script: "[1, 2, 3, 4, 5].fill(2) { |index| 42 }"
+- name: Array#fill(start, length) { |index| ...}
+  script: "[1, 2, 3, 4, 5].fill(2, 3) { |index| 42 }"
+- name: Array#fill(range) { |index| ...}
+  script: "[1, 2, 3, 4, 5].fill(2..3) { |index| 42 }"

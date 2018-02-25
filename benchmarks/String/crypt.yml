@@ -1,4 +1,4 @@
--
-  description: String#crypt(salt)
-  benchmark: |-
-    "hello world".crypt("6e")
+---
+benchmark:
+- name: String#crypt(salt)
+  script: '"hello world".crypt("6e")'

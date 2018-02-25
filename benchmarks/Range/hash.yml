@@ -1,6 +1,5 @@
--
-  description: Range#hash
-  before: |-
-    range = 0..10
-  benchmark: |-
-    range.hash
+---
+benchmark:
+- name: Range#hash
+  script: range.hash
+  prelude: range = 0..10

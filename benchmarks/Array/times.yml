@@ -1,6 +1,5 @@
--
-  description: Array#*(n)
-  before: |-
-    ary = [1, 2, 3]
-  benchmark: |-
-    ary * 5
+---
+benchmark:
+- name: Array#*(n)
+  script: ary * 5
+  prelude: ary = [1, 2, 3]

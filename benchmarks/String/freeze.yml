@@ -1,4 +1,4 @@
--
-  description: String#freeze
-  benchmark: |-
-    "hello".freeze
+---
+benchmark:
+- name: String#freeze
+  script: '"hello".freeze'

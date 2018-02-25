@@ -1,6 +1,5 @@
--
-  description: Array#at
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.at(1)
+---
+benchmark:
+- name: Array#at
+  script: ary.at(1)
+  prelude: ary = [1, 2, 3, 4, 5]

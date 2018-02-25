@@ -1,6 +1,5 @@
--
-  description: Array#drop_while { |obj| ...}
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.drop_while { |x| x < 3 }
+---
+benchmark:
+- name: Array#drop_while { |obj| ...}
+  script: ary.drop_while { |x| x < 3 }
+  prelude: ary = [1, 2, 3, 4, 5]

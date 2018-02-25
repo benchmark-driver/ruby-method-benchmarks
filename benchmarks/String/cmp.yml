@@ -1,4 +1,4 @@
--
-  description: String#<=>(other)
-  benchmark: |-
-    "abcdef" <=> "abcdefg"
+---
+benchmark:
+- name: String#<=>(other)
+  script: '"abcdef" <=> "abcdefg"'

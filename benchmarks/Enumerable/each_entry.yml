@@ -1,12 +1,8 @@
--
-  description: Enumerable#each_entry
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_entry
--
-  description: Enumerable#each_entry { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.each_entry { |obj| }
+---
+benchmark:
+- name: Enumerable#each_entry
+  script: enum.each_entry
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#each_entry { |obj| ...}
+  script: enum.each_entry { |obj| }
+  prelude: enum = (1..100).to_enum

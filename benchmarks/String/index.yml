@@ -1,12 +1,8 @@
--
-  description: String#index(str)
-  benchmark: |-
-    "hello".index('l')
--
-  description: String#index(str, pos)
-  benchmark: |-
-    "hello".index('l', 3)
--
-  description: String#index(pattern, pos)
-  benchmark: |-
-    "hello".index(/[aeiou]/, -3)
+---
+benchmark:
+- name: String#index(str)
+  script: '"hello".index(''l'')'
+- name: String#index(str, pos)
+  script: '"hello".index(''l'', 3)'
+- name: String#index(pattern, pos)
+  script: '"hello".index(/[aeiou]/, -3)'

@@ -1,24 +1,14 @@
--
-  description: Range#each
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.each
--
-  description: Range#each { |x| ...} (Fixnum range)
-  before: |-
-    range = 0..676
-  benchmark: |-
-    range.each { |x| }
--
-  description: Range#each { |x| ...} (Symbol range)
-  before: |-
-    range = :aa..:zz
-  benchmark: |-
-    range.each { |x| }
--
-  description: Range#each { |x| ...} (String range)
-  before: |-
-    range = "aa".."zz"
-  benchmark: |-
-    range.each { |x| }
+---
+benchmark:
+- name: Range#each
+  script: range.each
+  prelude: range = 0..100
+- name: Range#each { |x| ...} (Fixnum range)
+  script: range.each { |x| }
+  prelude: range = 0..676
+- name: Range#each { |x| ...} (Symbol range)
+  script: range.each { |x| }
+  prelude: range = :aa..:zz
+- name: Range#each { |x| ...} (String range)
+  script: range.each { |x| }
+  prelude: range = "aa".."zz"

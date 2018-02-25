@@ -1,20 +1,15 @@
--
-  description: Array#product
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-  benchmark: |-
-    ary.product
--
-  description: Array#product(other)
-  before: |-
-    ary = [1, 2, 3, 4, 5]
-    other = [1, 2]
-  benchmark: |-
-    ary.product(other)
--
-  description: Array#product(other) { |obj| ...}
-  before: |-
+---
+benchmark:
+- name: Array#product
+  script: ary.product
+  prelude: ary = [1, 2, 3, 4, 5]
+- name: Array#product(other)
+  script: ary.product(other)
+  prelude: |-
     ary = [1, 2, 3, 4, 5]
     other = [1, 2]
-  benchmark: |-
-    ary.product(other) { |x| x }
+- name: Array#product(other) { |obj| ...}
+  script: ary.product(other) { |x| x }
+  prelude: |-
+    ary = [1, 2, 3, 4, 5]
+    other = [1, 2]

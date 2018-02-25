@@ -1,41 +1,28 @@
--
-  description: Hash#select
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.select
--
-  description: Hash#select { |key, value| true}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#select
+  script: hash.select
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#select { |key, value| true}
+  script: |-
     h = hash.dup
     h.select { |key, value| true }
--
-  description: Hash#select { |key, value| false}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#select { |key, value| false}
+  script: |-
     h = hash.dup
     h.select { |key, value| false }
--
-  description: Hash#select!
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.select!
--
-  description: Hash#select! { |key, value| true}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#select!
+  script: hash.select!
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#select! { |key, value| true}
+  script: |-
     h = hash.dup
     h.select! { |key, value| true }
--
-  description: Hash#select! { |key, value| false}
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#select! { |key, value| false}
+  script: |-
     h = hash.dup
     h.select! { |key, value| false }
-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

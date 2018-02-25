@@ -1,12 +1,8 @@
--
-  description: String#-@
-  before: |-
-    string = "hello"
-  benchmark: |-
-    -string
--
-  description: String#-@ FROZEN
-  before: |-
-    string = "hello".freeze
-  benchmark: |-
-    -string
+---
+benchmark:
+- name: String#-@
+  script: "-string"
+  prelude: string = "hello"
+- name: String#-@ FROZEN
+  script: "-string"
+  prelude: string = "hello".freeze

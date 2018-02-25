@@ -1,7 +1,7 @@
--
-  description: Array#<=>(other)
-  before: |-
+---
+benchmark:
+- name: Array#<=>(other)
+  script: ary <=> other
+  prelude: |-
     ary = [1, 1.5, 2, 3, 3.2, 4, 4.6, 5]
     other = [1, 1.5, 2, 3, 3.2, 4, 4.6, 555]
-  benchmark: |-
-    ary <=> other

@@ -1,6 +1,5 @@
--
-  description: Enumerable#to_h
-  before: |-
-    enum = ["hello", "world"].each_with_index
-  benchmark: |-
-    enum.to_h
+---
+benchmark:
+- name: Enumerable#to_h
+  script: enum.to_h
+  prelude: enum = ["hello", "world"].each_with_index

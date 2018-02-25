@@ -1,6 +1,5 @@
--
-  description: Hash#rehash
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.rehash
+---
+benchmark:
+- name: Hash#rehash
+  script: hash.rehash
+  prelude: hash = { "foo" => 100, "bar" => 300 }

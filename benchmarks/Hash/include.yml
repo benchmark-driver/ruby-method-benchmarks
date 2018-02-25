@@ -1,48 +1,26 @@
--
-  description: Hash#include?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.include?("baz")
--
-  description: Hash#include? not included
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.include?("hoge")
--
-  description: Hash#member?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.member?("baz")
--
-  description: Hash#member? not included
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.member?("hoge")
--
-  description: Hash#has_key?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.has_key?("baz")
--
-  description: Hash#has_key? not included
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.has_key?("hoge")
--
-  description: Hash#key?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.key?("baz")
--
-  description: Hash#key? not included
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
-    hash.key?("hoge")
+---
+benchmark:
+- name: Hash#include?
+  script: hash.include?("baz")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#include? not included
+  script: hash.include?("hoge")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#member?
+  script: hash.member?("baz")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#member? not included
+  script: hash.member?("hoge")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#has_key?
+  script: hash.has_key?("baz")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#has_key? not included
+  script: hash.has_key?("hoge")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#key?
+  script: hash.key?("baz")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#key? not included
+  script: hash.key?("hoge")
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

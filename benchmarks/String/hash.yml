@@ -1,4 +1,4 @@
--
-  description: String#hash
-  benchmark: |-
-    "abcdefg".hash
+---
+benchmark:
+- name: String#hash
+  script: '"abcdefg".hash'

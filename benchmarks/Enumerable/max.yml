@@ -1,24 +1,14 @@
--
-  description: Enumerable#max
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.max
--
-  description: Enumerable#max { |a, b| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.max { |a, b| a <=> b }
--
-  description: Enumerable#max(n)
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.max(5)
--
-  description: Enumerable#max(n) { |a, b| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.max(5) { |a, b| a <=> b }
+---
+benchmark:
+- name: Enumerable#max
+  script: enum.max
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#max { |a, b| ...}
+  script: enum.max { |a, b| a <=> b }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#max(n)
+  script: enum.max(5)
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#max(n) { |a, b| ...}
+  script: enum.max(5) { |a, b| a <=> b }
+  prelude: enum = (1..100).to_enum

@@ -1,40 +1,22 @@
--
-  description: String#upcase
-  benchmark: |-
-    "hello".upcase
--
-  description: String#upcase(:ascii)
-  benchmark: |-
-    "hello".upcase(:ascii)
--
-  description: String#upcase(:turkic)
-  benchmark: |-
-    "hello".upcase(:turkic)
--
-  description: String#upcase(:lithuanian)
-  benchmark: |-
-    "hello".upcase(:lithuanian)
--
-  description: String#upcase(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".upcase(:turkic, :lithuanian)
--
-  description: String#upcase!
-  benchmark: |-
-    "hello".upcase!
--
-  description: String#upcase!(:ascii)
-  benchmark: |-
-    "hello".upcase!(:ascii)
--
-  description: String#upcase!(:turkic)
-  benchmark: |-
-    "hello".upcase!(:turkic)
--
-  description: String#upcase!(:lithuanian)
-  benchmark: |-
-    "hello".upcase!(:lithuanian)
--
-  description: String#upcase!(:turkic, :lithuanian)
-  benchmark: |-
-    "hello".upcase!(:turkic, :lithuanian)
+---
+benchmark:
+- name: String#upcase
+  script: '"hello".upcase'
+- name: String#upcase(:ascii)
+  script: '"hello".upcase(:ascii)'
+- name: String#upcase(:turkic)
+  script: '"hello".upcase(:turkic)'
+- name: String#upcase(:lithuanian)
+  script: '"hello".upcase(:lithuanian)'
+- name: String#upcase(:turkic, :lithuanian)
+  script: '"hello".upcase(:turkic, :lithuanian)'
+- name: String#upcase!
+  script: '"hello".upcase!'
+- name: String#upcase!(:ascii)
+  script: '"hello".upcase!(:ascii)'
+- name: String#upcase!(:turkic)
+  script: '"hello".upcase!(:turkic)'
+- name: String#upcase!(:lithuanian)
+  script: '"hello".upcase!(:lithuanian)'
+- name: String#upcase!(:turkic, :lithuanian)
+  script: '"hello".upcase!(:turkic, :lithuanian)'

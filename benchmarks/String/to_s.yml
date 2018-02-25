@@ -1,8 +1,6 @@
--
-  description: String#to_s
-  benchmark: |-
-    "hello".to_s
--
-  description: String#to_str
-  benchmark: |-
-    "hello".to_str
+---
+benchmark:
+- name: String#to_s
+  script: '"hello".to_s'
+- name: String#to_str
+  script: '"hello".to_str'

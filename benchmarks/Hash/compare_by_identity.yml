@@ -1,14 +1,12 @@
--
-  description: Hash#compare_by_identity
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#compare_by_identity
+  script: |-
     h = hash.dup
     h.compare_by_identity
--
-  description: Hash#compare_by_identity?
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+- name: Hash#compare_by_identity?
+  script: |-
     h = hash.dup
     h.compare_by_identity?
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

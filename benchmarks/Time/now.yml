@@ -1,4 +1,4 @@
--
-  description: Time.now
-  benchmark: |-
-    Time.now
+---
+benchmark:
+- name: Time.now
+  script: Time.now

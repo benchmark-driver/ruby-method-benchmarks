@@ -1,12 +1,8 @@
--
-  description: Hash#length
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.length
--
-  description: Hash#size
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.size
+---
+benchmark:
+- name: Hash#length
+  script: hash.length
+  prelude: hash = { "foo" => 100, "bar" => 300 }
+- name: Hash#size
+  script: hash.size
+  prelude: hash = { "foo" => 100, "bar" => 300 }

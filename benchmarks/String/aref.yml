@@ -1,42 +1,23 @@
--
-  description: String#[nth]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[1]
--
-  description: String#[nth, len]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[2, 3]
--
-  description: String#[range]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[2..3]
--
-  description: String#[substr]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str["lo"]
--
-  description: String#[regexp]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[/[aeiou](.)\1/]
--
-  description: String#[regexp, nth]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[/[aeiou](.)\1/, 1]
--
-  description: String#[regexp, name]
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str[/(?<vowel>[aeiou])(?<non_vowel>[^aeiou])/, "vowel"]
+---
+benchmark:
+- name: String#[nth]
+  script: str[1]
+  prelude: str = "Hello there"
+- name: String#[nth, len]
+  script: str[2, 3]
+  prelude: str = "Hello there"
+- name: String#[range]
+  script: str[2..3]
+  prelude: str = "Hello there"
+- name: String#[substr]
+  script: str["lo"]
+  prelude: str = "Hello there"
+- name: String#[regexp]
+  script: str[/[aeiou](.)\1/]
+  prelude: str = "Hello there"
+- name: String#[regexp, nth]
+  script: str[/[aeiou](.)\1/, 1]
+  prelude: str = "Hello there"
+- name: String#[regexp, name]
+  script: str[/(?<vowel>[aeiou])(?<non_vowel>[^aeiou])/, "vowel"]
+  prelude: str = "Hello there"

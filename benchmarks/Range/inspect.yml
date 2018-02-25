@@ -1,6 +1,5 @@
--
-  description: Range#inspect
-  before: |-
-    range = 0..100
-  benchmark: |-
-    range.inspect
+---
+benchmark:
+- name: Range#inspect
+  script: range.inspect
+  prelude: range = 0..100

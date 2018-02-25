@@ -1,6 +1,5 @@
--
-  description: Time#year
-  before: |-
-    t = Time.now
-  benchmark: |-
-    t.year
+---
+benchmark:
+- name: Time#year
+  script: t.year
+  prelude: t = Time.now

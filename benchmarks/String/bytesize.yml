@@ -1,12 +1,8 @@
--
-  description: String#bytesize with ASCII
-  before: |-
-    str = "Hello there"
-  benchmark: |-
-    str.bytesize
--
-  description: String#bytesize with UTF8
-  before: |-
-    str = "あいうえお"
-  benchmark: |-
-    str.bytesize
+---
+benchmark:
+- name: String#bytesize with ASCII
+  script: str.bytesize
+  prelude: str = "Hello there"
+- name: String#bytesize with UTF8
+  script: str.bytesize
+  prelude: str = "あいうえお"

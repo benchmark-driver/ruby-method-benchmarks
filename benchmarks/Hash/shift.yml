@@ -1,7 +1,7 @@
--
-  description: Hash#shift
-  before: |-
-    hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
-  benchmark: |-
+---
+benchmark:
+- name: Hash#shift
+  script: |-
     h = hash.dup
     h.shift
+  prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }

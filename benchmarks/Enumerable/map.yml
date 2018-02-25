@@ -1,24 +1,14 @@
--
-  description: Enumerable#map
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.map
--
-  description: Enumerable#map { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.map { |x| x * 2 }
--
-  description: Enumerable#collect
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.collect
--
-  description: Enumerable#collect { |obj| ...}
-  before: |-
-    enum = (1..100).to_enum
-  benchmark: |-
-    enum.collect { |x| x * 2 }
+---
+benchmark:
+- name: Enumerable#map
+  script: enum.map
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#map { |obj| ...}
+  script: enum.map { |x| x * 2 }
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#collect
+  script: enum.collect
+  prelude: enum = (1..100).to_enum
+- name: Enumerable#collect { |obj| ...}
+  script: enum.collect { |x| x * 2 }
+  prelude: enum = (1..100).to_enum

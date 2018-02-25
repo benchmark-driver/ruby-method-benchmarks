@@ -1,6 +1,5 @@
--
-  description: Array#replace(other)
-  before: |-
-    other = ["x", "y", "z"]
-  benchmark: |-
-    [1, 2, 3, 4, 5].replace(other)
+---
+benchmark:
+- name: Array#replace(other)
+  script: "[1, 2, 3, 4, 5].replace(other)"
+  prelude: other = ["x", "y", "z"]

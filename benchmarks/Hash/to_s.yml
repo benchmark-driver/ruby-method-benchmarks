@@ -1,12 +1,8 @@
--
-  description: Hash#to_s
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.to_s
--
-  description: Hash#inspect
-  before: |-
-    hash = { "foo" => 100, "bar" => 300 }
-  benchmark: |-
-    hash.inspect
+---
+benchmark:
+- name: Hash#to_s
+  script: hash.to_s
+  prelude: hash = { "foo" => 100, "bar" => 300 }
+- name: Hash#inspect
+  script: hash.inspect
+  prelude: hash = { "foo" => 100, "bar" => 300 }

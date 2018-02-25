@@ -1,14 +1,7 @@
 # ruby-method-benchmarks
+
 The benchmarks for Ruby methods.
 
-## How to measure benchmarks
-```console
-$ rake
-$ rake benchmarks
-```
+## Copyright
 
-or
-
-```console
-$ ./measure
-```
+@Watson1978

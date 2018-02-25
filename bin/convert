@@ -1,8 +1,26 @@
 #!/usr/bin/env ruby
 # Convert watson format to benchmark_driver format
 
+require 'yaml'
+
 class << Converter = Module.new
   def convert_file(file)
+    elements = YAML.load_file(file)
+    converted = { 'benchmark' => elements.map { |e| convert_element(e) } }
+    File.write(file, converted.to_yaml)
+  end
+
+  private
+
+  def convert_element(element)
+    result = {
+      'name' => element.fetch('description'),
+      'script' => element.fetch('benchmark'),
+    }
+    if element.key?('before')
+      result['prelude'] = element['before']
+    end
+    result
   end
 end
 

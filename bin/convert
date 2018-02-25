@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+# Convert watson format to benchmark_driver format
+
+class << Converter = Module.new
+  def convert_file(file)
+  end
+end
+
+ARGV.each do |file|
+  Converter.convert_file(file)
+end

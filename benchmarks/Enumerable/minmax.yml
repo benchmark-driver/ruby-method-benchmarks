@@ -3,6 +3,8 @@ benchmark:
 - name: Enumerable#minmax
   script: enum.minmax
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#minmax { |a, b| ...}
   script: enum.minmax { |a, b| a <=> b }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5

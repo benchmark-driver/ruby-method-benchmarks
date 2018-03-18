@@ -3,18 +3,24 @@ benchmark:
 - name: Enumerable#sum
   script: enum.sum
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#sum(init)
   script: enum.sum(100)
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#sum with float
   script: enum.sum
   prelude: enum = (1..100).to_a.map(&:to_f).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#sum { |obj| ...}
   script: enum.sum { |x| x * 2 }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#sum(init) { |obj| ...}
   script: enum.sum(100) { |x| x * 2 }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#sum { |obj| ...} with float
   script: enum.sum { |x| x * 2 }
   prelude: enum = (1..100).to_a.map(&:to_f).to_enum
+  required_ruby_version: 2.5

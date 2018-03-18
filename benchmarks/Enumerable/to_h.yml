@@ -3,3 +3,4 @@ benchmark:
 - name: Enumerable#to_h
   script: enum.to_h
   prelude: enum = ["hello", "world"].each_with_index
+  required_ruby_version: 2.5

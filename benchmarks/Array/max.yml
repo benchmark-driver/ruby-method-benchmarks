@@ -3,12 +3,16 @@ benchmark:
 - name: Array#max
   script: ary.max
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#max(n)
   script: ary.max(5)
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#max { |a, b| ...}
   script: ary.max { |a, b| a <=> b }
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#max(n) { |a, b| ...}
   script: ary.max(5) { |a, b| a <=> b }
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5

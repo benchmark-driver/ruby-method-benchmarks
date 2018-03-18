@@ -3,6 +3,8 @@ benchmark:
 - name: Enumerable#chunk_while { |obj| true }
   script: enum.chunk_while { |obj| true }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#chunk_while { |obj| false }
   script: enum.chunk_while { |obj| false }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5

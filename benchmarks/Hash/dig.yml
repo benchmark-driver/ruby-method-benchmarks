@@ -3,3 +3,4 @@ benchmark:
 - name: Hash#dig
   script: hash.dig(:foo, :bar, :baz)
   prelude: 'hash = { foo: {bar: {baz: 1}}}'
+  required_ruby_version: 2.3

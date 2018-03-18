@@ -3,12 +3,16 @@ benchmark:
 - name: Enumerable#grep_v(pattern)
   script: enum.grep_v(/(f|g|h|i)/)
   prelude: enum = ("a".."z").to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#grep_v(range)
   script: enum.grep_v("f".."i")
   prelude: enum = ("a".."z").to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#grep_v(pattern) { |obj| ...}
   script: enum.grep_v(/(f|g|h|i)/) { |obj| obj }
   prelude: enum = ("a".."z").to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#grep_v(range) { |obj| ...}
   script: enum.grep_v("f".."i") { |obj| obj }
   prelude: enum = ("a".."z").to_enum
+  required_ruby_version: 2.5

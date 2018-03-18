@@ -3,12 +3,16 @@ benchmark:
 - name: Enumerable#max
   script: enum.max
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#max { |a, b| ...}
   script: enum.max { |a, b| a <=> b }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#max(n)
   script: enum.max(5)
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#max(n) { |a, b| ...}
   script: enum.max(5) { |a, b| a <=> b }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5

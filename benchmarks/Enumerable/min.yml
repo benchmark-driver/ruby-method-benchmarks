@@ -3,12 +3,16 @@ benchmark:
 - name: Enumerable#min
   script: enum.min
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#min { |a, b| ...}
   script: enum.min { |a, b| a <=> b }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#min(n)
   script: enum.min(5)
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#min(n) { |a, b| ...}
   script: enum.min(5) { |a, b| a <=> b }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5

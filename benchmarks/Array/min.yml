@@ -3,12 +3,16 @@ benchmark:
 - name: Array#min
   script: ary.max
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#min(n)
   script: ary.min(5)
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#min { |a, b| ...}
   script: ary.min { |a, b| a <=> b }
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5
 - name: Array#min(n) { |a, b| ...}
   script: ary.min(5) { |a, b| a <=> b }
   prelude: ary = (1..20).to_a
+  required_ruby_version: 2.5

@@ -3,3 +3,4 @@ benchmark:
 - name: Hash#to_proc
   script: hash.to_proc
   prelude: hash = { "foo" => 100, "bar" => 300 }
+  required_ruby_version: 2.5

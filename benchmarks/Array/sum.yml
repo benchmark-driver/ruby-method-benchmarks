@@ -3,12 +3,16 @@ benchmark:
 - name: Array#sum with Fixnum
   script: ary.sum
   prelude: ary = [1, 2, 3, 4, 5]
+  required_ruby_version: 2.5
 - name: Array#sum with Float
   script: ary.sum
   prelude: ary = [1.0, 2.0, 3.0, 4.0, 5.0]
+  required_ruby_version: 2.5
 - name: Array#sum with Rational
   script: ary.sum
   prelude: ary = [1r, 2r, 3r, 4r, 5r]
+  required_ruby_version: 2.5
 - name: Array#sum { |obj| ...}
   script: ary.sum { |x| x }
   prelude: ary = [1, 2, 3, 4, 5]
+  required_ruby_version: 2.5

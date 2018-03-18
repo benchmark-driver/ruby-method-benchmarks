@@ -3,6 +3,8 @@ benchmark:
 - name: Hash#fetch_values(key, ...)
   script: hash.fetch_values("foo", "bar")
   prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  required_ruby_version: 2.5
 - name: Hash#fetch_values(key, ...) { |key| ...}
   script: hash.fetch_values("foo", "hoge") { |key| }
   prelude: hash = { "foo" => 100, "bar" => 300, "baz" => 500 }
+  required_ruby_version: 2.5

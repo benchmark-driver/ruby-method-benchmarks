@@ -3,15 +3,20 @@ benchmark:
 - name: Enumerable#slice_after(pattern)
   script: enum.slice_after(/t/)
   prelude: enum = enum = (['cat'] * 100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#slice_after(range)
   script: enum.slice_after(1..10)
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#slice_after(method)
   script: enum.slice_after(&:even?)
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#slice_after { |obj| true }
   script: enum.slice_after { |obj| true }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5
 - name: Enumerable#slice_after { |obj| false }
   script: enum.slice_after { |obj| false }
   prelude: enum = (1..100).to_enum
+  required_ruby_version: 2.5

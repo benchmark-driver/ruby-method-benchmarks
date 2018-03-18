@@ -2,25 +2,37 @@
 benchmark:
 - name: String#downcase
   script: '"hello".downcase'
+  required_ruby_version: 2.5
 - name: String#downcase(:ascii)
   script: '"hello".downcase(:ascii)'
+  required_ruby_version: 2.5
 - name: String#downcase(:turkic)
   script: '"hello".downcase(:turkic)'
+  required_ruby_version: 2.5
 - name: String#downcase(:lithuanian)
   script: '"hello".downcase(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#downcase(:turkic, :lithuanian)
   script: '"hello".downcase(:turkic, :lithuanian)'
+  required_ruby_version: 2.5
 - name: String#downcase(:fold)
   script: '"hello".downcase(:fold)'
+  required_ruby_version: 2.5
 - name: String#downcase!
   script: '"hello".downcase!'
+  required_ruby_version: 2.5
 - name: String#downcase!(:ascii)
   script: '"hello".downcase!(:ascii)'
+  required_ruby_version: 2.5
 - name: String#downcase!(:turkic)
   script: '"hello".downcase!(:turkic)'
+  required_ruby_version: 2.5
 - name: String#downcase!(:lithuanian)
   script: '"hello".downcase!(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#downcase!(:turkic, :lithuanian)
   script: '"hello".downcase!(:turkic, :lithuanian)'
+  required_ruby_version: 2.5
 - name: String#downcase!(:fold)
   script: '"hello".downcase!(:fold)'
+  required_ruby_version: 2.5

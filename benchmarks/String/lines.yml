@@ -2,13 +2,19 @@
 benchmark:
 - name: String#lines
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines'
+  required_ruby_version: 2.5
 - name: String#lines('')
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines('''')'
+  required_ruby_version: 2.5
 - name: 'String#lines(chomp: true)'
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true)'
+  required_ruby_version: 2.5
 - name: String#lines { |line| ...}
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines { |line| }'
+  required_ruby_version: 2.5
 - name: String#lines('') { |line| ...}
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines('''') { |line| }'
+  required_ruby_version: 2.5
 - name: 'String#lines(chomp: true) { |line| ...}'
   script: '"aa\nbb\n\n\ncc\ndd\nee".lines(chomp: true) { |line| }'
+  required_ruby_version: 2.5

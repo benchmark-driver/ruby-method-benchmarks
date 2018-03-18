@@ -6,3 +6,4 @@ benchmark:
     min = Time.now
     t = Time.now
     max = Time.now
+  required_ruby_version: 2.5

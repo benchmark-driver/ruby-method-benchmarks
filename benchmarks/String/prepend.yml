@@ -2,5 +2,7 @@
 benchmark:
 - name: String#prepend(other)
   script: '"!".prepend("hello")'
+  required_ruby_version: 2.5
 - name: String#prepend(obj1, obj2,...)
   script: '"!".prepend("hello", " ", "world")'
+  required_ruby_version: 2.5

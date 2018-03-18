@@ -2,21 +2,31 @@
 benchmark:
 - name: String#swapcase
   script: '"hello".swapcase'
+  required_ruby_version: 2.5
 - name: String#swapcase(:ascii)
   script: '"hello".swapcase(:ascii)'
+  required_ruby_version: 2.5
 - name: String#swapcase(:turkic)
   script: '"hello".swapcase(:turkic)'
+  required_ruby_version: 2.5
 - name: String#swapcase(:lithuanian)
   script: '"hello".swapcase(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#swapcase(:turkic, :lithuanian)
   script: '"hello".swapcase(:turkic, :lithuanian)'
+  required_ruby_version: 2.5
 - name: String#swapcase!
   script: '"hello".swapcase!'
+  required_ruby_version: 2.5
 - name: String#swapcase!(:ascii)
   script: '"hello".swapcase!(:ascii)'
+  required_ruby_version: 2.5
 - name: String#swapcase!(:turkic)
   script: '"hello".swapcase!(:turkic)'
+  required_ruby_version: 2.5
 - name: String#swapcase!(:lithuanian)
   script: '"hello".swapcase!(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#swapcase!(:turkic, :lithuanian)
   script: '"hello".swapcase!(:turkic, :lithuanian)'
+  required_ruby_version: 2.5

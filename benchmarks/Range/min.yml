@@ -3,12 +3,16 @@ benchmark:
 - name: Range#min
   script: range.min
   prelude: range = 0..100
+  required_ruby_version: 2.5
 - name: Range#min(n)
   script: range.min(10)
   prelude: range = 0..100
+  required_ruby_version: 2.5
 - name: Range#min { |a, b| ...}
   script: range.min { |a, b| a <=> b }
   prelude: range = 0..100
+  required_ruby_version: 2.5
 - name: Range#min(n) { |a, b| ...}
   script: range.min(10) { |a, b| a <=> b }
   prelude: range = 0..100
+  required_ruby_version: 2.5

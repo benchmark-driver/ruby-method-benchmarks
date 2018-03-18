@@ -2,21 +2,31 @@
 benchmark:
 - name: String#capitalize
   script: '"hello".capitalize'
+  required_ruby_version: 2.5
 - name: String#capitalize(:ascii)
   script: '"hello".capitalize(:ascii)'
+  required_ruby_version: 2.5
 - name: String#capitalize(:turkic)
   script: '"hello".capitalize(:turkic)'
+  required_ruby_version: 2.5
 - name: String#capitalize(:lithuanian)
   script: '"hello".capitalize(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#capitalize(:turkic, :lithuanian)
   script: '"hello".capitalize(:turkic, :lithuanian)'
+  required_ruby_version: 2.5
 - name: String#capitalize!
   script: '"hello".capitalize!'
+  required_ruby_version: 2.5
 - name: String#capitalize!(:ascii)
   script: '"hello".capitalize!(:ascii)'
+  required_ruby_version: 2.5
 - name: String#capitalize!(:turkic)
   script: '"hello".capitalize!(:turkic)'
+  required_ruby_version: 2.5
 - name: String#capitalize!(:lithuanian)
   script: '"hello".capitalize!(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#capitalize!(:turkic, :lithuanian)
   script: '"hello".capitalize!(:turkic, :lithuanian)'
+  required_ruby_version: 2.5

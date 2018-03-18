@@ -2,21 +2,31 @@
 benchmark:
 - name: String#upcase
   script: '"hello".upcase'
+  required_ruby_version: 2.5
 - name: String#upcase(:ascii)
   script: '"hello".upcase(:ascii)'
+  required_ruby_version: 2.5
 - name: String#upcase(:turkic)
   script: '"hello".upcase(:turkic)'
+  required_ruby_version: 2.5
 - name: String#upcase(:lithuanian)
   script: '"hello".upcase(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#upcase(:turkic, :lithuanian)
   script: '"hello".upcase(:turkic, :lithuanian)'
+  required_ruby_version: 2.5
 - name: String#upcase!
   script: '"hello".upcase!'
+  required_ruby_version: 2.5
 - name: String#upcase!(:ascii)
   script: '"hello".upcase!(:ascii)'
+  required_ruby_version: 2.5
 - name: String#upcase!(:turkic)
   script: '"hello".upcase!(:turkic)'
+  required_ruby_version: 2.5
 - name: String#upcase!(:lithuanian)
   script: '"hello".upcase!(:lithuanian)'
+  required_ruby_version: 2.5
 - name: String#upcase!(:turkic, :lithuanian)
   script: '"hello".upcase!(:turkic, :lithuanian)'
+  required_ruby_version: 2.5

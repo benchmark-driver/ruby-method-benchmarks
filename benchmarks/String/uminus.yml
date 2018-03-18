@@ -3,6 +3,8 @@ benchmark:
 - name: String#-@
   script: "-string"
   prelude: string = "hello"
+  required_ruby_version: 2.3
 - name: String#-@ FROZEN
   script: "-string"
   prelude: string = "hello".freeze
+  required_ruby_version: 2.3

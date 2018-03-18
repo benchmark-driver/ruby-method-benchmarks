@@ -4,10 +4,12 @@ benchmark:
   script: '"hello ".concat("world")'
 - name: String#concat(obj1, obj2,...)
   script: '"hello ".concat(" ", "world", "!!!")'
+  required_ruby_version: 2.4
 - name: String#concat(integer)
   script: '"hello world".concat(33)'
 - name: String#concat(integer1, integer2,...)
   script: '"hello world".concat(33, 33, 33)'
+  required_ruby_version: 2.4
 - name: String#<<(other)
   script: '"hello " << "world"'
 - name: String#<<(integer)

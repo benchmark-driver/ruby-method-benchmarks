@@ -2,5 +2,7 @@
 benchmark:
 - name: String#casecmp(other)
   script: '"aBcDeF".casecmp("abcdefg")'
+  required_ruby_version: 2.5
 - name: String#casecmp?(other)
   script: '"aBcDeF".casecmp?("abcdefg")'
+  required_ruby_version: 2.5

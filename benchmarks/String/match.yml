@@ -3,15 +3,20 @@ benchmark:
 - name: String#=~(other)
   script: str =~ /str/
   prelude: str = "string"
+  required_ruby_version: 2.5
 - name: String#match(pattern)
   script: str.match('(.)\1')
   prelude: str = "hello"
+  required_ruby_version: 2.5
 - name: String#match(pattern, pos)
   script: str.match('(.)\1', 1)
   prelude: str = "hello"
+  required_ruby_version: 2.5
 - name: String#match?(pattern)
   script: str.match?('(.)\1')
   prelude: str = "hello"
+  required_ruby_version: 2.5
 - name: String#match?(pattern, pos)
   script: str.match?('(.)\1', 1)
   prelude: str = "hello"
+  required_ruby_version: 2.5

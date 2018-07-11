@@ -1,0 +1,11 @@
+---
+prelude: |
+  class Foo
+    def hello
+      "Hello world!"
+    end
+  end
+benchmark:
+- name: Object#method(symbol)
+  script: obj.method(:hello)
+  prelude: obj = Foo.new

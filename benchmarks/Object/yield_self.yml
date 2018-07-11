@@ -1,0 +1,5 @@
+---
+benchmark:
+- name: Object#yield_self { |x| ...}
+  script: obj.yield_self { |x| }
+  prelude: obj = Object.new

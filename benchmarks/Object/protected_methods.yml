@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#protected_methods(true)
+  script: obj.protected_methods(true)
+  prelude: obj = Object.new
+- name: Object#protected_methods(false)
+  script: obj.protected_methods(false)
+  prelude: obj = Object.new

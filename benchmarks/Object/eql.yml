@@ -1,0 +1,10 @@
+---
+benchmark:
+- name: Object#eql?(self)
+  script: obj.eql?(obj)
+  prelude: obj = Object.new
+- name: Object#eql?(other)
+  script: obj1.eql?(obj2)
+  prelude: |
+    obj1 = Object.new
+    obj2 = Object.new

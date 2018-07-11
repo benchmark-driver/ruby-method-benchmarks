@@ -1,0 +1,14 @@
+---
+prelude: |
+  class Foo
+    def initialize
+      @x = true
+    end
+  end
+benchmark:
+- name: Object#remove_instance_variable(symbol)
+  script: obj.dup.remove_instance_variable(:@x)
+  prelude: obj = Foo.new
+- name: Object#remove_instance_variable(string)
+  script: obj.dup.remove_instance_variable("@x")
+  prelude: obj = Foo.new

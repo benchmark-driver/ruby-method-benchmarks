@@ -1,0 +1,5 @@
+---
+benchmark:
+- name: Object#to_s
+  script: obj.to_s
+  prelude: obj = Object.new

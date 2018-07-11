@@ -1,0 +1,5 @@
+---
+benchmark:
+- name: Object#singleton_class
+  script: obj.singleton_class
+  prelude: obj = Object.new

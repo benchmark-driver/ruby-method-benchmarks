@@ -1,0 +1,14 @@
+---
+benchmark:
+- name: Object#send(symbol)
+  script: obj.send(:nil?)
+  prelude: obj = Object.new
+- name: Object#send(symbol, arg)
+  script: obj.send(:==, 1)
+  prelude: obj = Object.new
+- name: Object#send(string)
+  script: obj.send("nil?")
+  prelude: obj = Object.new
+- name: Object#send(string, arg)
+  script: obj.send("==", 1)
+  prelude: obj = Object.new

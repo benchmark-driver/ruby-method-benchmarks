@@ -1,0 +1,28 @@
+---
+prelude: |
+  module Calc
+    def add(x, y)
+      x + y
+    end
+
+    def double
+      self * 2
+    end
+  end
+benchmark:
+- name: Object#singleton_methods
+  script: obj.singleton_methods
+  prelude: |
+    obj = "hello"
+    obj.extend(Calc)
+    def obj.triple
+      self * 3
+    end
+- name: Object#singleton_methods(false)
+  script: obj.singleton_methods(false)
+  prelude: |
+    obj = "hello"
+    obj.extend(Calc)
+    def obj.triple
+      self * 3
+    end

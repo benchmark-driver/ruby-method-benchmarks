@@ -1,0 +1,15 @@
+---
+prelude: |
+  module Calc
+    def add(x, y)
+      x + y
+    end
+
+    def double
+      self * 2
+    end
+  end
+benchmark:
+- name: Object#extend
+  script: obj.extend(Calc)
+  prelude: obj = "hello"

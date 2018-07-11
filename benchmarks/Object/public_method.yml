@@ -1,0 +1,5 @@
+---
+benchmark:
+- name: Object#public_method(symbol)
+  script: obj.public_method(:inspect)
+  prelude: obj = Object.new

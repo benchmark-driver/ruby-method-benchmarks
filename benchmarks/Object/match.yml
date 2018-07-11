@@ -1,0 +1,7 @@
+---
+benchmark:
+- name: Object#=~(other)
+  script: obj1 =~ obj2
+  prelude: |
+    obj1 = Object.new
+    obj2 = Object.new

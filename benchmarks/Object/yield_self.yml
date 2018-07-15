@@ -3,3 +3,4 @@ benchmark:
 - name: Object#yield_self { |x| ...}
   script: obj.yield_self { |x| }
   prelude: obj = Object.new
+  required_ruby_version: 2.5

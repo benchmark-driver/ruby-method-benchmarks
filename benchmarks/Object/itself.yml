@@ -3,3 +3,4 @@ benchmark:
 - name: Object#itself
   script: obj.itself
   prelude: obj = Object.new
+  required_ruby_version: 2.2

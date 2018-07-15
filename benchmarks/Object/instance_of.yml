@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#instance_of?(class)
+  script: obj.instance_of?(Object)
+  prelude: obj = Object.new
+- name: Object#instance_of?(other_class)
+  script: obj.instance_of?(String)
+  prelude: obj = Object.new

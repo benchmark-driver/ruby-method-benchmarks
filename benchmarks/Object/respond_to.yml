@@ -1,0 +1,37 @@
+---
+prelude: |
+  class Foo
+    def hello
+      "Hello world"
+    end
+
+    private
+    def add(x, y)
+      x + y
+    end
+  end
+
+  class Bar
+    def respond_to_missing?(name, private)
+      true
+    end
+  end
+benchmark:
+- name: Object#respond_to?(symbol)
+  script: foo.respond_to?(:hello)
+  prelude: foo = Foo.new
+- name: Object#respond_to?(symbol, true)
+  script: foo.respond_to?(:add, true)
+  prelude: foo = Foo.new
+- name: Object#respond_to?(symbol) with respond_to_missing
+  script: bar.respond_to?(:xxxx)
+  prelude: bar = Bar.new
+- name: Object#respond_to?(string)
+  script: foo.respond_to?("hello")
+  prelude: foo = Foo.new
+- name: Object#respond_to?(string, true)
+  script: foo.respond_to?("add", true)
+  prelude: foo = Foo.new
+- name: Object#respond_to?(string) with respond_to_missing
+  script: bar.respond_to?("xxxx")
+  prelude: bar = Bar.new

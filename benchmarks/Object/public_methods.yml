@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#public_methods(true)
+  script: obj.public_methods(true)
+  prelude: obj = Object.new
+- name: Object#public_methods(false)
+  script: obj.public_methods(false)
+  prelude: obj = Object.new

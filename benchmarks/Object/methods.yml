@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#methods(true)
+  script: obj.methods(true)
+  prelude: obj = Object.new
+- name: Object#methods(false)
+  script: obj.methods(false)
+  prelude: obj = Object.new

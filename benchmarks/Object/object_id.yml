@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#object_id
+  script: obj.object_id
+  prelude: obj = Object.new
+- name: Object#__id__
+  script: obj.__id__
+  prelude: obj = Object.new

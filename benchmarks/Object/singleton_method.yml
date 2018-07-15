@@ -1,0 +1,16 @@
+---
+benchmark:
+- name: Object#singleton_method(symbol)
+  script: obj.singleton_method(:hello)
+  prelude: |
+    obj = Object.new
+    def obj.hello
+      "Hello world"
+    end
+- name: Object#singleton_method(string)
+  script: obj.singleton_method("hello")
+  prelude: |
+    obj = Object.new
+    def obj.hello
+      "Hello world"
+    end

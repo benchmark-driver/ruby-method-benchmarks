@@ -1,0 +1,8 @@
+---
+benchmark:
+- name: Object#private_methods(true)
+  script: obj.private_methods(true)
+  prelude: obj = Object.new
+- name: Object#private_methods(false)
+  script: obj.private_methods(false)
+  prelude: obj = Object.new

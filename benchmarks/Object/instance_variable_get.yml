@@ -1,0 +1,14 @@
+---
+prelude: |
+  class Foo
+    def initialize
+      @x = true
+    end
+  end
+benchmark:
+- name: Object#instance_variable_get(defined_string)
+  script: obj.instance_variable_get("@x")
+  prelude: obj = Foo.new
+- name: Object#instance_variable_get(defined_symbol)
+  script: obj.instance_variable_get(:@x)
+  prelude: obj = Foo.new

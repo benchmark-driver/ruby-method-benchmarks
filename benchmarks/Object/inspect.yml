@@ -1,0 +1,5 @@
+---
+benchmark:
+- name: Object#inspect
+  script: obj.inspect
+  prelude: obj = Object.new

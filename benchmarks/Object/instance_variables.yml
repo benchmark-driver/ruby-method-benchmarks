@@ -1,0 +1,11 @@
+---
+prelude: |
+  class Foo
+    def initialize
+      @x = @y = @z = true
+    end
+  end
+benchmark:
+- name: Object#instance_variables
+  script: obj.instance_variables
+  prelude: obj = Object.new

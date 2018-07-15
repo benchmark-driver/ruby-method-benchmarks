@@ -1,0 +1,14 @@
+---
+benchmark:
+- name: Object#is_a?(class)
+  script: obj.is_a?(Object)
+  prelude: obj = Object.new
+- name: Object#is_a?(other_class)
+  script: obj.is_a?(String)
+  prelude: obj = Object.new
+- name: Object#kind_of?(class)
+  script: obj.kind_of?(Object)
+  prelude: obj = Object.new
+- name: Object#kind_of?(other_class)
+  script: obj.kind_of?(String)
+  prelude: obj = Object.new

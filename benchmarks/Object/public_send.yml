@@ -1,0 +1,14 @@
+---
+benchmark:
+- name: Object#public_send(symbol)
+  script: obj.public_send(:nil?)
+  prelude: obj = Object.new
+- name: Object#public_send(symbol, arg)
+  script: obj.public_send(:==, 1)
+  prelude: obj = Object.new
+- name: Object#public_send(string)
+  script: obj.public_send("nil?")
+  prelude: obj = Object.new
+- name: Object#public_send(string, arg)
+  script: obj.public_send("==", 1)
+  prelude: obj = Object.new

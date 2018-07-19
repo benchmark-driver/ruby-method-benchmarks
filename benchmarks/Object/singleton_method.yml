@@ -7,6 +7,7 @@ benchmark:
     def obj.hello
       "Hello world"
     end
+  required_ruby_version: 2.1
 - name: Object#singleton_method(string)
   script: obj.singleton_method("hello")
   prelude: |
@@ -14,3 +15,4 @@ benchmark:
     def obj.hello
       "Hello world"
     end
+  required_ruby_version: 2.1

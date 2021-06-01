@@ -1,7 +1,0 @@
----
-benchmark:
-- name: Time#succ
-  script: t.succ
-  prelude: |-
-    $VERBOSE = nil # get rid of warning message "warning: Time#succ is obsolete"
-    t = Time.now

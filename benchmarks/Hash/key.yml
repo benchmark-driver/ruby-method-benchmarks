@@ -3,8 +3,3 @@ benchmark:
 - name: Hash#key(val)
   script: hash.key(300)
   prelude: hash = { "foo" => 100, "bar" => 300 }
-- name: Hash#index(val)
-  script: hash.index(300)
-  prelude: |-
-    $VERBOSE = nil # get rid of warning message "warning: Time#succ is obsolete"
-    hash = { "foo" => 100, "bar" => 300 }
